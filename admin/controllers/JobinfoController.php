@@ -360,6 +360,7 @@ class JobinfoController extends Controller{
         $mm=rand(100,1000);
         $this->view->mm=$mm;
 		$id = $this->getRequest()->get("id");
+        //var_dump($id);
 		$this->view->id = $id;
 		$employ = new employmentpolicy();
 		if($_POST)
@@ -380,6 +381,7 @@ class JobinfoController extends Controller{
 		    		$edit = $employ->modifyInfo($id, $_POST['title'], addslashes($_POST['content']));
 		    	}
 				//$edit = $employ->modifyInfo($id, $_POST['title'], addslashes($_POST['content']));
+
 				if($edit){
 					$this->view->result = $this->_lang->xiugaichenggong;
 				}else{
@@ -391,10 +393,16 @@ class JobinfoController extends Controller{
 					if ($tokenList){
 						for ($i = 0; $i < count($tokenList); $i++){
 							if ($tokenList[$i]['fu_token']){
-								$url = $this->getRequest()->hostUrl."/clientapi.php/student/getpolicyinfodetail/id/".$id;
-								$this->getApp()->getPush()->pushMsg($tokenList[$i]['fu_token'], $_POST['title'],"此就业政策信息有修改", "5", $url);
+//								$url = $this->getRequest()->hostUrl."/clientapi.php/student/getpolicyinfodetail/id/".$id;
+//								$this->getApp()->getPush()->pushMsg($tokenList[$i]['fu_token'], $_POST['title'],"此就业政策信息有修改", "5", $url);
 							}
 						}
+                        $platform = 'android,ios'; // 接受此信息的系统
+                        $msg_content = json_encode(array('n_builder_id'=>0,'n_title'=>'消息提醒', 'n_content'=>$_POST['title']."此就业政策信息有修改",'n_extras'=>array('type'=>0,'if_url'=>0,'msg_type'=>2,'msg_id'=>$id)));
+                        //var_dump($msg_content);
+                        $j=new jpush();
+                        //$j->send(18,3,$company_id,1,$msg_content,$platform);
+                        $j->send(18,4,"",1,$msg_content,$platform);
 					}
 					
 				}
@@ -432,6 +440,7 @@ class JobinfoController extends Controller{
 				}else {
 					$result = $employ->addEmploy($_POST['title'], addslashes($_POST['content']), $_POST['fileid'], $_POST['filetitle']);
 				}
+                //var_dump($result);
 				if($result > 0 ){
 					$this->view->result = $this->_lang->tianjiachenggong;
 				}else{
@@ -443,10 +452,16 @@ class JobinfoController extends Controller{
 					if ($tokenList){
 						for ($i = 0; $i < count($tokenList); $i++){
 							if ($tokenList[$i]['fu_token']){
-								$url = $this->getRequest()->hostUrl."/clientapi.php/student/getpolicyinfodetail/id/".$result;
-								$this->getApp()->getPush()->pushMsg($tokenList[$i]['fu_token'], $_POST['title'],"有新的就业政策信息", "5", $url);
+//								$url = $this->getRequest()->hostUrl."/clientapi.php/student/getpolicyinfodetail/id/".$result;
+//								$this->getApp()->getPush()->pushMsg($tokenList[$i]['fu_token'], $_POST['title'],"有新的就业政策信息", "5", $url);
 							}
 						}
+                        $platform = 'android,ios'; // 接受此信息的系统
+                        $msg_content = json_encode(array('n_builder_id'=>0,'n_title'=>'消息提醒', 'n_content'=>"有新的就业政策信息",'n_extras'=>array('type'=>0,'if_url'=>0,'msg_type'=>2,'msg_id'=>$result)));
+                        //var_dump($msg_content);
+                        $j=new jpush();
+                        //$j->send(18,3,$company_id,1,$msg_content,$platform);
+                        $j->send(18,4,"",1,$msg_content,$platform);
 					}
 					
 				}

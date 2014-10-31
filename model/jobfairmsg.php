@@ -453,15 +453,20 @@ class jobfairmsg extends Model{
     /**
      * APP获取招聘信息赫建武　
      **/
-    public function getappzphinfo($num,$state){
+    public function getappzphinfo($num,$state,$login_type){
         $sql = "SELECT `jobfairmsg`.*,`picture`.*
 					FROM `jobfairmsg` LEFT JOIN `picture`
 					ON `jobfairmsg`.`pic_id` = `picture`.`pic_id`";
+        if($login_type==1){
+            $filter = "WHERE  jm_isopen=1  ";
+        }else{
+            $filter = " ";
+        }
         if($state!==null){
-            $where = " WHERE `jobfairmsg`.`jm_veri` = ".$state;
+            $where = " AND `jobfairmsg`.`jm_veri` = ".$state;
         }
         $order = " ORDER BY  `jobfairmsg`.`jm_isup` DESC , `jobfairmsg`.`jm_date` DESC Limit ".$num.",10";
-        $sql=$sql.$where.$order;
+        $sql=$sql.$filter.$where.$order;
         return $this->fetchAll($sql);
     }
 

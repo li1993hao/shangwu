@@ -132,9 +132,11 @@ class AccountController extends Controller {
         $state=1;
         $rit_id=1;
         $num = $this->getRequest ()->get ( "num" );
+        /** @var 0表示登陆  1表示游客  没登陆 $login_type */
+        $login_type=$this->getRequest ()->get ( "login_type" );
         $msg = new corpinternmsg();
         $collect=new collect();
-        $zp_info=$msg->getappfrontmsg($num,$state,$rit_id);
+        $zp_info=$msg->getappfrontmsg($num,$state,$rit_id,$login_type);
         if($zp_info){
             for($i=0;$i<count($zp_info);$i++){
                 $data[$i]["cim_id"]=$zp_info[$i]["cim_id"];
@@ -168,9 +170,11 @@ class AccountController extends Controller {
         $state=1;
         $rit_id=2;
         $num = $this->getRequest ()->get ( "num" );
+        /** @var 0表示登陆  1表示游客  没登陆 $login_type */
+        $login_type=$this->getRequest ()->get ( "login_type" );
         $msg = new corpinternmsg();
         $collect=new collect();
-        $zp_info=$msg->getappfrontmsg($num,$state,$rit_id);
+        $zp_info=$msg->getappfrontmsg($num,$state,$rit_id,$login_type);
         if($zp_info){
             for($i=0;$i<count($zp_info);$i++){
                 $data[$i]["cim_id"]=$zp_info[$i]["cim_id"];
@@ -202,9 +206,11 @@ class AccountController extends Controller {
     public function Zphinfo(){
         $state=1;
         $num = $this->getRequest ()->get ( "num" );
+        /** @var 0表示登陆  1表示游客  没登陆 $login_type */
+        $login_type=$this->getRequest ()->get ( "login_type" );
         $jobfair=new jobfairmsg();
         $collect=new collect();
-        $zph_info=$jobfair->getappzphinfo($num,$state);
+        $zph_info=$jobfair->getappzphinfo($num,$state,$login_type);
         if($zph_info){
             for($i=0;$i<count($zph_info);$i++){
                 $data[$i]["jm_id"]=$zph_info[$i]["jm_id"];
@@ -323,7 +329,7 @@ class AccountController extends Controller {
         $this->view->appdisplay ( "json" );
     }
     /**
-        * 获取单个招聘,实习,招聘会,就业政策 详细信息   基层就业
+        * 获取单个招聘,实习,招聘会,就业政策 详细信息   基层就业    12  创业申请
     */
     public function Zponeinfo(){
         /** userId  游客为0   */
@@ -395,7 +401,8 @@ class AccountController extends Controller {
         </html>
         ";
         }else{
-            echo "
+            if($zp_content[file_name]){
+                echo "
 
         <html>
         <head>
@@ -413,9 +420,9 @@ class AccountController extends Controller {
             <div style='text-align: center;padding-top: 15px;font-size: 24px'>$zp_content[title]  </div>
             <div style='text-align: center;margin-top: 10px;font-size: 8px'><span style='text-decoration:none'>发布时间：$zp_content[fb_date]</span><span style='margin-left: 40px;text-decoration:none'>浏览量：$zp_content[read_num]</span></div>
         ";
-            echo ($zp_content[pic_link]?$div_str1:"");
-            echo ($office_arr?$div_str:"");
-            echo "
+                echo ($zp_content[pic_link]?$div_str1:"");
+                echo ($office_arr?$div_str:"");
+                echo "
             <div style='width: 100%' >
                 <div style='line-height:31px;margin: 0 auto;width:98%;margin-left: 15px;font-size: 16px;margin-top: 18px'>
                     $zp_content[content]
@@ -424,9 +431,10 @@ class AccountController extends Controller {
                     <span><strong>相关附件：</strong></span><span style='margin-left: 10px;'><a href='$file_link' style='color: red;text-decoration: none'>
                     ";
 
-            echo           $zp_content[file_name]?$zp_content[file_name]:'暂无附件';
-            echo "
-                    </a></span>
+                echo           $zp_content[file_name];
+                echo "
+                        </a>
+                    </span>
                 </div>
             </div>
 
@@ -434,6 +442,49 @@ class AccountController extends Controller {
         </body>
         </html>
         ";
+            }else{
+                echo "
+
+        <html>
+        <head>
+        <style type='text/css' >
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Hiragino Sans GB', 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei', sans-serif;
+        }
+
+        </style>
+        </head>
+        <body style='background-image: url(http://localhost/sw/shangwu/common/upload/images/bg.jpg);width: 98%;height: 100%;'>
+        <div style='width: 98%;height: 100%;'>
+            <div style='text-align: center;padding-top: 15px;font-size: 24px'>$zp_content[title]  </div>
+            <div style='text-align: center;margin-top: 10px;font-size: 8px'><span style='text-decoration:none'>发布时间：$zp_content[fb_date]</span><span style='margin-left: 40px;text-decoration:none'>浏览量：$zp_content[read_num]</span></div>
+        ";
+                echo ($zp_content[pic_link]?$div_str1:"");
+                echo ($office_arr?$div_str:"");
+                echo "
+            <div style='width: 100%' >
+                <div style='line-height:31px;margin: 0 auto;width:98%;margin-left: 15px;font-size: 16px;margin-top: 18px'>
+                    $zp_content[content]
+                </div>
+                <div style='margin-top: 40px;margin-left: 15px'>
+                    <span><strong>相关附件：</strong></span><span style='margin-left: 10px;'>
+                    ";
+
+                echo           "暂无附件";
+                echo "
+
+                    </span>
+                </div>
+            </div>
+
+        </div>
+        </body>
+        </html>
+        ";
+            }
+
         }
 
 
@@ -754,7 +805,7 @@ class AccountController extends Controller {
 <body style='background-image: url(http://localhost/xiandai/common/upload/images/bg.jpg);width: 98%;height: 100%;'>
 <div style='width: 98%;height: 100%;'>
     <div style='text-align: center;padding-top: 15px;font-size: 24px'>现代职业技术学院招聘指南  </div>
-    <div style='text-align: center;margin-top: 10px;font-size: 8px'><span style='text-decoration:none'>修改时间：$ci_info[ci_modify]</span><span style='margin-left: 40px;text-decoration:none'>浏览次数：$ci_info[ci_browse]</span><span style='margin-left: 40px;text-decoration:none'>分享次数：$ci_info[ci_share]</span></div>
+    <div style='text-align: center;margin-top: 10px;font-size: 8px'><span style='text-decoration:none'>修改时间：$ci_info[ci_modify]</span><span style='margin-left: 25px;text-decoration:none'>浏览次数：$ci_info[ci_browse]</span><span style='margin-left: 30px;text-decoration:none'>分享次数：$ci_info[ci_share]</span></div>
     <div style='width: 100%' >
         <div style='line-height:31px;margin: 0 auto;width:98%;margin-left: 15px;font-size: 16px;margin-top: 18px'>
             $ci_info[ci_content]

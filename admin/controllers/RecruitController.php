@@ -257,7 +257,7 @@ class RecruitController extends Controller {
 						}
 					}
                     $platform = 'android,ios'; // 接受此信息的系统
-                    $msg_content = json_encode(array('n_builder_id'=>0,'n_title'=>'消息提醒', 'n_content'=>$_POST['name']."此企业招聘信息有修改",'n_extras'=>array('type'=>0,'if_url'=>0,'msg_type'=>1,'msg_id'=>$result)));
+                    $msg_content = json_encode(array('n_builder_id'=>0,'n_title'=>'消息提醒', 'n_content'=>$_POST['name']."此企业招聘信息有修改",'n_extras'=>array('type'=>0,'if_url'=>0,'msg_type'=>1,'msg_id'=>$id)));
                     //var_dump($msg_content);
                     $j=new jpush();
                     //$j->send(18,3,$company_id,1,$msg_content,$platform);
@@ -328,6 +328,7 @@ class RecruitController extends Controller {
 			$result=$internmsg->addmsg( $_POST['name'], 2,$_POST['cttype'], $_POST['prov'], $_POST['addr'], $_POST['contact'], $_POST['tel'], $_POST['email'], 
 					$_POST['fax'], $_POST['web'], $userinfo['user_id'], $_POST['src'], $content, $news, $notice,$_POST['filetitle'],$_POST['fileid'],0,0,$_POST['isopen']);
 			//print_r($_POST);
+             // var_dump($result);
 			if($result>0){
 				$this->view->result = $this->_lang->tianjiachenggong;
 				$officelist = explode("**",$_POST['officeidlist']);
@@ -366,7 +367,7 @@ class RecruitController extends Controller {
 						}
 					}
                     $platform = 'android,ios'; // 接受此信息的系统
-                    $msg_content = json_encode(array('n_builder_id'=>0,'n_title'=>'消息提醒', 'n_content'=>"有新的实习信息",'n_extras'=>array('type'=>0,'if_url'=>0,'msg_type'=>2,'msg_id'=>$result)));
+                    $msg_content = json_encode(array('n_builder_id'=>0,'n_title'=>'消息提醒', 'n_content'=>"有新的基层招聘信息",'n_extras'=>array('type'=>0,'if_url'=>0,'msg_type'=>1,'msg_id'=>$result)));
                     //var_dump($msg_content);
                     $j=new jpush();
                     //$j->send(18,3,$company_id,1,$msg_content,$platform);
@@ -453,12 +454,12 @@ class RecruitController extends Controller {
 					if ($tokenList){
 						for ($i = 0; $i < count($tokenList); $i++){
 							if ($tokenList[$i]['fu_token']){
-								$url = $this->getRequest()->hostUrl."/clientapi.php/student/getrecruinfodetail/id/".$id;
-								$this->getApp()->getPush()->pushMsg($tokenList[$i]['fu_token'], $_POST['name'],"此实习信息有修改", "3", $url);
+//								$url = $this->getRequest()->hostUrl."/clientapi.php/student/getrecruinfodetail/id/".$id;
+//								$this->getApp()->getPush()->pushMsg($tokenList[$i]['fu_token'], $_POST['name'],"此实习信息有修改", "3", $url);
 							}
 						}
                         $platform = 'android,ios'; // 接受此信息的系统
-                        $msg_content = json_encode(array('n_builder_id'=>0,'n_title'=>'消息提醒', 'n_content'=>$_POST['name']."此企业招聘信息有修改",'n_extras'=>array('type'=>0,'if_url'=>0,'msg_type'=>2,'msg_id'=>$result)));
+                        $msg_content = json_encode(array('n_builder_id'=>0,'n_title'=>'消息提醒', 'n_content'=>$_POST['name']."此基层招聘信息有修改",'n_extras'=>array('type'=>0,'if_url'=>0,'msg_type'=>1,'msg_id'=>$id)));
                         //var_dump($msg_content);
                         $j=new jpush();
                         //$j->send(18,3,$company_id,1,$msg_content,$platform);

@@ -752,9 +752,14 @@ class corpinternmsg extends Model {
 
     /** APP获取招聘信息赫建武 */
     // 获取前台招聘信息
-    public function getappfrontmsg($num = 0, $state = NULL,$rit_id = 1) {
+    public function getappfrontmsg($num = 0, $state = NULL,$rit_id = 1,$login_type) {
         $select = "SELECT `corpinternmsg`.* FROM `corpinternmsg` ";
-        $filter = "WHERE `corpinternmsg`.`rit_id` = '".$rit_id."' ";
+        if($login_type==1){
+            $filter = "WHERE `corpinternmsg`.`rit_id` = '".$rit_id."' AND cim_isopen=1  ";
+        }else{
+            $filter = "WHERE `corpinternmsg`.`rit_id` = '".$rit_id."'  ";
+        }
+
         if ($state){
             $filter .="AND `corpinternmsg`.`cim_veri` = '".$state."' ";
         }
@@ -762,6 +767,7 @@ class corpinternmsg extends Model {
         $limit = "LIMIT " . $num . ",10 ";
         //echo $sql;
         $sql = $select.$filter.$order.$limit;
+        //var_dump($sql);
         return $this->fetchAll ( $sql );
     }
     /**  获取单条招聘信息内容*/
@@ -855,7 +861,7 @@ class corpinternmsg extends Model {
             $sql="SELECT cim_id info_id,cim_name info_name,cim_content info_content,cim_read info_read,cim_good info_good,cim_date info_date FROM corpinternmsg WHERE  `cim_date` >  '".$end_time."' AND  `cim_date` <  '".$start_time."' AND `rit_id`='".$type_num."' order by cim_read desc limit $num,10";
         }elseif($type_num==0){
             $sql="SELECT jm_id info_id,jm_name info_name,jm_addr info_content,jm_read info_read,jm_good info_good,jm_opentime info_date FROM jobfairmsg WHERE  `jm_date` >  '".$end_time."' AND  `jm_date` <  '".$start_time."'  order by jm_read desc limit $num,10";
-           // var_dump($sql);
+            // var_dump($sql);
         }
         return $this->fetchAll($sql);
     }
