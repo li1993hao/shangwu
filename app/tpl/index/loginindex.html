@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta id="screen-view" name="viewport" content="width=device-width"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link type="text/css" rel="stylesheet" href="<{$web_url}>/common/app/css/reset.css?v=2.0"/>
+    <link type="text/css" rel="stylesheet" href="<{$web_url}>/common/app/css/headAndfoot.css"/>
+    <title>登录</title>
+    <script type="text/javascript" src="<{$web_url}>/common/libs/jquery.min.js"></script>
+    <script type="text/javascript" src="<{$web_url}>/common/app/js/header.js"></script>
+    <script type="text/javascript">
+        var web_url = "<{$web_url}>";
+    </script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="<{$web_url}>/common/app/js/DOMAssistantCompressed-2.7.4.js"></script>
+    <script type="text/javascript" src="<{$web_url}>/common/app/js/ie-css3.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        #middle {
+            width: 100%;
+            height: 700px;
+            background-color: #ffffff;
+        }
+
+        #middle_left img {
+            margin-left: 197px;
+            margin-top: 50px;
+            float: left
+        }
+
+        #middle_right {
+            float: left;
+            margin-top: 133px;
+        }
+
+        .input-title {
+            display: inline-block;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        .input-content {
+            border: 1px solid #000000;
+            width: 287px;
+            height: 27px;
+        }
+
+        #login_submit {
+            width: 148px;
+            height: 49px;
+            background-color: #3499da;
+            color: #ffffff;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        #login_submit:hover{
+            background-color: #22618c;
+        }
+
+        .error {
+            font-size: 20px;
+        }
+        .textlabel{
+            font-size: 18px;
+        }
+        #form_table td{
+            padding:10px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<{include file='header.htm'}>
+<div id="middle">
+    <div id="middle_left">
+        <img src="<{$web_url}>/common/app/images/index/login_person.png"/>
+    </div>
+    <div id="middle_right">
+        <table id="form_table">
+            <tr>
+                <td></td><td><p id="error" class="error"></p></td>
+            </tr>
+            <tr>
+                <td class="textlabel"><span>用户名：</span></td><td><input name="user_name" id="name" class="input-content" type="text"/>
+                </td>
+
+            </tr>
+            <tr><td class="textlabel"><span>密码：</span></td><td><input name="user_pswd" id="pswd" class="input-content"
+                                                                      type="password"/>
+            </td></tr>
+            <tr>
+                <td></td>
+                <td><input id="login_submit" type="button" onclick="login()" value="登录"/><br>
+                </td>
+            </tr>
+        </table>
+
+
+    </div>
+
+</div>
+
+<{include file='footer.htm'}>
+<script type="text/javascript">
+    function login() {
+        $("login_erro").empty();
+        var name = $("#name").val();
+
+        var pswd = $("#pswd").val();
+
+        if (name == "") {
+            shake($("#name"));
+            return;
+        }
+
+        if (pswd == "") {
+            shake($("#pswd"));
+            return;
+        }
+        $.ajax({
+            url: web_url + "/index.php/index/login",
+            data: {"user_name": name, "user_pswd": pswd},
+            dataType: "json",
+            success: function (data) {
+                if (data.json.state == 0) {
+                    shake($("#error"));
+                    $("#error").html(data.json.msg);
+                } else {
+                    location.href = web_url + "/index.php/";
+                }
+
+
+            },
+            async: false
+        });
+    }
+</script>
+<link type="text/css" rel="stylesheet" href="<{$web_url}>/common/app/css/am.min.css"/>
+<script type="text/javascript" src="<{$web_url}>/common/app/js/index/index.js"></script>
+</body>
+</html>

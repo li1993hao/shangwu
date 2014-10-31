@@ -1,0 +1,530 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta id="screen-view" name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link type="text/css" rel="stylesheet" href="<{$web_url}>/common/app/css/reset.css?v=2.0" />
+    <link type="text/css" rel="stylesheet" href="<{$web_url}>/common/app/css/headAndfoot.css" />
+    <link type="text/css" rel="stylesheet" href="<{$web_url}>/common/app/css/corpinternmsg/calendar.css" />
+    <link rel='stylesheet' type='text/css' href='<{$web_url}>/common/libs/fullcalendar/fullcalendar.css' />
+    <link rel='stylesheet' type='text/css' href='<{$web_url}>/common/libs/fullcalendar/fullcalendar.print.css' media='print' />
+    <title>个人中心-收藏的招聘会</title>
+    <script type="text/javascript">
+        var web_url = "<{$web_url}>";
+    </script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="<{$web_url}>/common/app/js/DOMAssistantCompressed-2.7.4.js"></script>
+    <script type="text/javascript" src="<{$web_url}>/common/app/js/ie-css3.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        .nav dt {
+            float: left;
+            margin-top: 5px;
+        }
+        .nav dt:first-child {
+            margin-left: 30px;
+        }
+        .nav dt a {
+            color: white;
+        }
+
+        #middle_left, #middle_right{
+            float: left;
+        }
+
+        #middle_left{
+            width: 250px;
+            height: 400px;
+            background-color: #ecf0f1;
+            margin-right: 10px;
+        }
+
+        #middle_right{
+            width: 671px;
+        }
+
+        #middle_main{
+            margin-top: 10px;
+        }
+
+
+        #myinfo_left{
+            width:647px;
+            height:auto;
+            float:right;
+            display:inline;
+            margin-top:20px;
+        }
+
+        #myinfo_title{
+            text-align:left;
+            width:647px;
+            /*background-color:blue;*/
+            line-height:30px;
+            color:#7bac87;
+            font-size:22px;
+            font-weight:500;
+            display:block;
+        }
+
+        /*#middle-other{width:405px;height:40px;float:left;font-size:0.9em;margin-top:10px;}*/
+        #middle-other{width:671px;float:left;font-size:0.9em;margin-top:23px;margin-bottom:10px;margin-left:26px;background: #34495e;}
+        .other-option-item{
+            display: block;
+            height: 20px;
+            width:130px;
+            font-size: 15px;
+            color: #ffffff;
+            text-decoration: none;
+            float: left;
+            padding:10px 10px;
+            text-align:center;
+        }
+
+        .menu-list-item-other-selected{background:url(../../common/app/images/index/bottom_bg.png)  no-repeat;
+            background-color:  #5d6d7d;
+            background-position:center 30px;height: 20px;
+        }
+        .other-menu-list{float:left;}
+        .other-option-content{float:left;}
+        #mytable{width:667px; margin-top:10px;}
+        #info th {
+            border-right: 1px solid #D9D9D9;
+            border-bottom: 1px solid #D9D9D9;
+            border-top: 1px solid #D9D9D9;
+            letter-spacing: 2px;
+            text-align: center;
+            padding: 6px 6px 6px 12px;
+            background: #3598db;
+            color:#fff;
+        }
+        #info td {
+            border-right: 1px solid #D9D9D9;
+            border-bottom: 1px solid #D9D9D9;
+            background: #fff;
+            font-size:12px;
+            padding: 6px 6px 6px 8px;
+
+        }
+        #info th.spec {
+            border-left: 1px solid #D9D9D9;
+            border-top: 0;
+            background: #fff;
+        }
+
+        .select-option{
+            float:left;
+            width:100px;
+            color:#446976;
+            font-size:15px;
+        }
+        #down{
+            height:30px;
+            width:600px;
+            font-size:14px;
+            color:#707070;
+        }
+        .op-del, #all-choose,#delete-some{text-align:center; margin-left:5px;float:left; background:#3598db;}
+        a.op-del, #all-choose,#delete-some{
+            color: #ffffff;
+            padding: 0 10px;
+        }
+        #middle_big{min-height: 700px; width: 1006px;background-color: #F5F5F5;padding-top: 23px;margin: 0 auto; border: 3px solid #ebebeb}
+        #student_menu{float: left;height: 565px;background-color: #ECECEC;margin-left: 12px; }
+        #middle_right{float: left;}
+        #middle_right_top{margin-left: 10px;font-size: 20px;color: #416f86;width: 660px;height: 30px; }
+        #middle_right_top_buttom{margin-left: 10px;;width: 660px;height: 6px;background-image: url("<{$web_url}>/common/app/images/student/xian.jpg"); }
+        #middle_right_top p{float: left}
+        #nowLoaction{font-size: 14px;margin-left: 133px;margin-top: 7px;}
+        #nowLoaction a{display: inline-block;text-decoration: none;font-size: 14px;color: #416f86}
+        #gerenzhongxin{padding-left: 26px;}
+        #middle_right_top_english{padding-left: 10px;font-size: 14px;margin-top: 7px;}
+        #middle_right_middle{width: 678px;height: 184px;}
+        #photo{width: 109px;height: 153px;background-color: #ff0000;margin-left: 54px;margin-top:33px;float:left}
+        #detail{margin-left: 20px;float:left;margin-top: 76px;}
+        #detail p{font-size: 15px;color: #808080}
+        #middle_right_bottom{width:630px;height: 62px;margin-top: 32px;margin-left: 53px;font-size: 15px;color: #808080}
+        #myinfo_left{
+            width:645px;
+            height:auto;
+            float:right;
+            display:inline;
+            margin-top:0px;
+        }
+        #myinfo_title{
+            text-align:left;
+            width:723px;
+            /*background-color:blue;*/
+            line-height:30px;
+            color:#7bac87;
+            font-size:22px;
+            font-weight:500;
+            display:block;
+        }
+
+    </style>
+    <script>
+        $(function(){
+            var canlendar = new calendar_view("#myinfo_left","<{$web_url}>");
+            canlendar.generateCalendar();
+
+            $(".event-info").mouseleave(function(event){
+
+                //fc-event-inner
+                if($(event.relatedTarget).attr("class") != "fc-event-inner fc-event-skin" && $(event.relatedTarget).attr("class") != "fc-event-title"){
+                    $(".event-info").hide("fast");
+                }
+
+            });
+        });
+
+        function calendar_view(containerid,basePath) {
+            var container = $(containerid);
+            this.generateCalendar = function() {
+
+                var viewsets = {
+                    defaultView : 'month',
+                    header : {
+
+                        left : 'month,agendaWeek,agendaDay prevYear,nextYear',
+                        center : 'title',
+                        right : ' prev,next today'
+                    },
+                    weekends : true,
+                    weekMode : 'liquid',
+                    editable : false,
+
+                    disableResizing : false,
+                    // event ajax
+                    lazyFetching : true,
+                    startParam : 'start',
+                    endParam : 'end',
+
+                    isRTL : false,
+                    firstDay : 1,
+                    monthNames : [ '一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月',
+                        '九月', '十月', '十一月', '十二月' ],
+                    monthNamesShort : [ '一月', '二月', '三月', '四月', '五月', '六月', '七月',
+                        '八月', '九月', '十月', '十一月', '十二月' ],
+                    dayNames : [ '周日', '周一', '周二', '周三', '周四', '周五', '周六'  ],
+                    dayNamesShort : [ '周日','周一', '周二', '周三', '周四', '周五', '周六'],
+                    buttonText : {
+                        prev : '&#9668;',
+                        next : '&#9658;',
+                        prevYear : '&lt;&lt;上一年',
+                        nextYear : '下一年&gt;&gt;',
+                        today : '今天',
+                        month : '月',
+                        week : '周',
+                        day : '天'
+
+                    },
+                    agenda: 'HH:mm{ - HH:mm}',
+                    '': 'HH:mm',
+                    timeFormat: 'HH:mm',
+                    allDayText:"全天",
+                    axisFormat: 'HH:mm',
+                    slotMinutes:60,
+                    firstHour:6,
+                    slotEventOverlap:false,
+
+                    dayClick: function(date, allDay, jsEvent, view) {
+
+                        // change the day's background color just for fun
+                        //$(this).css('background-color', 'red');
+                        container.fullCalendar( 'changeView', "agendaDay" );
+                        container.fullCalendar( 'gotoDate', date.getFullYear(),date.getMonth(),date.getDate() );
+
+                    },
+                    eventMouseover:function( event, jsEvent, view ){
+                        $(".event-info").html("<a href=\""+basePath+"/index.php/jobfairmsg/calendardetail/id/"+event.id+"\">"+event.title+"</a><a href=\""+basePath+"/index.php/student/canceljobfair/infoid/"+event.id+"\">&nbsp;【退出】</a><br/>地点："+event.addr+"<br/>开始时间："+event.start.getFullYear()+"-"+(event.start.getMonth()+1)+"-"+event.start.getDate()+"&nbsp;"+event.start.toLocaleTimeString() );
+                        //alert("jsEvent"+jsEvent.pageX+"..."+jsEvent.pageY);
+                        $(".event-info").css("left",$(jsEvent.target).offset().left+"px");
+                        $(".event-info").css("top",$(jsEvent.target).offset().top+$(jsEvent.target).height()+"px");
+                        //$(".event-info").clearQueue();
+                        $(".event-info").stop(true,true);
+                        $(".event-info").show("fast");
+                        //alert(event+"...."+jsEvent+"...."+view);
+
+                    },
+                    eventMouseout:function( event, jsEvent, view ){
+
+                        if($(jsEvent.relatedTarget).attr("class")!="event-info"){
+                            $(".event-info").hide("fast");
+                        }
+
+
+                    },
+                    events : function(start, end, callback) {
+
+                        var events = [];
+                        var goUrl = basePath+"/index.php/student/getjsondata";
+                        //alert(start.getTime());
+                        $.ajax({
+                            type: "POST",
+                            data:"start="+start.getTime()+"&end="+end.getTime()+"",
+                            url: goUrl,
+                            success: function(msg){
+                                //alert( msg );
+                                var myObject = eval('(' + msg + ')');
+                                //jm_opentimestamp":"1380816000
+
+                                $.each(myObject, function(idx, iteminfo) {
+
+                                    events.push({
+                                        id:iteminfo.jm_id,
+                                        title : iteminfo.jm_name,
+                                        start :new Date(iteminfo.jm_opentimestamp*1000),
+                                        allDay: false,
+                                        addr:iteminfo.jm_addr,
+                                        url : basePath+"/index.php/jobfairmsg/calendardetail/id/"+iteminfo.jm_id,
+                                        color: '#99CC33'
+                                        // will be parsed
+                                    });
+                                });
+                                callback(events);
+                            },
+                            error:function(msg){
+                                alert("ss");
+                            }
+                        });
+
+                    },
+                    eventColor: '#378006'
+                };
+                container.fullCalendar(viewsets);
+            };// generateCalendar
+
+            this.refetchEvents = function() {
+                container.fullCalendar('refetchEvents');
+            };
+
+        };// function calendar_view
+
+
+        function ShowObjProperty ( obj ) {
+            // 用来保存所有的属性名称和值
+            var props = "" ;
+            // 开始遍历
+            for ( var p in obj ){
+                // 方法
+                if ( typeof ( obj [p]) == "function" ){
+                    //obj [p]() ;
+                    props += p + " = function \t " ;
+                } else {
+                    // p 为属性名称，obj[p]为对应属性的值
+                    props += p + " = " + obj [ p ] + " \t " ;
+                    //props += p + "  \t " ;
+                }
+            }
+            // 最后显示所有的属性
+            alert ( props ) ;
+        }
+    </script>
+
+
+</head>
+
+<body>
+
+<{include file='header.htm'}>
+
+<div id="middle_big">
+    <{assign var=pageid value=2}>
+    <div >
+        <div >
+            <{include file='student/student_menu.htm'}>
+        </div>
+    </div>
+    <!-- 中间右部-->
+    <div id="middle_right">
+        <div id="middle_right_top">
+            <p id="gerenzhongxin">个人中心</p>
+            <p id="middle_right_top_english">Person Center</p>
+            <p id="nowLoaction"> 您现在所在的位置：<a href="<{$web_url}>/index.php/index/index"> 首页></a><a href=""> 个人中心</a>>我的招聘</p>
+        </div>
+        <div id="middle_right_top_buttom">
+
+        </div>
+
+        <div id="middle">
+            <div id="middle-other">
+                <div class="other-option-content">
+                    <a class="other-option-item menu-list-item-other-selected" href="<{$web_url}>/index.php/student/favorjobfair">收藏的招聘会</a>
+                </div>
+                <div class="other-option-content">
+                    <a class="other-option-item menu-list-item-other" href="<{$web_url}>/index.php/student/favorjobinfo">收藏的招聘信息</a>
+                </div>
+
+            </div>
+            <div id="myinfo_left">
+            </div>
+            <div class="event-info">
+            </div>
+        </div>
+    </div>
+</div>
+    <{include file='footer.htm'}>
+    <script type="text/javascript" src="<{$web_url}>/common/libs/jquery.min.js"></script>
+    <script type="text/javascript" src="<{$web_url}>/common/app/js/header.js"></script>
+    <script type='text/javascript' src='<{$web_url}>/common/libs/fullcalendar/fullcalendar.min.js'></script>
+<script type="text/javascript">
+    $(function(){
+        var canlendar = new calendar_view("#myinfo_left","<{$web_url}>");
+        canlendar.generateCalendar();
+
+        $(".event-info").mouseleave(function(event){
+
+            //fc-event-inner
+            if($(event.relatedTarget).attr("class") != "fc-event-inner fc-event-skin" && $(event.relatedTarget).attr("class") != "fc-event-title"){
+                $(".event-info").hide("fast");
+            }
+
+        });
+    });
+
+    function calendar_view(containerid,basePath) {
+        var container = $(containerid);
+        this.generateCalendar = function() {
+
+            var viewsets = {
+                defaultView : 'month',
+                header : {
+
+                    left : 'month,agendaWeek,agendaDay prevYear,nextYear',
+                    center : 'title',
+                    right : ' prev,next today'
+                },
+                weekends : true,
+                weekMode : 'liquid',
+                editable : false,
+
+                disableResizing : false,
+                // event ajax
+                lazyFetching : true,
+                startParam : 'start',
+                endParam : 'end',
+
+                isRTL : false,
+                firstDay : 1,
+                monthNames : [ '一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月',
+                    '九月', '十月', '十一月', '十二月' ],
+                monthNamesShort : [ '一月', '二月', '三月', '四月', '五月', '六月', '七月',
+                    '八月', '九月', '十月', '十一月', '十二月' ],
+                dayNames : [ '周日', '周一', '周二', '周三', '周四', '周五', '周六'  ],
+                dayNamesShort : [ '周日','周一', '周二', '周三', '周四', '周五', '周六'],
+                buttonText : {
+                    prev : '&#9668;',
+                    next : '&#9658;',
+                    prevYear : '&lt;&lt;上一年',
+                    nextYear : '下一年&gt;&gt;',
+                    today : '今天',
+                    month : '月',
+                    week : '周',
+                    day : '天'
+
+                },
+                agenda: 'HH:mm{ - HH:mm}',
+                '': 'HH:mm',
+                timeFormat: 'HH:mm',
+                allDayText:"全天",
+                axisFormat: 'HH:mm',
+                slotMinutes:60,
+                firstHour:6,
+                slotEventOverlap:false,
+
+                dayClick: function(date, allDay, jsEvent, view) {
+
+                    // change the day's background color just for fun
+                    //$(this).css('background-color', 'red');
+                    container.fullCalendar( 'changeView', "agendaDay" );
+                    container.fullCalendar( 'gotoDate', date.getFullYear(),date.getMonth(),date.getDate() );
+
+                },
+                eventMouseover:function( event, jsEvent, view ){
+                    $(".event-info").html("<a href=\""+basePath+"/index.php/jobfairmsg/calendardetail/id/"+event.id+"\">"+event.title+"</a><a href=\""+basePath+"/index.php/student/canceljobfair/infoid/"+event.id+"\">&nbsp;【退出】</a><br/>地点："+event.addr+"<br/>开始时间："+event.start.getFullYear()+"-"+(event.start.getMonth()+1)+"-"+event.start.getDate()+"&nbsp;"+event.start.toLocaleTimeString() );
+                    //alert("jsEvent"+jsEvent.pageX+"..."+jsEvent.pageY);
+                    $(".event-info").css("left",$(jsEvent.target).offset().left+"px");
+                    $(".event-info").css("top",$(jsEvent.target).offset().top+$(jsEvent.target).height()+"px");
+                    //$(".event-info").clearQueue();
+                    $(".event-info").stop(true,true);
+                    $(".event-info").show("fast");
+                    //alert(event+"...."+jsEvent+"...."+view);
+
+                },
+                eventMouseout:function( event, jsEvent, view ){
+
+                    if($(jsEvent.relatedTarget).attr("class")!="event-info"){
+                        $(".event-info").hide("fast");
+                    }
+
+
+                },
+                events : function(start, end, callback) {
+
+                    var events = [];
+                    var goUrl = basePath+"/index.php/student/getjsondata";
+                    //alert(start.getTime());
+                    $.ajax({
+                        type: "POST",
+                        data:"start="+start.getTime()+"&end="+end.getTime()+"",
+                        url: goUrl,
+                        success: function(msg){
+                            //alert( msg );
+                            var myObject = eval('(' + msg + ')');
+                            //jm_opentimestamp":"1380816000
+
+                            $.each(myObject, function(idx, iteminfo) {
+
+                                events.push({
+                                    id:iteminfo.jm_id,
+                                    title : iteminfo.jm_name,
+                                    start :new Date(iteminfo.jm_opentimestamp*1000),
+                                    allDay: false,
+                                    addr:iteminfo.jm_addr,
+                                    url : basePath+"/index.php/jobfairmsg/calendardetail/id/"+iteminfo.jm_id,
+                                    color: '#99CC33'
+                                    // will be parsed
+                                });
+                            });
+                            callback(events);
+                        },
+                        error:function(msg){
+                            alert("ss");
+                        }
+                    });
+
+                },
+                eventColor: '#378006'
+            };
+            container.fullCalendar(viewsets);
+        };// generateCalendar
+
+        this.refetchEvents = function() {
+            container.fullCalendar('refetchEvents');
+        };
+
+    };// function calendar_view
+
+
+    function ShowObjProperty ( obj ) {
+        // 用来保存所有的属性名称和值
+        var props = "" ;
+        // 开始遍历
+        for ( var p in obj ){
+            // 方法
+            if ( typeof ( obj [p]) == "function" ){
+                //obj [p]() ;
+                props += p + " = function \t " ;
+            } else {
+                // p 为属性名称，obj[p]为对应属性的值
+                props += p + " = " + obj [ p ] + " \t " ;
+                //props += p + "  \t " ;
+            }
+        }
+        // 最后显示所有的属性
+        alert ( props ) ;
+    }
+</script>
+</body>
+</html>

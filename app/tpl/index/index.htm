@@ -1,0 +1,830 @@
+<!DOCTYPE HTML>
+<html>
+<!-- <![endif]-->
+
+
+<head>
+    <meta id="screen-view" name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link type="text/css" rel="stylesheet" href="<{$web_url}>/common/app/css/reset.css?v=2.0" />
+    <link type="text/css" rel="stylesheet" href="<{$web_url}>/common/app/css/headAndfoot.css" />
+    <link type="text/css" rel="stylesheet" href="<{$web_url}>/common/app/css/index/index.css" />
+
+    <title>天津商务职业学院就业指导中心</title>
+
+    <script type="text/javascript">
+        var web_url = "<{$web_url}>";
+    </script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="<{$web_url}>/common/app/js/DOMAssistantCompressed-2.7.4.js"></script>
+    <script type="text/javascript" src="<{$web_url}>/common/app/js/ie-css3.js"></script>
+    <![endif]-->
+
+
+</head>
+
+<body>
+<{include file='header.htm' }>
+
+<div class="carousel">
+    <div class="carousel_scroll_wrap">
+        <div class="carousel_content">
+            <{section name=recnews loop=$recNews}>
+            <div>
+                <a href="<{$web_url}>/index.php/jobinfo/detail/id/<{$recNews[recnews].ji_id}>">
+                    <img src="<{$web_url}>/common/upload/images/<{$recNews[recnews].pic_link|default:'noimg.jpg'}>"/></a>
+            </div>
+            <{/section}>
+        </div>
+    </div>
+
+    <div class="carousel_info">
+        <{section name=recnews loop=$recNews}>
+        <{if $smarty.section.recnews.index == 0}>
+        <div class="carousel_mid">
+            <div>
+                <a href="<{$web_url}>/index.php/jobinfo/detail/id/<{$recNews[recnews].ji_id}>"><{$recNews[recnews].ji_title}></a>
+            </div>
+        </div>
+        <{else}>
+        <div class="carousel_mid" style="display: none">
+            <div>
+                <a href="<{$web_url}>/index.php/jobinfo/detail/id/<{$recNews[recnews].ji_id}>"><{$recNews[recnews].ji_title}></a>
+            </div>
+        </div>
+        <{if $smarty.section.recnews.last}>
+        <{section name=l loop=$recNews max=1}>
+        <div class="carousel_mid" style="display: none">
+            <div>
+                <a href="<{$web_url}>/index.php/jobinfo/detail/id/<{$recNews[l].ji_id}>"><{$recNews[l].ji_title}></a>
+            </div>
+        </div>
+        <{/section}>
+        <{/if}>
+
+        <{/if}>
+        <{/section}>
+        <div class="carousel_control">
+            <{section name=recnews loop=$recNews}>
+            <{if $smarty.section.recnews.last}>
+            <div class="carousel_point carousel_active_point">
+
+            </div>
+            <{else}>
+            <div class="carousel_point carousel_normal_point">
+
+            </div>
+            <{/if}>
+            <{/section}>
+        </div>
+    </div>
+</div>
+<!-- 招聘日历-->
+<div id="jobCalendar" >
+    <div id="jobCalendar_top">
+        <a href="<{$web_url}>/index.php/Jobfairmsg/calendar"><img style="padding-top: 59px;padding-left: 291px;cursor: pointer" src="<{$web_url}>/common/app/images/index/more.png"/></a>
+    </div>
+
+    <div id="jobCalendar_content">
+        <{section name=n loop=$news.list}>
+        <div class="jobCalendar_content_title">
+
+            <a href="<{$web_url}>/index.php/jobfairmsg/detail/id/<{$news.list[n].jm_id}>"> <{$news.list[n].jm_date}> 第一教学楼     <{$news.list[n].jm_name|truncate:9:'…'}></a>
+
+        </div>
+        <{/section}>
+    </div>
+
+</div>
+<div class="middle">
+
+
+<!--信息展示区-->
+<div class="middle_main clearfix" >
+
+<!--左边-->
+<div class="middle_left">
+<div class="category_info">
+    <div class="category_nav">
+        <ul>
+            <li>
+                <a class="category_nav_active" href="<{$web_url}>/index.php/Corpinternmsg/Corpindex">招聘信息</a>
+            </li>
+            <li>
+                <a class="category_nav_normal" href="<{$web_url}>/index.php/Jobfairmsg">招聘会信息</a>
+            </li>
+            <li>
+                <a class="category_nav_normal" href="<{$web_url}>/index.php/Corpinternmsg/internindex/">基层招聘信息</a>
+            </li>
+            <li>
+                <a class="category_nav_normal" href="javascript:void(0)">一站式信息</a>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="category_list clearfix">
+        <!--招聘信息  ok-->
+        <ul>
+            <div class="more_info1"><a href="<{$web_url}>/index.php/Corpinternmsg/Corpindex">[更多]</a>
+            </div>
+            <{section name=i loop=$corpMsg}>
+            <li>
+                <div>
+                        <{if $corpMsg[i].cim_isup != "" }>
+                    <div class="top">
+                        <a  href="<{$web_url}>/index.php/Corpinternmsg/Corpdetail/id/<{$corpMsg[i].cim_id}>">
+                            <{$corpMsg[i].cim_name|truncate:35: '…':true}>
+                        </a>
+                        </div>
+                        <{else}>
+                    <div class="item">
+                        <a  href="<{$web_url}>/index.php/Corpinternmsg/Corpdetail/id/<{$corpMsg[i].cim_id}>">
+                            <{$corpMsg[i].cim_name|truncate:35: '…':true}>
+                        </a>
+                        </div>
+                        <{/if}>
+
+                                            <span>
+                                                <{$corpMsg[i].cim_date|date_format: "%Y-%m-%d"}>
+                                            </span>
+                </div>
+                <div>
+                    <{$corpMsg[i].cim_content|strip_tags|strip|truncate:110: '…':true|default: "暂无介绍~"}>
+                </div>
+            </li>
+            <{/section}>
+
+        </ul>
+        <!--招聘会信息 0k-->
+        <ul>
+            <div class="more_info1"><a href="<{$web_url}>/index.php/Jobfairmsg">[更多]</a>
+            </div>
+            <{section name=i loop=$jobFairMsg}>
+            <li>
+                <div>
+                        <{if $jobFairMsg[i].jm_isup !=""}>
+                    <div class="top">
+                        <a href="<{$web_url}>/index.php/jobfairmsg/detail/id/<{$jobFairMsg[i].jm_id}>">
+                            <{$jobFairMsg[i].jm_name|truncate:34: '…':true}>
+                        </a>
+                        </div>
+                        <{else}>
+                    <div class="item">
+                        <a href="<{$web_url}>/index.php/jobfairmsg/detail/id/<{$jobFairMsg[i].jm_id}>">
+                            <{$jobFairMsg[i].jm_name|truncate:34: '…':true}>
+                        </a>
+                        </div>
+                        <{/if}>
+
+                                            <span>
+                                                <{$jobFairMsg[i].jm_opentime|date_format: "%Y-%m-%d %H:%M"}>
+                                                    <{getdate format="cnWeek" date=$jobFairMsg[i].jm_opentime }>
+                                            </span>
+                </div>
+                <div>
+                    <{$jobFairMsg[i].jm_addr|truncate:28: '…':true}>
+                </div>
+            </li>
+            <{/section}>
+
+        </ul>
+        <!--基层招聘信息 ok-->
+        <ul>
+            <div class="more_info1"><a href="<{$web_url}>/index.php/Corpinternmsg/internindex/">[更多]</a>
+            </div>
+            <{section name=i loop=$interMsg}>
+            <li>
+                <div>
+                        <{if $interMsg[i].cim_isup != "" }>
+                        <div class="top">
+                        <a href="<{$web_url}>/index.php/Corpinternmsg/interndetail/id/<{$interMsg[i].cim_id}>">
+                            <{$interMsg[i].cim_name|truncate:35: '…':true}>
+                        </a>
+                            </div>
+                        <{else}>
+                    <div class="item">
+                        <a href="<{$web_url}>/index.php/Corpinternmsg/interndetail/id/<{$interMsg[i].cim_id}>">
+                            <{$interMsg[i].cim_name|truncate:35: '…':true}>
+                        </a>
+                    </div>
+                        <{/if}>
+
+                                            <span>
+                                                <{$interMsg[i].cim_date|date_format: "%Y-%m-%d"}>
+                                            </span>
+                </div>
+                <div>
+                    <{$interMsg[i].cim_content|strip_tags|strip|truncate:110: '…':true|default: "暂无介绍~"}>
+                </div>
+            </li>
+            <{/section}>
+
+        </ul>
+        <!--一站式信息-->
+        <ul>
+
+           <iframe id="mframe" style="border: none;width: 100%; height: 478px" onload="iFrameHeight()" src="<{$web_url}>/common/onesite/index.html">
+               </iframe>
+        </ul>
+    </div>
+</div>
+<div class="onsite">
+    <img usemap="#onesite_map" height="131px" width="635px" src="<{$web_url}>/common/app/images/onesite.jpg"/>
+</div>
+<map id="onesite_map" name="onesite_map">
+    <area shape="rect" coords="399,56,515,82" target="_blank" href ="http://tjbys.ncss.org.cn/login" alt="学生登录" />
+    <area shape="rect" coords="524,57,640,82" target="_blank" href ="http://tjbys.ncss.org.cn/rec/login" alt="单位登录" />
+    <area shape="rect" coords="402,98,496,120"  href ="<{$web_url}>/common/onesite/xszd.doc" alt="学生指导手册" />
+    <area shape="rect" coords="523,99,640,117" href ="<{$web_url}>/common/onesite/dwzd.doc" alt="用人单位指导手册" />
+</map>
+<{if $publicitycolumn.stop == 1}>
+<div class="focus_map">
+    <a href="<{$publicitycolumn.pc_url}>" target="_blank"><img height="98px" width="637px" src="<{$web_url}>/common/upload/images/<{$publicitycolumn.pic_link}>"/></a>
+</div>
+<{/if}>
+
+
+
+<div class="category_info2">
+    <div class="category_nav2">
+        <ul>
+            <li>
+                <a class="category_nav2_active" href="<{$web_url}>/index.php/jobinfo/jobPlan">职业生涯规划</a>
+            </li>
+            <li>
+                <a href="<{$web_url}>/index.php/jobinfo/jobGuid">求职指导</a>
+            </li>
+            <li>
+                <a href="<{$web_url}>/index.php/Employmentpolicy/index">就业政策</a>
+            </li>
+            <li>
+                <a href="<{$web_url}>/index.php/Activityjobbulletin/index">工作简报</a>
+            </li>
+            <li>
+                <a href="<{$web_url}>/index.php/west/index">西部就业</a>
+            </li>
+        </ul>
+    </div>
+    <div class="category_list clearfix">
+        <!--职业生涯规划 ok-->
+        <ul>
+            <div class="more_info2"><a href="<{$web_url}>/index.php/jobinfo/jobPlan">[更多]</a>
+            </div>
+            <{section name=n  loop=$jobPlan.list}>
+            <li>
+                <div>
+                    <{if $jobPlan.list[n].ji_isup != "" }>
+                    <div class="top">
+                        <a href="<{$web_url}>/index.php/jobinfo/detail/id/<{$jobPlan.list[n].ji_id}>">
+                            <{$jobPlan.list[n].ji_title|truncate:35: '…':true}>
+                        </a>
+                    </div>
+                    <{else}>
+                    <div class="item">
+                        <a href="<{$web_url}>/index.php/jobinfo/detail/id/<{$jobPlan.list[n].ji_id}>">
+                            <{$jobPlan.list[n].ji_title|truncate:35: '…':true}>
+                        </a>
+                    </div>
+                    <{/if}>
+
+                                            <span>
+                                                <{$jobPlan.list[n].ji_date|date_format:"%Y-%m-%d"}>
+                                            </span>
+                </div>
+                <div>
+                    <{$jobPlan.list[n].ji_content|strip_tags|strip|truncate:110: '…':true}>
+                </div>
+            </li>
+            <{/section}>
+
+        </ul>
+        <!--求职指导-->
+        <ul id="jobGuid">
+            <div class="more_info2"><a href="<{$web_url}>/index.php/jobinfo/jobGuid" style="color: #378ea1">[更多]</a>
+            </div>
+            <!--<{section name=n loop=$jobGuid}>-->
+            <!--<li>-->
+                <!--<div>-->
+                    <!--<div>-->
+                        <!--<{if $jobGuid.list[n].ji_isup != "" }>-->
+                        <!--<a style="color: #ff0000" href="<{$web_url}>/index.php/jobinfo/detail/id/<{$jobGuid.list[n].ji_id}>">-->
+                            <!--[顶]<{$jobGuid.list[n].ji_title}>-->
+                        <!--</a>-->
+                        <!--<{else}>-->
+                        <!--<a href="<{$web_url}>/index.php/jobinfo/detail/id/<{$empStar.list[i].ji_id}>">-->
+                            <!--<{$jobGuid.list[n].ji_title}>-->
+                        <!--</a>-->
+                        <!--<{/if}>-->
+                    <!--</div>-->
+                                            <!--<span>-->
+                                                <!--<{$jobGuid.list[n].ji_date|date_format:"%Y-%m-%d"}>-->
+                                            <!--</span>-->
+                <!--</div>-->
+                <!--<div>-->
+                    <!--<{$jobGuid.list[n].ji_content|strip_tags|strip|truncate:110: '…':true}>-->
+                <!--</div>-->
+            <!--</li>-->
+            <!--<{/section}>-->
+            <div class="jobGuid1">
+                <{section name=n loop=$jobGuid1}>
+                    <{if $smarty.section.n.index==0}>
+                        <{if $jobGuid1[0].pic_link != ""}>
+                        <img src="<{$web_url}>/common/upload/images/<{$jobGuid1[0].pic_link}>"/>
+
+                         <{else}>
+                        <img src="<{$web_url}>/common/app/images/index/morentupian.png"/>
+
+                        <{/if}>
+                        <div class="jobGuidmask"><a style="color: #ffffff"  href="<{$web_url}>/index.php/jobinfo/detail/id/<{$jobGuid1[n].ji_id}>">
+                            <{$jobGuid1[n].ji_title|truncate:13: '…':true}>
+                        </a></div>
+                    <{else}>
+                    <p><a  href="<{$web_url}>/index.php/jobinfo/detail/id/<{$jobGuid1[n].ji_id}>">
+                        <{$jobGuid1[n].ji_title|truncate:13: '…':true}>
+                    </a></p>
+                    <{/if}>
+                <{/section}>
+            </div>
+            <div class="jobGuid2">
+                <{section name=n loop=$jobGuid2}>
+                <{if $smarty.section.n.index==0}>
+                    <{if $jobGuid2[0].pic_link != ""}>
+                    <img src="<{$web_url}>/common/upload/images/<{$jobGuid2[0].pic_link}>"/>
+
+                    <{else}>
+                    <img src="<{$web_url}>/common/app/images/index/morentupian.png"/>
+
+                    <{/if}>
+                <div class="jobGuidmask"><a style="color: #ffffff" href="<{$web_url}>/index.php/jobinfo/detail/id/<{$jobGuid1[n].ji_id}>">
+                    <{$jobGuid1[n].ji_title|truncate:13: '…':true}>
+                </a></div>
+                <{else}>
+                <p><a href="<{$web_url}>/index.php/jobinfo/detail/id/<{$jobGuid2[n].ji_id}>">
+                    <{$jobGuid2[n].ji_title}>
+                </a></p>
+                <{/if}>
+                <{/section}>
+            </div>
+            <div class="jobGuid3">
+                <{section name=n loop=$jobGuid3}>
+                <{if $smarty.section.n.index==0}>
+                    <{if $jobGuid3[0].pic_link != ""}>
+                    <img src="<{$web_url}>/common/upload/images/<{$jobGuid3[0].pic_link}>"/>
+
+                    <{else}>
+                    <img src="<{$web_url}>/common/app/images/index/morentupian.png"/>
+
+                    <{/if}>
+                <div class="jobGuidmask"><a style="color: #ffffff"  href="<{$web_url}>/index.php/jobinfo/detail/id/<{$jobGuid1[n].ji_id}>">
+                    <{$jobGuid1[n].ji_title|truncate:13: '…':true}>
+                </a></div>
+                <{else}>
+                <p><a  href="<{$web_url}>/index.php/jobinfo/detail/id/<{$jobGuid3[n].ji_id}>">
+                    <{$jobGuid3[n].ji_title}>
+                </a></p>
+                <{/if}>
+                <{/section}>
+            </div>
+
+        </ul>
+        <!--就业政策-->
+        <ul>
+            <div class="more_info2"><a href="<{$web_url}>/index.php/Employmentpolicy/index">[更多]</a>
+            </div>
+            <{section name=n loop=$employmentpolicy}>
+            <li>
+                <div>
+                        <{if $employmentpolicy.list[n].ep_istop != "" }>
+                            <div class="top">
+
+                            <a  href="<{$web_url}>/index.php/Employmentpolicy/detail/id/<{$employmentpolicy.list[n].ep_id}>">
+                                   <{$employmentpolicy.list[n].ep_title|truncate:35: '…':true}>
+                                </a>
+                            </div>
+
+                    <{else}>
+                            <div class="item">
+                                <a href="<{$web_url}>/index.php/Employmentpolicy/detail/id/<{$employmentpolicy.list[n].ep_id}>">
+                                    <{$employmentpolicy.list[n].ep_title|truncate:35: '…':true}>
+                                </a>
+                                </div>
+                     <{/if}>
+                 <span>
+                        <{$employmentpolicy.list[n].ep_create|date_format:"%Y-%m-%d"}>
+                    </span>
+                </div>
+                <div>
+                    <{$employmentpolicy.list[n].ep_content|strip_tags|strip|truncate:110: '…':true}>
+                </div>
+            </li>
+            <{/section}>
+
+        </ul>
+        <!--工作简报-->
+        <ul>
+            <div class="more_info2"><a href="<{$web_url}>/index.php/Activityjobbulletin/index">[更多]</a>
+            </div>
+            <{section name=i loop=$bulletin}>
+            <li>
+                <div>
+                    <div class="item">
+                        <a href="<{$web_url}>/index.php/Activityjobbulletin/detail/id/<{$bulletin[i].aa_id}>">
+                            <{$bulletin[i].aa_title|truncate:35: '…':true}>
+                        </a>
+                    </div>
+                                            <span>
+                                                <{$bulletin[i].aa_time|date_format:"%Y-%m-%d"}>
+                                            </span>
+                </div>
+                <div>
+                    <{$bulletin[i].aa_content|strip_tags|strip|truncate:110: '…':true}>
+                </div>
+            </li>
+            <{/section}>
+
+        </ul>
+        <!-- 西部就业-->
+        <ul id="westGuid">
+            <div class="more_info2"><a href="<{$web_url}>/index.php/west/index" style="color: #378ea1">[更多]</a>
+            </div>
+            <div >
+                <!-- 工作动态-->
+                <div class="jobGuid1">
+                    <{section name=n loop=$ww1}>
+                    <{if $smarty.section.n.index==0}>
+                    <{if $ww1[n].pic_link != ""}>
+                    <img src="<{$web_url}>/common/upload/images/<{$ww1[n].pic_link}>"/>
+
+                    <{else}>
+                    <img src="<{$web_url}>/common/app/images/index/morentupian.png"/>
+
+                    <{/if}>
+                    <div class="jobGuidmask"><a style="color: #ffffff"  href="<{$web_url}>/index.php/west/detail/id/<{$ww1[n].ww_id}>">
+                        <{$ww1[n].ww_title|truncate:13: '…':true}>
+                    </a></div>
+                    <{else}>
+                    <p><a  href="<{$web_url}>/index.php/west/detail/id/<{$ww1[n].ww_id}>">
+                        <{$ww1[n].ww_title|truncate:13: '…':true}>
+                    </a></p>
+                    <{/if}>
+                    <{/section}>
+
+                </div>
+                <!-- 就业政策-->
+                <div class="jobGuid2">
+                    <{section name=n loop=$ww2}>
+                    <{if $smarty.section.n.index==0}>
+                    <{if $ww2[n].pic_link != ""}>
+                    <img src="<{$web_url}>/common/upload/images/<{$ww2[n].pic_link}>"/>
+
+                    <{else}>
+                    <img src="<{$web_url}>/common/app/images/index/morentupian.png"/>
+
+                    <{/if}>
+                    <div class="jobGuidmask"><a style="color: #ffffff"  href="<{$web_url}>/index.php/west/detail/id/<{$ww2[n].ww_id}>">
+                        <{$ww2[n].ww_title|truncate:13: '…':true}>
+                    </a></div>
+                    <{else}>
+                    <p><a  href="<{$web_url}>/index.php/west/detail/id/<{$ww2[n].ww_id}>">
+                        <{$ww2[n].ww_title|truncate:13: '…':true}>
+                    </a></p>
+                    <{/if}>
+                    <{/section}>
+
+                </div>
+                <!-- 典型人物-->
+                <div class="jobGuid3">
+                    <{section name=n loop=$ww3}>
+                    <{if $smarty.section.n.index==0}>
+                    <{if $ww3[n].pic_link != ""}>
+                    <img src="<{$web_url}>/common/upload/images/<{$ww3[n].pic_link}>"/>
+
+                    <{else}>
+                    <img src="<{$web_url}>/common/app/images/index/morentupian.png"/>
+
+                    <{/if}>
+                    <div class="jobGuidmask"><a style="color: #ffffff"  href="<{$web_url}>/index.php/west/detail/id/<{$ww3[n].ww_id}>">
+                        <{$ww3[n].ww_title|truncate:13: '…':true}>
+                    </a></div>
+                    <{else}>
+                    <p><a  href="<{$web_url}>/index.php/west/detail/id/<{$ww3[n].ww_id}>">
+                        <{$ww3[n].ww_title|truncate:13: '…':true}>
+                    </a></p>
+                    <{/if}>
+                    <{/section}>
+                </div>
+
+            </div>
+
+
+        </ul>
+    </div>
+</div>
+<div class="category_info3">
+    <div class="category_nav3">
+        <ul>
+            <li>
+                <a class="category_nav3_active" href="<{$web_url}>/index.php/jobinfo/entreGuid">创业指导</a>
+            </li>
+            <li>
+                <a href="<{$web_url}>/index.php/jobinfo/jobNotice">创业政策</a>
+            </li>
+            <li>
+                <a href="<{$web_url}>/index.php/jobinfo/empStar">创业孵化</a>
+            </li>
+            <li>
+                <a href="<{$web_url}>/index.php/sourceinformation/detail/id/<{$silist.list.1.si_id}>/type/1">创业申请</a>
+            </li>
+        </ul>
+    </div>
+    <div class="category_list clearfix">
+        <!--创业指导-->
+        <ul>
+            <div class="more_info3"><a href="<{$web_url}>/index.php/jobinfo/entreGuid">[更多]</a>
+            </div>
+            <{section name=n loop=$entreGuid}>
+            <li>
+                <div>
+
+
+                    <div class="item">
+                        <a href="<{$web_url}>/index.php/jobinfo/detail/id/<{$entreGuid.list[n].ji_id}>">
+                            <{$entreGuid.list[n].ji_title|truncate:35: '…':true}>
+                        </a>
+                        </div>
+                                         <span>
+                                                <{$entreGuid.list[n].ji_date|date_format:"%Y-%m-%d"}>
+                                            </span>
+                </div>
+                <div>
+                    <{$entreGuid.list[n].ji_content|strip_tags|strip|truncate:110: '…':true}>
+                </div>
+            </li>
+            <{/section}>
+
+        </ul>
+
+        <!--创业政策-->
+        <ul>
+            <div class="more_info3"><a href="<{$web_url}>/index.php/jobinfo/jobNotice">[更多]</a>
+            </div>
+            <{section name=n loop=$jobNotice}>
+            <li>
+                <div>
+
+                    <div class="item">
+                        <a href="<{$web_url}>/index.php/jobinfo/detail/id/<{$jobNotice.list[n].ji_id}>">
+                            <{$jobNotice.list[n].ji_title|truncate:35: '…':true}>
+                        </a>
+                        </div>
+                                         <span>
+                                                <{$jobNotice.list[n].ji_date|date_format:"%Y-%m-%d"}>
+                                            </span>
+                </div>
+                <div>
+                    <{$jobNotice.list[n].ji_content|strip_tags|strip|truncate:110: '…':true}>
+                </div>
+            </li>
+            <{/section}>
+
+        </ul>
+        <!--创业孵化--->
+        <ul>
+            <div class="more_info3"><a href="<{$web_url}>/index.php/jobinfo/empStar">[更多]</a>
+            </div>
+            <{section name=i loop=$empStar.list}>
+            <li>
+                <div>
+
+                    <div class="item">
+                        <a href="<{$web_url}>/index.php/jobinfo/detail/id/<{$empStar.list[i].ji_id}>">
+                            <{$empStar.list[i].ji_title|truncate:35: '…':true}>
+                        </a>
+                        </div>
+                        <span>
+                            <{$empStar.list[i].ji_date}>
+                        </span>
+                </div>
+                <div>
+                    <{$empStar.list[i].ji_content|strip_tags|strip|truncate:110: '…':true}>
+                </div>
+            </li>
+            <{/section}>
+        </ul>
+        <!--创业申请-->
+
+        <ul>
+            <div class="more_info3"><a href="<{$web_url}>/index.php/jobinfo/jobReuest">[更多]</a>
+            </div>
+            <{section name=i loop=$jobReuest.list}>
+            <li>
+                <div>
+
+                    <div class="item">
+                        <a href="<{$web_url}>/index.php/jobinfo/detail/id/<{$jobReuest.list[i].ji_id}>">
+                            <{$jobReuest.list[i].ji_title|truncate:35: '…':true}>
+                        </a>
+                    </div>
+                        <span>
+                            <{$jobReuest.list[i].ji_date}>
+                        </span>
+                </div>
+                <div>
+                    <{$jobReuest.list[i].ji_content|strip_tags|strip|truncate:110: '…':true}>
+                </div>
+            </li>
+            <{/section}>
+        </ul>
+
+    </div>
+</div>
+
+</div>
+
+<!--右边-->
+<div class="middle_right">
+    <div class="right_top block_style">
+        <div class="right_top_nav">
+            <div class="category_nav4_active">通知公告</div>
+            <div>工作动态</div>
+        </div>
+        <!--通知公告-->
+        <ul>
+            <{section name=i loop=$jobNotice.list}>
+            <!--item-->
+            <li>
+                <!--title-->
+                <div>
+                    <{if $jobNotice.list[i].ji_isup != ""}>
+                    <div class="top">
+                    <a  href="<{$web_url}>/index.php/jobinfo/detail/id/<{$jobNotice.list[i].ji_id}>" target="_blank">
+                        <{$jobNotice.list[i].ji_title|truncate:20: '…':true}>
+                    </a>
+                        </div>
+                    <{else}>
+                    <div class="item">
+                    <a href="<{$web_url}>/index.php/jobinfo/detail/id/<{$jobNotice.list[i].ji_id}>" target="_blank">
+                        <{$jobNotice.list[i].ji_title|truncate:20: '…':true}>
+                    </a>
+                        </div>
+                    <{/if}>
+
+                </div>
+                <!--time-->
+                <div>
+                    <{$jobNotice.list[i].ji_date}>
+                </div>
+                <!--info-->
+                <div>&nbsp&nbsp&nbsp&nbsp
+                    <{$jobNotice.list[i].ji_content|strip_tags|strip|truncate:40: '…':true}>
+                </div>
+            </li>
+            <{/section}>
+
+            <div style="margin-top: 5px;border-bottom: none;text-align: right;"><a href="<{$web_url}>/index.php/jobinfo/jobNotice" target="_blank">[更多]</a>
+            </div>
+        </ul>
+        <!--工作动态-->
+        <ul>
+            <{section name=i loop=$jobAct.list}>
+            <!--item-->
+            <!--item-->
+            <li>
+                <!--title-->
+                <div>
+                    <{if $jobAct.list[i].ji_isup != ""}>
+                    <div class="top">
+                    <a href="<{$web_url}>/index.php/jobinfo/detail/id/<{$jobAct.list[i].ji_id}>" target="_blank">
+                       <{$jobAct.list[i].ji_title|truncate:20: '…':true}>
+                    </a>
+                        </div>
+                    <{else}>
+                    <div class="item">
+                    <a href="<{$web_url}>/index.php/jobinfo/detail/id/<{$jobAct.list[i].ji_id}>" target="_blank">
+                        <{$jobAct.list[i].ji_title|truncate:20: '…':true}>
+                    </a>
+                        </div>
+                    <{/if}>
+
+                </div>
+                <!--time-->
+                <div>
+                    <{$jobAct.list[i].ji_date}>
+                </div>
+                <!--info-->
+                <div>&nbsp&nbsp&nbsp&nbsp
+                    <{$jobAct.list[i].ji_content|strip_tags|strip|truncate:40: '…':true}>
+                </div>
+            </li>
+            <{/section}>
+            <div style="margin-top: 5px;border-bottom: none;text-align: right;"><a href="<{$web_url}>/index.php/jobinfo/jobAct" target="_blank">[更多]</a>
+            </div>
+        </ul>
+
+    </div>
+
+    <!--<div class="right_mid block_style">-->
+    <!--<div></div>-->
+    <!--&lt;!&ndash;登录&ndash;&gt;-->
+    <!--<div>-->
+    <!--<div>学生登录</div>-->
+    <!--<div>企业登录</div>-->
+    <!--</div>-->
+    <!--<div><a href="#">学生指导手册</a>-->
+    <!--</div>-->
+    <!--<div><a href="#">用人单位指导手册</a>-->
+    <!--</div>-->
+    <!--<div>-->
+    <!--<{section name=sl loop=$softList}>-->
+    <!--<div>-->
+    <!--<a href="<{$softList[sl].sm_url}>" target="_blank">-->
+    <!--<img class="software-img" src="<{$web_url}>/common/upload/images/<{$softList[sl].pic_link|default:"noimg.jpg"}>" alt="<{$softList[sl].pic_link}>" title="<{$softList[sl].sm_title}>" />-->
+    <!--</a>-->
+    <!--</div>-->
+    <!--<{/section}>-->
+    <!--<div style="text-align: right"><a href="<{$web_url}>/index.php/friendlink/getpm" style="font-size: 16px; color: #b2b2b2; margin-right: 20px;">[更多]</a></div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <div id="feedback" class="right_feedback block_style clearfix">
+        <div>意见反馈</div>
+        <div id="friendly">
+            <div>界面友好性：</div>
+            <div class="star star_on"></div>
+            <div class="star star_on"></div>
+            <div class="star star_on"></div>
+            <div class="star star_off"></div>
+            <div class="star star_off"></div>
+            <span>还行</span>
+        </div>
+        <div id="effective">
+            <div>信息有效性：</div>
+            <div class="star star_on"></div>
+            <div class="star star_on"></div>
+            <div class="star star_on"></div>
+            <div class="star star_off"></div>
+            <div class="star star_off"></div>
+            <span>还行</span>
+        </div>
+        <div id="helpful">
+            <div>功能实用性：</div>
+            <div class="star star_on"></div>
+            <div class="star star_on"></div>
+            <div class="star star_on"></div>
+            <div class="star star_off"></div>
+            <div class="star star_off"></div>
+            <span>还行</span>
+        </div>
+        <div>
+            <div>建议标题:</div>
+        </div>
+        <div>
+            <input type="text" id="feedback_title" name="feedback_title"></textarea>
+        </div>
+        <div>
+            <div>建议详情:</div>
+        </div>
+        <div>
+            <textarea id="feedback_text" name="feedback_text"></textarea>
+        </div>
+        <div id="feed_submit">提交</div>
+    </div>
+    <div class="right_map block_style">
+        <div>出行路线</div>
+        <div id="baidu_map">
+        </div>
+    </div>
+</div>
+</div>
+
+</div>
+<div class="fast_way block_style">
+    <div><a href="<{$web_url}>/index.php/friendlink/getpm">快速通道</a></div>
+    <ul>
+        <{section name=sl loop=$softList}>
+        <li>
+            <a href="<{$softList[sl].sm_url}>" target="_blank">
+                <img class="software-img" src="<{$web_url}>/common/upload/images/<{$softList[sl].pic_link|default:"noimg.jpg"}>" alt="<{$softList[sl].pic_link}>" title="<{$softList[sl].sm_title}>" />
+            </a>
+        </li>
+        <{/section}>
+
+    </ul>
+</div>
+
+<{include file='footer.htm' }>
+
+<script type="text/javascript">
+    var web_url = "<{$web_url}>";
+
+
+</script>
+<link type="text/css" rel="stylesheet" href="<{$web_url}>/common/app/css/am.min.css" />
+<script type="text/javascript" src="<{$web_url}>/common/libs/jquery.min.js"></script>
+<script type="text/javascript" src="<{$web_url}>/common/app/js/header.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.5&ak=A03339d9c32ed4f0920276cd3d9b0474"></script>
+<script type="text/javascript" src="<{$web_url}>/common/app/js/index/index.js"></script>
+
+</body>
+
+</html>

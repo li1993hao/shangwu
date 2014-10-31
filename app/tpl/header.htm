@@ -1,0 +1,130 @@
+<div class="container">
+    <!--<div class="top_login">-->
+        <!--<p id="login_error" class="error">-->
+            <!--</p>-->
+                <!--<div>-->
+                    <!--<div>-->
+                        <!--<span>账号:</span>-->
+                        <!--<input type="text" name="user_name" id="user_name" placeholder="学号或邮箱" />-->
+                    <!--</div>-->
+                    <!--<div>-->
+                        <!--<span>密码:</span>-->
+                        <!--<input type="password" name="user_pswd" id="user_pswd" />-->
+                    <!--</div>-->
+                    <!--<div id="login_submit">登录</div>-->
+                <!--</div>-->
+                <!--<div>-->
+                    <!--<p>>学生可以使用学号登录,初始密码为身份证后六位</p>-->
+                    <!--<p>>企业可以使用您的注册邮箱进行登录</p>-->
+                    <!--<p>>如果忘记密码请联系天津现代职业技术学院就业指导中心</p>-->
+                <!--</div>-->
+    <!--</div>-->
+    <div class="header" id="header">
+        <div class="logo"></div>
+        <div class="header_top">
+
+            <{if isset($__userinfo__) }>
+                <ul class="header_login">
+
+                    <{if $__userinfo__.type=="0" }>
+                        <li>
+                            <img src="<{$web_url}>/common/upload/images/<{$__userinfo__.piclink}>"/>
+                        </li>
+                        <li>
+                            <a style="text-decoration: none">
+                                <{$__userinfo__.name}>
+                            </a>
+                        </li>
+                        <li> <a target="_blank" href="<{$web_url}>/index.php/student/myinfo">个人中心</a> 
+                        </li>
+                        <{else $__userinfo__.type=="1" }>
+                        <li>
+                            <img src="<{$web_url}>/common/upload/images/<{$__userinfo__.picUrl|default:"noimg.jpg"}>"/>
+                        </li>
+                            <li style="margin-right: 10px;">
+                                <a style="text-decoration: none">
+                                    <{$__userinfo__.name}>
+                                </a>
+                            </li>
+                            <li> <a target="_blank" href="<{$web_url}>/index.php/company/myinfo">个人中心 </a>
+                            </li>
+
+
+                                <{/if}>
+                                    <li><a id="login_out" href="<{$web_url}>/index.php/index/logout">注销</a>
+                                    </li>
+                </ul>
+
+
+                <{else}>
+                    <ul class="header_unlogin">
+                        <li><a href="<{$web_url}>/index.php/index/loginindex">用户登录</a>
+                        </li>
+                        <li><a href="<{$web_url}>/index.php/account/register">企业注册</a>
+                        </li>
+                    </ul>
+                    <{/if}>
+                        </li>
+                        </ul>
+            <div class="search_form_wrap">
+                <form id="search_form" action="<{$web_url}>/index.php/jobinfo/searchlist" method="post">
+                    <div class="search">
+                        <input type="text" id="key" name="key" placeholder="请输入关键字"/>
+                        <a href="javascript:void(0)" id="search_submit"></a>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!--导航栏-->
+    <div class="head_nav">
+        <ul>
+            <li><a href="<{$web_url}>/index.php">首页</a>
+            </li>
+            <li><a href="<{$web_url}>/index.php/center/index">中心简介</a>
+            </li>
+            <li class="drop"><a href="#">招聘查询</a>
+                <div class="drop_down">
+                    <div><a href="<{$web_url}>/index.php/Jobfairmsg/index">招聘会信息</a>
+                    </div>
+                    <div><a href="<{$web_url}>/index.php/Corpinternmsg/Corpindex">招聘信息</a>
+                    </div>
+                    <div><a href="<{$web_url}>/index.php/Jobfairmsg/calendar">招聘日历</a>
+                    </div>
+                    <div><a href="<{$web_url}>/index.php/Corpinternmsg/internindex">基层招聘</a>
+                    </div>
+                </div>
+            </li>
+            <li class="drop"><a href="#">用人单位服务</a>
+                <div class="drop_down">
+                    <div><a href="<{$web_url}>/index.php/collegeintroduction/index">院系介绍</a>
+                    </div>
+                    <div><a href="<{$web_url}>/index.php/sourceinformation/index">生源信息</a>
+                    </div>
+                    <div><a href="<{$web_url}>/index.php/Recruitment/index">招聘指南</a>
+                    </div>
+                    <div><a href="<{$web_url}>/index.php/Employmentteam/index">就业专员</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="<{$web_url}>/index.php/jobinfo/jobGuid">求职指导</a>
+            </li>
+            <li><a href="<{$web_url}>/index.php/jobinfo/entreGuid">创业指导</a>
+            </li>
+            <li><a href="<{$web_url}>/index.php/employmentpolicy/index">就业政策</a>
+            </li>
+            <li><a href="<{$web_url}>/index.php/jobinfo/entrePolicy">创业政策</a>
+            </li>
+
+            <li><a href="<{$web_url}>/index.php/Send/index">派遣服务</a>
+            </li>
+            <li><a href="<{$web_url}>/index.php/Downservice/index">文件下载</a>
+            </li>
+
+            <li><a href="#footer">联系我们</a>
+            </li>
+        </ul>
+    </div>
+

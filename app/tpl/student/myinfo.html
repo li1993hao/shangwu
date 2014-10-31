@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta id="screen-view" name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link type="text/css" rel="stylesheet" href="<{$web_url}>/common/app/css/reset.css?v=2.0" />
+    <link type="text/css" rel="stylesheet" href="<{$web_url}>/common/app/css/headAndfoot.css" />
+    <title>个人中心-我得信息</title>
+    <script type="text/javascript">
+        var web_url = "<{$web_url}>";
+    </script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="<{$web_url}>/common/app/js/DOMAssistantCompressed-2.7.4.js"></script>
+    <script type="text/javascript" src="<{$web_url}>/common/app/js/ie-css3.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        #middle{width: 1006px;background-color: #F5F5F5;padding-top: 23px;margin: 0 auto;min-height: 600px; border: 3px solid #ebebeb}
+        #student_menu{float: left;height: 565px;background-color: #ECECEC;margin-left: 12px; }
+        #middle_right{float: left;}
+        #middle_right_top{margin-left: 10px;font-size: 20px;color: #416f86;width: 660px;height: 30px; }
+        #middle_right_top_buttom{margin-left: 10px;;width: 660px;height: 6px;background-image: url("<{$web_url}>/common/app/images/student/xian.jpg"); }
+        #middle_right_top p{float: left}
+        #nowLoaction{font-size: 14px;margin-left: 133px;margin-top: 7px;}
+        #nowLoaction a{display: inline-block;text-decoration: none;font-size: 14px;color: #416f86}
+        #gerenzhongxin{padding-left: 26px;}
+        #middle_right_top_english{padding-left: 10px;font-size: 14px;margin-top: 7px;}
+        #middle_right_middle{width: 678px;height: 210px;}
+        #photo{width: 109px;height: 153px;margin-left: 54px;margin-top:33px;float:left}
+        #detail{margin-left: 20px;float:left;margin-top: 76px;}
+        #detail p{font-size: 15px;color: #808080}
+        #middle_right_bottom{width:630px;height: 62px;margin-top: 32px;margin-left: 53px;font-size: 15px;color: #808080}
+        #xiugai{display:block;width: 70px;height: 30px;background-color: #72d0d7;margin-left: 600px;line-height: 30px;font-size: 20px;color: #ffffff;text-align:center}
+    </style>
+</head>
+
+<body>
+
+<{include file='header.htm'}>
+<div id="middle">
+    <{assign var=pageid value=1}>
+    <div >
+        <div >
+            <{include file='student/student_menu.htm'}>
+        </div>
+    </div>
+    <!-- 中间右部-->
+    <div id="middle_right">
+        <div id="middle_right_top">
+            <p id="gerenzhongxin">个人中心</p>
+            <p id="middle_right_top_english">Person Center</p>
+            <p id="nowLoaction"> 您现在所在的位置：<a href="<{$web_url}>/index.php/index/index"> 首页></a><a href=""> 个人中心</a>>学生基本信息</p>
+        </div>
+        <div id="middle_right_top_buttom">
+
+        </div>
+        <div id="middle_right_middle">
+            <div>
+               <a id="xiugai" href="<{$web_url}>/index.php/student/modifyinfo">修改</a>
+            </div>
+
+            <div id="photo">
+                <div id="img">
+                    <{if $studetail.piclink != ""}>
+                    <img style="width: 109px;height: 153px"  src="<{$web_url}>/common/upload/images/<{$studetail.piclink}>"/>
+                    <{else}>
+                    <img style="width: 109px;height: 153px"  src="<{$web_url}>/common/upload/images/noimg.jpg"/>
+                    <{/if}>
+                </div>
+            </div>
+            <div id="detail">
+                <p><{$studetail.name}></p>
+                <p>性别：<{if $studetail.gender ==0}>
+                    男
+                    <{else}>
+                    女
+                    <{/if}>	</p>
+                <p>出生年月：<{$studetail.birth|truncate:10:""}></p>
+                <p>籍贯：<{$studetail.home}></p>
+                <p>专业：<{$studetail.pro}></p>
+            </div>
+        </div>
+        <div id="middle_right_bottom">
+            <p style="display: inline-block;color: #ff0000">自我评价</p>：<{$studetail.intro}>
+        </div>
+     </div>
+</div>
+
+<{include file='footer.htm'}>
+<script type="text/javascript" src="<{$web_url}>/common/libs/jquery.min.js"></script>
+<script type="text/javascript" src="<{$web_url}>/common/app/js/header.js"></script>
+</body>
+</html>

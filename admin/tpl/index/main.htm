@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<LINK href="<{$web_url}>/common/admin/css/admin.css" type="text/css" rel="stylesheet">
+</HEAD>
+<BODY>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
+  	<TR height=28><TD background="<{$web_url}>/common/admin/images/title_bg1.jpg">当前位置:首页 </TD></TR>
+  	<TR><TD bgColor=#b1ceef height=1></TD></TR>
+  	<TR height=20>
+    	<TD background="<{$web_url}>/common/admin/images/shadow_bg.jpg"></TD>
+	</TR>
+</TABLE>
+<center><h1>欢迎进入管理系统！</h1></center>
+<{if $roleid == 1}>
+<h3 style="border-bottom:2px solid #000000;margin:10px;color:red">待办事项</h3>
+<{if $corpmsg != 0}>
+	<div style="margin-left:15px">您有<font color="red"><{$corpmsg}></font>条未审核的招聘信息 &nbsp;&nbsp;<a href="<{$web_url}>/manshangwu.php/recruit/verifyinfo"><font color="red">查看</font></a></div>
+<{/if}>
+<{if $jobmsg != 0}>
+	<div style="margin-left:15px">您有<font color="red"><{$jobmsg}></font>条未审核的招聘会信息 &nbsp;&nbsp;<a href="<{$web_url}>/manshangwu.php/jobfair/verifyinfo"><font color="red">查看</font></a></div>
+<{/if}>
+<{if $commsg != 0}>
+	<div style="margin-left:15px">当前有<font color="red"><{$commsg}></font>家新注册的企业需要审核&nbsp;&nbsp;<a href="<{$web_url}>/manshangwu.php/frontuser/getcompanyuser"><font color="red">查看</font></a></div>
+<{/if}>
+
+<div style="width:100%;height:auto;float:left">
+<{if $calendar[0] != ""}>
+<h3 style="border-bottom:2px solid #000000;margin:10px;color:red">今日工作</h3>
+
+<{foreach $calendar as $re}>
+<div style="padding-left:30px;background-color:white;width:200px;height:150px; float:left">
+	<div style="background-color:#FFC1C1;width:200px;height:130px;">
+		<div style="height:110px; margin:10px; width:380; text-align:left;" >
+			<div style="width:200px;">标题:<a href="<{$web_url}>/manshangwu.php/calendar/calendar"><{$re.cal_name|truncate:12:""}></a></div>
+			<div style="width:200px;">时间:<{$re.cal_opentime}></div>
+			<div style="width:200px;">地点:<{$re.cal_addr|truncate:12:""}></div>
+			<div style="width:200px;">联系人:<{$re.cal_contact|default:"未填写"}></div>
+			<div style="width:200px;">联系人电话:<{$re.cal_tel|default:"未填写"}></div>
+			<div style="width:200px;">学生助理:<{$re.cal_stu|default:"未填写"}></div>
+			<div style="width:200px;">学生助理电话:<{$re.cal_assis_tel|default:"未填写"}></div>
+		</div>
+	</div>
+</div>
+<{/foreach}>
+<{/if}>
+</div>
+<{/if}>
+
+<h3 style="border-bottom:2px solid #000000;margin:20px 10px 10px;color:red">系统信息</h3>
+<div style="margin-left:15px">当前版本：1.0.0</div><br/>
+</BODY></HTML>

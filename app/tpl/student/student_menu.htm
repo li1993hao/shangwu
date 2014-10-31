@@ -1,0 +1,24 @@
+<style type="text/css">
+    *{padding: 0;margin-left: 0;}
+    #student_menu a{display: block;text-decoration: none;width: 264px;height: 54px;line-height: 54px;}
+    #student_menu_title {width: 264px;height: 69px;background-color: #1292a8;border-radius:7px 7px 0px 0px;color: #ffffff;font-size: 24px;line-height: 69px;}
+    #student_menu p{padding-left: 76px;}
+    #select p{width: 264px;height: 54px;color: #c8e1de;}
+    .menu-list-item{display:block;background-color: #72d0d7;color: #ffffff}
+    .selected{background-color: #c8e1de;color: #72d0d7;}
+    .unSelected{background-color: #72d0d7;}
+    #select a{margin-top: 1px;text-align:center;font-size: 20px; }
+    #select a:hover{background-color: #c8e1de;color: #72d0d7;}
+</style>
+<div id="student_menu">
+    <div id="student_menu_title">
+        <p>功能菜单</p>
+    </div>
+    <div id="select">
+        <a href="<{$web_url}>/index.php/student/myinfo" class="menu-list-item <{if $pageid eq 1}>selected<{/if}>">学生基本信息</a>
+        <a href="<{$web_url}>/index.php/student/favorjobinfo" class="menu-list-item <{if $pageid eq 2}>selected<{/if}>">我的招聘</a>
+        <a href="<{$web_url}>/index.php/student/changepw" class="menu-list-item <{if $pageid eq 3}>selected<{/if}>">修改密码</a>
+
+            <a href="<{$web_url}>/index.php/index#feedback" class="menu-list-item">满意度调查</a>
+    </div>
+</div>

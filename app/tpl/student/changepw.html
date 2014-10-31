@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta id="screen-view" name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link type="text/css" rel="stylesheet" href="<{$web_url}>/common/app/css/reset.css?v=2.0" />
+    <link type="text/css" rel="stylesheet" href="<{$web_url}>/common/app/css/headAndfoot.css" />
+    <title>个人中心-修改密码</title>
+    <script type="text/javascript">
+        var web_url = "<{$web_url}>";
+    </script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="<{$web_url}>/common/app/js/DOMAssistantCompressed-2.7.4.js"></script>
+    <script type="text/javascript" src="<{$web_url}>/common/app/js/ie-css3.js"></script>
+    <![endif]-->
+    <style type="text/css">
+
+
+        #middle_left, #middle_right{
+            float: left;
+        }
+
+
+
+
+
+
+        input{
+            height: 30px;
+            width: 200px;
+            border: 1px #b2b2b2 solid;
+        }
+        table td{
+            padding: 4px;
+        }
+        .submit-pw{height:30px; width:120px;background:#3598db;color:#FFF;cursor:pointer; border: none}
+        .submit-pw:hover{
+            background-color: #22618c;
+        }
+
+        #middle_right{float: left;}
+        #middle_right_top{margin-left: 10px;font-size: 20px;color: #416f86;width: 660px;height: 30px; }
+        #middle_right_top_buttom{margin-left: 10px;;width: 660px;height: 6px;background-image: url("<{$web_url}>/common/app/images/student/xian.jpg"); }
+        #middle_right_top p{float: left}
+        #nowLoaction{font-size: 14px;margin-left: 133px;margin-top: 7px;}
+        #nowLoaction a{display: inline-block;text-decoration: none;font-size: 14px;color: #416f86}
+        #middle_right_top_english{padding-left: 10px;font-size: 14px;margin-top: 7px;}
+        #gerenzhongxin{padding-left: 26px;}
+        #middle_big{width: 1006px;background-color: #F5F5F5;padding-top: 23px;float: left;border: 3px solid #ebebeb}
+        #student_menu{float: left;height: 565px;background-color: #ECECEC;margin-left: 12px; }
+        #middle{width: 1006px;background-color: #F5F5F5;padding-top: 23px;margin:0 auto;min-height:600px;border: 3px solid #ebebeb}
+    </style>
+
+
+</head>
+
+<body>
+<{assign var=pageid value=3}>
+<{include file='header.htm'}>
+<div id="middle">
+    <!-- 导航栏-->
+    <div >
+        <div >
+            <{include file='student/student_menu.htm'}>
+        </div>
+    </div>
+        <div id="middle_right">
+            <div id="middle_right_top">
+                <p id="gerenzhongxin">个人中心</p>
+                <p id="middle_right_top_english">Person Center</p>
+                <p id="nowLoaction"> 您现在所在的位置：<a href="<{$web_url}>/index.php/index/index"> 首页></a><a href=""> 个人中心</a>>修改密码</p>
+            </div>
+            <div id="middle_right_top_buttom">
+
+            </div>
+    </div>
+
+
+
+        <div >
+            <form method="post" action="<{$web_url}>/index.php/student/changepw">
+                <table style="margin: 0 auto; font-size: 18px;">
+                    <tr>
+                       <td> <span class="input-title">原密码：</span></td><td><input class="inputpw_first" type="password" name="old" size="15" placeholder="原始密码" /></td>
+                    </tr>
+                <tr>
+                    <td><span class="input-title">新密码：</span></td><td><input class="inputpw" type="password" name="new" size="15" placeholder="新密码" /></td>
+                </tr>
+                <tr >
+                    <td><span class="input-title">重复新密码：</span></td><td><input class="inputpw" type="password" name="renew" size="15" placeholder="重复输入新密码" /></td>
+                </tr>
+                <tr >
+                  <td><span class="input-title">&nbsp;</span></td><td><input class="submit-pw"  type="submit" value="更改"><span class="result-info" ><{$result}></span></td>
+                </tr>
+                </table>
+            </form>
+    </div>
+</div>
+
+<{include file='footer.htm'}>
+<script type="text/javascript" src="<{$web_url}>/common/libs/jquery.min.js"></script>
+<script type="text/javascript" src="<{$web_url}>/common/app/js/header.js"></script>
+</body>
+</html>
