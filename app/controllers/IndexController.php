@@ -34,8 +34,8 @@ class IndexController extends Controller{
         $this->view->jobPlan = $jobInfoDao->getCM("jobPlan",1,4); //职业生涯规划
         $this->view->entreGuid = $jobInfoDao->getCM("entreGuid",1,4); //创业指导
         $this->view->jobReuest = $jobInfoDao->getCM("jobReuest",1,4); //创业指导
-
-        $jobguid =  $jobInfoDao->getCM("jobGuid",1,9)['list']; //求职指导
+        $ffff = $jobInfoDao->getCM("jobGuid",1,9);
+        $jobguid =  $ffff['list']; //求职指导
         $jobguid1 = array();
         if(count($jobguid) >=3){
             for($i=0; $i<3; $i++){
@@ -99,7 +99,8 @@ class IndexController extends Controller{
         //西部就业
         $westWork = new westWork();
         $this->view->ww1 =$westWork->getNews(1,3);
-        $this->view->ww2 =$westWork->getPolicyPageModel(1,3)['list'];
+        $ff = $westWork->getPolicyPageModel(1,3);
+        $this->view->ww2 =$ff['list'];
          $this->view->ww3 =$westWork->getPersons(1,3);
 
 
