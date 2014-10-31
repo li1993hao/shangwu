@@ -44,6 +44,10 @@
     text-decoration: none;
     font-size: 12px;
 }
+.container{
+    background: url(../../images/bg.jpg) repeat-y;
+
+}
 
 .middle_main {
     width: 990px;
