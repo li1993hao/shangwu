@@ -50,6 +50,40 @@ class jobinfo extends Model{
     }
 
 
+    public function  getCMnoPic($type,$num){
+        $select = "SELECT `jobinfo`.*,`picture`.* FROM `jobinfo` LEFT JOIN `picture` ON `jobinfo`.`pic_id` = `picture`.`pic_id` ";
+
+        $filter = ( $type == 0 ) ? " 1 " : " `jobinfo`.`it_id` = '".intval( $type )."' AND `picture`.`pic_link` IS  NULL ";
+
+        $where = " WHERE ".$filter;
+
+
+        $order = " ORDER BY  `jobinfo`.`ji_isup` DESC , `jobinfo`.`ji_date` DESC ";
+
+        $limit = " Limit ".$num."";
+
+        $sql = $select.$where.$order.$limit;
+        //echo $sql."<br/>";
+        return $this->fetchAll($sql);
+    }
+
+    public  function  getCMPic($type,$num){
+        $select = "SELECT `jobinfo`.*,`picture`.* FROM `jobinfo` LEFT JOIN `picture` ON `jobinfo`.`pic_id` = `picture`.`pic_id` ";
+
+        $filter = ( $type == 0 ) ? " 1 " : " `jobinfo`.`it_id` = '".intval( $type )."' AND `picture`.`pic_link` IS NOT NULL ";
+
+        $where = " WHERE ".$filter;
+
+
+        $order = " ORDER BY  `jobinfo`.`ji_isup` DESC , `jobinfo`.`ji_date` DESC ";
+
+        $limit = " Limit ".$num."";
+
+        $sql = $select.$where.$order.$limit;
+       // echo $sql."<br/>";
+        return $this->fetchAll($sql);
+    }
+
     /**
      * 获取首页大图推荐的新闻
      */

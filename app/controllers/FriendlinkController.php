@@ -20,13 +20,19 @@ class FriendlinkController extends Controller
         $this->view->jobFair = $jobfairmsg->getfrontjobfair(5);
 		echo $this->view->render("index.html");
 	}
-
     public  function  getpm(){
         //快速通道
         $soft = new studysoft();
         $softlist = $soft->getSoftList();
-        $this->view->softList = $softlist;
 
+        for($i=0 ; $i<count($softlist); $i+=2){
+            $arr[0] = $softlist[$i];
+            if($i+1<count($softlist)){
+                $arr[1] = $softlist[$i+1];
+            }
+            $fsoftlist[] = $arr;
+        }
+        $this->view->softList = $fsoftlist;
         $jobfairmsg = new jobfairmsg();
         $this->view->jobFair = $jobfairmsg->getfrontjobfair(5);
         echo $this->view->render("pm.html");

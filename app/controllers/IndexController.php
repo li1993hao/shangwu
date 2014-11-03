@@ -35,25 +35,41 @@ class IndexController extends Controller{
         $this->view->jobPlan = $jobInfoDao->getCM("jobPlan",1,4); //职业生涯规划
         $this->view->entreGuid = $jobInfoDao->getCM("entreGuid",1,4); //创业指导
         $this->view->jobReuest = $jobInfoDao->getCM("jobReuest",1,4); //创业指导
-        $ffff = $jobInfoDao->getCM("jobGuid",1,9);
-        $jobguid =  $ffff['list']; //求职指导
+        $fpic = $jobInfoDao->getCMPic(4,3);
+        $fnpic =  $jobInfoDao->getCMnoPic(4,6);
+
         $jobguid1 = array();
-        if(count($jobguid) >=3){
-            for($i=0; $i<3; $i++){
-                $jobguid1[$i] = array_shift($jobguid);
+        for($i=0; count($fnpic)>0&&$i<3; $i++){
+            if($i==0){
+                if(count($fpic) >0){
+                    $jobguid1[$i] =  array_shift($fpic);
+                    continue;
+                }
             }
+            $jobguid1[$i] = array_shift($fnpic);
         }
+
         $jobguid2 = array();
-        if(count($jobguid) >=3){
-            for($i=0; $i<3; $i++){
-                $jobguid2[$i] = array_shift($jobguid);
+        for($i=0; count($fnpic)>0&&$i<3; $i++){
+            if($i==0){
+                if(count($fpic) >0){
+                    $jobguid2[$i] =  array_shift($fpic);
+                    continue;
+                }
             }
+            $jobguid2[$i] = array_shift($fnpic);
         }
+
         $jobguid3 = array();
-        if(count($jobguid) >=3){
-            for($i=0; $i<3; $i++){
-                $jobguid3[$i] = array_shift($jobguid);
+        for($i=0; count($fnpic)>0&&$i<3; $i++){
+
+            if($i==0){
+                if(count($fpic) >0){
+                    $jobguid3[$i] =  array_shift($fpic);
+                    continue;
+                }
             }
+            $jobguid3[$i] = array_shift($fnpic);
         }
         $this->view->jobGuid1 = $jobguid1;
         $this->view->jobGuid2 = $jobguid2;
