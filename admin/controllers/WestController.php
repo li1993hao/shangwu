@@ -81,14 +81,29 @@ class WestController extends Controller{
 					}
 					if ($result && $push == 1){
 						if ($_POST['newssort'] == 1){
-							$url = $this->getRequest()->hostUrl."/clientapi.php/Student/Getwestdetail/id/".$id;
-							$this->getApp()->getPush()->pushMsg($_POST['title'],"此工作动态信息有修改", "10", $url);
+
+                            $platform = 'android,ios'; // 接受此信息的系统
+                            $msg_content = json_encode(array('n_builder_id'=>0,'n_title'=>'消息提醒', 'n_content'=>$_POST['title']."此工作动态信息有修改",'n_extras'=>array('type'=>0,'if_url'=>0,'msg_type'=>6,'msg_id'=>$id)));
+                            //var_dump($msg_content);
+                            $j=new jpush();
+                            //$j->send(18,3,$company_id,1,$msg_content,$platform);
+                            $j->send(18,4,"",1,$msg_content,$platform);
 						}else if ($_POST['newssort'] == 2){
-							$url = $this->getRequest()->hostUrl."/clientapi.php/Student/Getwestdetail/id/".$id;
-							$this->getApp()->getPush()->pushMsg($_POST['title'],"此相关政策信息有修改", "11", $url);
+
+                            $platform = 'android,ios'; // 接受此信息的系统
+                            $msg_content = json_encode(array('n_builder_id'=>0,'n_title'=>'消息提醒', 'n_content'=>$_POST['title']."此相关政策信息有修改",'n_extras'=>array('type'=>0,'if_url'=>0,'msg_type'=>6,'msg_id'=>$id)));
+                            //var_dump($msg_content);
+                            $j=new jpush();
+                            //$j->send(18,3,$company_id,1,$msg_content,$platform);
+                            $j->send(18,4,"",1,$msg_content,$platform);
 						}else{
-							$url = $this->getRequest()->hostUrl."/clientapi.php/Student/Getwestdetail/id/".$id;
-							$this->getApp()->getPush()->pushMsg($_POST['title'],"此典型人物消息有修改", "12", $url);
+
+                            $platform = 'android,ios'; // 接受此信息的系统
+                            $msg_content = json_encode(array('n_builder_id'=>0,'n_title'=>'消息提醒', 'n_content'=>$_POST['title']."此典型人物消息有修改",'n_extras'=>array('type'=>0,'if_url'=>0,'msg_type'=>6,'msg_id'=>$id)));
+                            //var_dump($msg_content);
+                            $j=new jpush();
+                            //$j->send(18,3,$company_id,1,$msg_content,$platform);
+                            $j->send(18,4,"",1,$msg_content,$platform);
 						}
 					}
 				}
@@ -135,14 +150,28 @@ class WestController extends Controller{
 						for ($i = 0; $i < count($tokenList); $i++){
 							if ($tokenList[$i]['fu_token']){
 								if ($_POST['newssort'] == 1){
-									$url = $this->getRequest()->hostUrl."/clientapi.php/Student/Getwestdetail/id/".$result;
-									$this->getApp()->getPush()->pushMsg($tokenList[$i]['fu_token'], $_POST['title'],"有新的工作动态信息", "10", $url);
+                                    $platform = 'android,ios'; // 接受此信息的系统
+                                    $msg_content = json_encode(array('n_builder_id'=>0,'n_title'=>'消息提醒', 'n_content'=>$_POST['title']."有新的工作动态信息",'n_extras'=>array('type'=>0,'if_url'=>0,'msg_type'=>6,'msg_id'=>$result)));
+                                    //var_dump($msg_content);
+                                    $j=new jpush();
+                                    //$j->send(18,3,$company_id,1,$msg_content,$platform);
+                                    $j->send(18,4,"",1,$msg_content,$platform);
 								}else if ($_POST['newssort'] == 2){
-									$url = $this->getRequest()->hostUrl."/clientapi.php/Student/Getwestdetail/id/".$result;
-									$this->getApp()->getPush()->pushMsg($tokenList[$i]['fu_token'], $_POST['title'],"有新的相关政策信息", "11", $url);
+
+                                    $platform = 'android,ios'; // 接受此信息的系统
+                                    $msg_content = json_encode(array('n_builder_id'=>0,'n_title'=>'消息提醒', 'n_content'=>$_POST['title']."有新的相关政策信息",'n_extras'=>array('type'=>0,'if_url'=>0,'msg_type'=>6,'msg_id'=>$result)));
+                                    //var_dump($msg_content);
+                                    $j=new jpush();
+                                    //$j->send(18,3,$company_id,1,$msg_content,$platform);
+                                    $j->send(18,4,"",1,$msg_content,$platform);
 								}else{
-									$url = $this->getRequest()->hostUrl."/clientapi.php/Student/Getwestdetail/id/".$result;
-									$this->getApp()->getPush()->pushMsg($tokenList[$i]['fu_token'], $_POST['title'],"有新的典型人物消息", "12", $url);
+
+                                    $platform = 'android,ios'; // 接受此信息的系统
+                                    $msg_content = json_encode(array('n_builder_id'=>0,'n_title'=>'消息提醒', 'n_content'=>$_POST['title']."有新的典型人物消息",'n_extras'=>array('type'=>0,'if_url'=>0,'msg_type'=>6,'msg_id'=>$result)));
+                                    //var_dump($msg_content);
+                                    $j=new jpush();
+                                    //$j->send(18,3,$company_id,1,$msg_content,$platform);
+                                    $j->send(18,4,"",1,$msg_content,$platform);
 								}
 							}
 						}
