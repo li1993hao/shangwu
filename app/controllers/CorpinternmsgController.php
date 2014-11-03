@@ -33,13 +33,14 @@ class CorpinternmsgController extends Controller{
 
 		//echo $page;
 		if( $type == $this->__typeinfo["corp"]["type_code"]){
+
 			if($userinfo){
 				$newsList = $corpinternmsg->getCorpPageModel($page,$pageSize,null,"pass",true);
 			}else{
 				$newsList = $corpinternmsg->getCorpPageModel($page,$pageSize,null,"pass",false);
 			}
 			$this->getView()->corpInfo = $this->__typeinfo["corp"];
-
+            $this->getView()->action = "index";
 		
 		}else if( $type == $this->__typeinfo["intern"]["type_code"] ){
 			if($userinfo){
@@ -48,6 +49,7 @@ class CorpinternmsgController extends Controller{
 				$newsList = $corpinternmsg->getInternPageModel($page,$pageSize,null,"pass",false);
 			}
 			$this->getView()->corpInfo = $this->__typeinfo["intern"];
+            $this->getView()->action = "internindex";
 		}else{
 			if($userinfo){
 				$newsList = $corpinternmsg->getBasePageModel($page,$pageSize,null,"pass",true);
@@ -55,6 +57,7 @@ class CorpinternmsgController extends Controller{
 				$newsList = $corpinternmsg->getBasePageModel($page,$pageSize,null,"pass",false);
 			}
 			$this->getView()->corpInfo = $this->__typeinfo["base"];
+            $this->getView()->action = "internindex";
 			
 		}	
 
@@ -73,6 +76,7 @@ class CorpinternmsgController extends Controller{
 	
 	public function Corpindex(){
 		$_GET["type"] = 1;
+
 		$this->Index();
 		/*
 		$pageSize = 20;

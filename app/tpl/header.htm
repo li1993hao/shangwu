@@ -43,7 +43,7 @@
                         </li>
                             <li style="margin-right: 10px;">
                                 <a style="text-decoration: none">
-                                    <{$__userinfo__.name}>
+                                    <{$__userinfo__.name|truncate:6: '…':true}>
                                 </a>
                             </li>
                             <li> <a target="_blank" href="<{$web_url}>/index.php/company/myinfo">个人中心 </a>

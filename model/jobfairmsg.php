@@ -78,12 +78,23 @@ class jobfairmsg extends Model{
 	}
 
 	public function getPreNews($cur_id){
-
-		$sql = "SELECT `jobfairmsg`.* FROM `jobfairmsg` WHERE `jm_veri` = ".$this->_state["pass"]." AND `jm_id` > ".$cur_id."   ORDER BY `jm_id` ASC ";
+//        $app =  App::getInstance();
+//        $userInfo = $app->getData("userinfo");
+//        if($userInfo){
+            $sql = "SELECT `jobfairmsg`.* FROM `jobfairmsg` WHERE `jm_veri` = ".$this->_state["pass"]." AND `jm_id` > ".$cur_id."   ORDER BY `jm_id` ASC ";
+//        }else{
+//            $sql = "SELECT `jobfairmsg`.* FROM `jobfairmsg` WHERE `jm_veri` = ".$this->_state["pass"]." AND `jm_id` > ".$cur_id." And 'jm_isopen'='1'  ORDER BY `jm_id` ASC ";
+//        }
 		return $this->fetchRow($sql);
 	}
 	public function getNextNews($cur_id){
-		$sql = "SELECT `jobfairmsg`.* FROM `jobfairmsg` WHERE `jm_veri` = ".$this->_state["pass"]." AND `jm_id` < ".$cur_id."  ORDER BY `jm_id` DESC ";
+//        $app =  App::getInstance();
+//        $userInfo = $app->getData("userinfo");
+//        if($userInfo){
+            $sql = "SELECT `jobfairmsg`.* FROM `jobfairmsg` WHERE `jm_veri` = ".$this->_state["pass"]." AND `jm_id` < ".$cur_id."  ORDER BY `jm_id` DESC ";
+//        }else{
+//            $sql = "SELECT `jobfairmsg`.* FROM `jobfairmsg` WHERE `jm_veri` = ".$this->_state["pass"]." AND `jm_id` < ".$cur_id." And 'jm_isopen'='1' ORDER BY `jm_id` DESC ";
+//        }
 		return $this->fetchRow($sql);
 	}
 

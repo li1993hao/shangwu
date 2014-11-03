@@ -86,10 +86,10 @@
     </div>
 
     <div id="jobCalendar_content">
-        <{section name=n loop=$news.list}>
+        <{section name=n loop=$news}>
         <div class="jobCalendar_content_title">
 
-            <a href="<{$web_url}>/index.php/jobfairmsg/detail/id/<{$news.list[n].jm_id}>"> <{$news.list[n].jm_date}> 第一教学楼     <{$news.list[n].jm_name|truncate:9:'…'}></a>
+            <a href="<{$web_url}>/index.php/jobfairmsg/detail/id/<{$news.list[n].jm_id}>"> <{$news[n].jm_date}> 第一教学楼     <{$news.list[n].jm_name|truncate:9:'…'}></a>
 
         </div>
         <{/section}>
@@ -224,7 +224,7 @@
         <!--一站式信息-->
         <ul>
 
-           <iframe id="mframe" style="border: none;width: 100%; height: 478px" onload="iFrameHeight()" src="<{$web_url}>/common/onesite/index.html">
+           <iframe id="mframe" style="border: none;width: 100%; height: 498px" onload="iFrameHeight()" src="<{$web_url}>/common/onesite/index.html">
                </iframe>
         </ul>
     </div>
@@ -567,23 +567,23 @@
 
         <!--创业政策-->
         <ul>
-            <div class="more_info3"><a href="<{$web_url}>/index.php/jobinfo/jobNotice">[更多]</a>
+            <div class="more_info3"><a href="<{$web_url}>/index.php/jobinfo/policyNotice">[更多]</a>
             </div>
-            <{section name=n loop=$jobNotice}>
+            <{section name=n loop=$policyNotice}>
             <li>
                 <div>
 
                     <div class="item">
-                        <a href="<{$web_url}>/index.php/jobinfo/detail/id/<{$jobNotice.list[n].ji_id}>">
-                            <{$jobNotice.list[n].ji_title|truncate:35: '…':true}>
+                        <a href="<{$web_url}>/index.php/jobinfo/detail/id/<{$policyNotice.list[n].ji_id}>">
+                            <{$policyNotice.list[n].ji_title|truncate:35: '…':true}>
                         </a>
                         </div>
                                          <span>
-                                                <{$jobNotice.list[n].ji_date|date_format:"%Y-%m-%d"}>
+                                                <{$policyNotice.list[n].ji_date|date_format:"%Y-%m-%d"}>
                                             </span>
                 </div>
                 <div>
-                    <{$jobNotice.list[n].ji_content|strip_tags|strip|truncate:110: '…':true}>
+                    <{$policyNotice.list[n].ji_content|strip_tags|strip|truncate:110: '…':true}>
                 </div>
             </li>
             <{/section}>
@@ -646,8 +646,8 @@
 <div class="middle_right">
     <div class="right_top block_style">
         <div class="right_top_nav">
-            <div class="category_nav4_active">通知公告</div>
-            <div>工作动态</div>
+            <div class="category_nav4_active"><a style="color: #ffffff" href="<{$web_url}>/index.php/jobinfo/jobNotice" target="_blank">通知公告</a></div>
+            <div><a href="<{$web_url}>/index.php/jobinfo/jobAct" style="color: #ffffff"  target="_blank">工作动态</a></div>
         </div>
         <!--通知公告-->
         <ul>

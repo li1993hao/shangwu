@@ -82,7 +82,6 @@ class JobfairmsgController extends Controller{
 					$frontlist = $corpinternmsg->getfrontmsg(4);
 					$this->view->frontlist = $frontlist;
 
-
 					$this->view->preNews = $jobfairmsg->getPreNews($jobfairinfo['jm_id']);
 					$this->view->nextNews = $jobfairmsg->getNextNews($jobfairinfo['jm_id']);
 					$this->view->detail = $jobfairinfo;

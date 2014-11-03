@@ -30,7 +30,8 @@ class IndexController extends Controller{
         $this->view->employmentpolicy = $employmentpolicy->getEmployPageModel(1,4);
         $jobInfoDao  = new jobinfo();
         $this->view->jobAct =  $jobInfoDao->getCM("jobAct",1,4); 	  //工作动态
-        $this->view->jobNotice = $jobInfoDao->getCM("jobNotice",1,4); //创业政策
+        $this->view->jobNotice = $jobInfoDao->getCM("jobNotice",1,4); //通知公告
+        $this->view->policyNotice = $jobInfoDao->getCM("policyNotice",1,4); //创业政策
         $this->view->jobPlan = $jobInfoDao->getCM("jobPlan",1,4); //职业生涯规划
         $this->view->entreGuid = $jobInfoDao->getCM("entreGuid",1,4); //创业指导
         $this->view->jobReuest = $jobInfoDao->getCM("jobReuest",1,4); //创业指导
@@ -107,13 +108,11 @@ class IndexController extends Controller{
         //招聘会日历
         $job = new jobfairmsg();
         if($userinfo){
-            $jobFair = $job->getRecentCorpMsg(5,1);
-            $newsList = $job->getJobfairPageModel(1,6,null,3,null,1);
+            $jobFair = $job->getRecentCorpMsg(7,1);
         }else{
-            $newsList = $job->getJobfairPageModel(1,6,null,3,null,0);
-            $jobFair = $job->getRecentCorpMsg(5,0);
+            $jobFair = $job->getRecentCorpMsg(7,0);
         }
-        $this->view->news = $newsList;
+        $this->view->news = $jobFair;
 
         if(!$jobFair){
             $tempCount = 5;

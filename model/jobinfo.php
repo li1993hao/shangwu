@@ -39,7 +39,7 @@ class jobinfo extends Model{
         'empStar' =>9, //创就业明星
         'bohai' => 11, //渤海轻工业集团
         'jobReuest' => 12, //就业工作简报
-        'stuNotice' => 13, //学生就业通知
+        'policyNotice' => 13, //创业政策
         'centerIntro' => 15, //中心介绍
         'departIntro' => 16, //院系介绍
         'recGuid' =>17 //招聘指南
