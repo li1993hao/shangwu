@@ -7,6 +7,11 @@ class appFilter extends Filter{
 		$session = $this->getApp()->loadUtilClass("SessionUtil");
         $mm=rand(100,1000);
         $this->getApp()->getView()->mm=$mm;
+
+        $friendlink = new friendlink();
+        $schoollinklist = $friendlink->getFootLinkList();
+        $this->getApp()->getView()->footlink = $schoollinklist;
+
 		if($userid = $session->get("session_userid") ){
 
 			$f_user=new frontuser();

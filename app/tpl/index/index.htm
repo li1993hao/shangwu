@@ -89,7 +89,7 @@
         <{section name=n loop=$news}>
         <div class="jobCalendar_content_title">
 
-            <a href="<{$web_url}>/index.php/jobfairmsg/detail/id/<{$news.list[n].jm_id}>"> <{$news[n].jm_date}> 第一教学楼     <{$news.list[n].jm_name|truncate:9:'…'}></a>
+            <a href="<{$web_url}>/index.php/jobfairmsg/detail/id/<{$news[n].jm_id}>">  <{$news[n].jm_opentime|date_format: "%Y-%m-%d"}>  <{$news[n].jm_addr|truncate:15: '…':true}>  <{$news[n].jm_name|truncate:9:'…'}></a>
 
         </div>
         <{/section}>

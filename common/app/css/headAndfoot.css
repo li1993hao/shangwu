@@ -54,7 +54,12 @@
 }
 .carousel_mid >div{
     margin-left: 30px;
+    background: url("../images/lb.png") no-repeat;
+    padding-left: 25px;
+    background-position: -3px 1px;
+
 }
+
 
 .carousel_mid >div:first-child{
     margin-top: 10px;

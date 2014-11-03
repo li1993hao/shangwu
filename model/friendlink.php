@@ -9,9 +9,14 @@ class friendlink extends Model
 	public function getLinkList($flag)
 	{
 		$sql = "select * from `friendlink` where `fl_flag`='".$flag."'";
-		return $this->fetchAll($sql);	
-
+		return $this->fetchAll($sql);
 	}
+
+    public function  getFootLinkList(){
+        $sql = "select * from `friendlink` where `fl_flag`='".$flag."' LIMIT 8";
+        return $this->fetchAll($sql);
+    }
+
 	public function updateLinkTitle($title,$id)
 	{
 		$sql = "UPDATE `friendlink` SET `fl_title` = '".$title."' WHERE `friendlink`.`fl_id` = '".$id."'";

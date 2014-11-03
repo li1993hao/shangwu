@@ -113,6 +113,7 @@ class IndexController extends Controller{
             $jobFair = $job->getRecentCorpMsg(7,0);
         }
         $this->view->news = $jobFair;
+        //var_dump($jobFair);
 
         if(!$jobFair){
             $tempCount = 5;
