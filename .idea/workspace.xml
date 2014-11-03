@@ -23,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="IndexController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="IndexController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/IndexController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="10" selection-start="3561" selection-end="3561" vertical-scroll-proportion="0.3568075" vertical-offset="1497" max-vertical-offset="4050">
+            <state line="115" column="10" selection-start="3561" selection-end="3561" vertical-scroll-proportion="-4.56" vertical-offset="1497" max-vertical-offset="4050">
               <folding />
             </state>
           </provider>
@@ -41,10 +41,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.htm" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.htm" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/tpl/index/index.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="20" selection-start="3404" selection-end="3404" vertical-scroll-proportion="-19.375" vertical-offset="945" max-vertical-offset="12510">
+            <state line="571" column="52" selection-start="23281" selection-end="23281" vertical-scroll-proportion="0.23943663" vertical-offset="8397" max-vertical-offset="12510">
               <folding>
                 <element signature="tag#div#0;tag#ul#0;tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
                 <element signature="n#style#0;n#iframe#0;n#ul#3;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -187,8 +187,8 @@
         <option value="$PROJECT_DIR$/model/friendlink.php" />
         <option value="$PROJECT_DIR$/app/filter/appFilter.php" />
         <option value="$PROJECT_DIR$/app/tpl/footer.htm" />
-        <option value="$PROJECT_DIR$/app/tpl/index/index.htm" />
         <option value="$PROJECT_DIR$/app/controllers/IndexController.php" />
+        <option value="$PROJECT_DIR$/app/tpl/index/index.htm" />
       </list>
     </option>
   </component>
@@ -725,9 +725,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="115" column="10" selection-start="3561" selection-end="3561" vertical-scroll-proportion="-4.56" vertical-offset="1497" max-vertical-offset="4050">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/tpl/index/index.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="20" selection-start="3404" selection-end="3404" vertical-scroll-proportion="-19.375" vertical-offset="945" max-vertical-offset="12510">
+        <state line="571" column="52" selection-start="23281" selection-end="23281" vertical-scroll-proportion="0.23943663" vertical-offset="8397" max-vertical-offset="12510">
           <folding>
             <element signature="tag#div#0;tag#ul#0;tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
             <element signature="n#style#0;n#iframe#0;n#ul#3;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -742,13 +749,6 @@
             <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="10" selection-start="3561" selection-end="3561" vertical-scroll-proportion="0.3568075" vertical-offset="1497" max-vertical-offset="4050">
-          <folding />
         </state>
       </provider>
     </entry>
