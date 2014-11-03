@@ -166,11 +166,12 @@ class student extends Model {
 		} else {
 			$filter .= " AND `collect`.`coll_type` !=  " . $type;
 		}
+        $filter.= " ORDER BY  `collect`.`coll_time` DESC";
 		// echo $sql.$infotype;
 		$where = " WHERE ";
 		$where .= $filter;
 		$limit = " LIMIT " . ($page - 1) * $num . "," . $num . " ";
-		// echo $sql . $where . $limit;
+		//echo $sql . $where . $limit;
 		$list = $this->fetchAll ( $sql . $where . $limit );
 		
 		$total = $this->getTotal ( "collect", $filter );

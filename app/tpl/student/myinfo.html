@@ -14,6 +14,11 @@
     <script type="text/javascript" src="<{$web_url}>/common/app/js/ie-css3.js"></script>
     <![endif]-->
     <style type="text/css">
+        .infotable td{
+            padding: 5px;
+        }
+
+
         #middle{width: 1006px;background-color: #F5F5F5;padding-top: 23px;margin: 0 auto;min-height: 600px; border: 3px solid #ebebeb}
         #student_menu{float: left;height: 565px;background-color: #ECECEC;margin-left: 12px; }
         #middle_right{float: left;}
@@ -25,10 +30,18 @@
         #gerenzhongxin{padding-left: 26px;}
         #middle_right_top_english{padding-left: 10px;font-size: 14px;margin-top: 7px;}
         #middle_right_middle{width: 678px;height: 210px;}
-        #photo{width: 109px;height: 153px;margin-left: 54px;margin-top:33px;float:left}
-        #detail{margin-left: 20px;float:left;margin-top: 76px;}
+        #middle_right_middle:after,#middle_right_middle:before{
+            display: table;
+            content: " ";
+        }
+        #middle_right_middle:after{
+            clear: both;
+        }
+
+        #photo{width: 109px;height: 153px;margin-left: 54px;float:left}
+        #detail{margin-left: 20px;float:left;}
         #detail p{font-size: 15px;color: #808080}
-        #middle_right_bottom{width:630px;height: 62px;margin-top: 32px;margin-left: 53px;font-size: 15px;color: #808080}
+        #middle_right_bottom{width:630px;height: 62px;margin-top: 32px;margin-left: 50px;font-size: 15px;color: #808080}
         #xiugai{display:block;width: 70px;height: 30px;background-color: #72d0d7;margin-left: 600px;line-height: 30px;font-size: 20px;color: #ffffff;text-align:center}
     </style>
 </head>
@@ -68,19 +81,39 @@
                 </div>
             </div>
             <div id="detail">
-                <p><{$studetail.name}></p>
-                <p>性别：<{if $studetail.gender ==0}>
-                    男
-                    <{else}>
-                    女
-                    <{/if}>	</p>
-                <p>出生年月：<{$studetail.birth|truncate:10:""}></p>
-                <p>籍贯：<{$studetail.home}></p>
-                <p>专业：<{$studetail.pro}></p>
+                <table class="infotable">
+                    <tr><td>性别:</td><td> <{if $studetail.gender ==0}> 男<{else}>女<{/if}></td>
+                        <td>出生年月:</td><td><{$studetail.birth|truncate:10:""}></td></tr>
+                    <tr><td>学历:</td><td>专科</td><td>学院:</td><td><{$studetail.college}></td></tr>
+                    <tr><td>年级:</td><td><{$studetail.grade}>级</td><td>专业:</td><td><{$studetail.pro}></td></tr>
+                    <tr><td>生源地:</td><td><{$studetail.source}></td><td>籍贯:</td><td><{$studetail.home}></td></tr>
+                    <tr><td>政治面貌:</td><td><{$studetail.politic}></td><td>简历:</td><td><{if isset($studetail.fileid)  }>
+                        <a target="top" href="<{$web_url}>/common/upload/files/<{$studetail.filelink}>">
+                            <{$studetail.filename}>
+                        </a>
+                        <{/if}></td></tr>
+
+                    <tr>
+                        <td>我感兴趣的领域:</td>
+                        <td><{foreach $stuindustry as $si}>
+                            <{$si.ind_type}>&nbsp;
+                            <{/foreach}></td>
+                    </tr>
+
+                </table>
+                <!--<p><{$studetail.name}></p>-->
+                <!--<p>性别：<{if $studetail.gender ==0}>-->
+                    <!--男-->
+                    <!--<{else}>-->
+                    <!--女-->
+                    <!--<{/if}>	</p>-->
+                <!--<p>出生年月：<{$studetail.birth|truncate:10:""}></p>-->
+                <!--<p>籍贯：<{$studetail.home}></p>-->
+                <!--<p>专业：<{$studetail.pro}></p>-->
             </div>
         </div>
         <div id="middle_right_bottom">
-            <p style="display: inline-block;color: #ff0000">自我评价</p>：<{$studetail.intro}>
+            <p style="display: inline-block;color: #ff0000">个人简介</p>：<{$studetail.intro}>
         </div>
      </div>
 </div>

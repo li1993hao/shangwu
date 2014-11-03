@@ -356,8 +356,8 @@
                     <img src="<{$web_url}>/common/app/images/index/morentupian.png"/>
 
                     <{/if}>
-                <div class="jobGuidmask"><a style="color: #ffffff" href="<{$web_url}>/index.php/jobinfo/detail/id/<{$jobGuid1[n].ji_id}>">
-                    <{$jobGuid1[n].ji_title|truncate:13: '…':true}>
+                <div class="jobGuidmask"><a style="color: #ffffff" href="<{$web_url}>/index.php/jobinfo/detail/id/<{$jobGuid2[n].ji_id}>">
+                    <{$jobGuid2[n].ji_title|truncate:13: '…':true}>
                 </a></div>
                 <{else}>
                 <p><a href="<{$web_url}>/index.php/jobinfo/detail/id/<{$jobGuid2[n].ji_id}>">
@@ -376,8 +376,8 @@
                     <img src="<{$web_url}>/common/app/images/index/morentupian.png"/>
 
                     <{/if}>
-                <div class="jobGuidmask"><a style="color: #ffffff"  href="<{$web_url}>/index.php/jobinfo/detail/id/<{$jobGuid1[n].ji_id}>">
-                    <{$jobGuid1[n].ji_title|truncate:13: '…':true}>
+                <div class="jobGuidmask"><a style="color: #ffffff"  href="<{$web_url}>/index.php/jobinfo/detail/id/<{$jobGuid3[n].ji_id}>">
+                    <{$jobGuid3[n].ji_title|truncate:13: '…':true}>
                 </a></div>
                 <{else}>
                 <p><a  href="<{$web_url}>/index.php/jobinfo/detail/id/<{$jobGuid3[n].ji_id}>">
@@ -572,12 +572,19 @@
             <{section name=n loop=$policyNotice.list}>
             <li>
                 <div>
-
-                    <div class="item">
+                    <{if $empStar.list[i].ji_isup != ""}>
+                    <div class="top">
                         <a href="<{$web_url}>/index.php/jobinfo/detail/id/<{$policyNotice.list[n].ji_id}>">
                             <{$policyNotice.list[n].ji_title|truncate:35: '…':true}>
                         </a>
                         </div>
+                    <{else}>
+                    <div class="item">
+                        <a href="<{$web_url}>/index.php/jobinfo/detail/id/<{$policyNotice.list[n].ji_id}>">
+                            <{$policyNotice.list[n].ji_title|truncate:35: '…':true}>
+                        </a>
+                    </div>
+                    <{/if}>
                                          <span>
                                                 <{$policyNotice.list[n].ji_date|date_format:"%Y-%m-%d"}>
                                             </span>
@@ -596,12 +603,19 @@
             <{section name=i loop=$empStar.list}>
             <li>
                 <div>
-
-                    <div class="item">
+                    <{if $empStar.list[i].ji_isup != ""}>
+                    <div class="top">
                         <a href="<{$web_url}>/index.php/jobinfo/detail/id/<{$empStar.list[i].ji_id}>">
                             <{$empStar.list[i].ji_title|truncate:35: '…':true}>
                         </a>
                         </div>
+                    <{else}>
+                    <div class="item">
+                        <a href="<{$web_url}>/index.php/jobinfo/detail/id/<{$empStar.list[i].ji_id}>">
+                            <{$empStar.list[i].ji_title|truncate:35: '…':true}>
+                        </a>
+                    </div>
+                    <{/if}>
                         <span>
                             <{$empStar.list[i].ji_date}>
                         </span>
@@ -620,12 +634,20 @@
             <{section name=i loop=$jobReuest.list}>
             <li>
                 <div>
-
+                    <{if $jobReuest.list[i].ji_isup != ""}>
+                    <div class="top">
+                        <a href="<{$web_url}>/index.php/jobinfo/detail/id/<{$jobReuest.list[i].ji_id}>">
+                            <{$jobReuest.list[i].ji_title|truncate:35: '…':true}>
+                        </a>
+                    </div>
+                    <{else}>
                     <div class="item">
                         <a href="<{$web_url}>/index.php/jobinfo/detail/id/<{$jobReuest.list[i].ji_id}>">
                             <{$jobReuest.list[i].ji_title|truncate:35: '…':true}>
                         </a>
                     </div>
+                    <{/if}>
+
                         <span>
                             <{$jobReuest.list[i].ji_date}>
                         </span>

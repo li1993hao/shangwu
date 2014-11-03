@@ -43,7 +43,7 @@
                         </li>
                             <li style="margin-right: 10px;">
                                 <a style="text-decoration: none">
-                                    <{$__userinfo__.name|truncate:6: '…':true}>
+                                    <{$__userinfo__.name|truncate:10: '…':true}>
                                 </a>
                             </li>
                             <li> <a target="_blank" href="<{$web_url}>/index.php/company/myinfo">个人中心 </a>
@@ -68,7 +68,7 @@
                         </ul>
             <div class="search_form_wrap">
                 <form id="search_form" action="<{$web_url}>/index.php/jobinfo/searchlist" method="post">
-                    <div class="search">
+                    <div class="search" style="float: right">
                         <input type="text" id="key" name="key" placeholder="请输入关键字"/>
                         <a href="javascript:void(0)" id="search_submit"></a>
                     </div>

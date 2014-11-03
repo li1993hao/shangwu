@@ -3,8 +3,8 @@
 //namespace admin\controllers;
 
 class JobinfoController extends Controller{
-	
-	private $__typeinfo = array(
+
+    private $__typeinfo = array(
         "jobAct"=> array("type_code"=>1,"type_name"=>"工作动态","type_color"=>"red"),
         "jobNotice"=>array("type_code"=>2,"type_name"=>"通知公告","type_color"=>"red"),
         "jobPlan"=>array("type_code"=>3,"type_name"=>"职业生涯规划","type_color"=>"blue"),
@@ -13,9 +13,9 @@ class JobinfoController extends Controller{
         "empPolicy"=> array("type_code"=>6,"type_name"=>"就业政策","type_color"=>"blue"),
         "entrePolicy"=> array("type_code"=>8,"type_name"=>"创业政策","type_color"=>"blue"),
         "empStar"=> array("type_code"=>9,"type_name"=>"创业孵化","type_color"=>"blue"),
-        "jobReuest"=> array("type_code"=>12,"type_name"=>"创业申请","type_color"=>"blue")
-	);
-	
+        "jobReuest"=> array("type_code"=>12,"type_name"=>"创业申请","type_color"=>"blue"),
+        "policyNotice"=> array("type_code"=>13,"type_name"=>"创业政策","type_color"=>"blue")
+    );
 	public function __construct(){
 		parent::__construct();
 		//$this->view->url_path=$this->getRequest()->appPath;

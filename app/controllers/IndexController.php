@@ -59,6 +59,7 @@ class IndexController extends Controller{
         $this->view->jobGuid2 = $jobguid2;
         $this->view->jobGuid3 = $jobguid3;
 
+
         //首页焦点图
         $recNews = $jobInfoDao->getRecNews();
 //        var_dump($recNews);
