@@ -32,46 +32,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JobfairmsgController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/JobfairmsgController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="49" selection-start="700" selection-end="700" vertical-scroll-proportion="103.0" vertical-offset="2847" max-vertical-offset="3525">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jobfairmsg.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/jobfairmsg.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="171" column="10" selection-start="6439" selection-end="6439" vertical-scroll-proportion="-0.0" vertical-offset="2565" max-vertical-offset="7380">
-              <folding>
-                <marker date="1414981534000" expanded="true" signature="302:505" placeholder="SELECT `jobf..." />
-                <marker date="1414981534000" expanded="true" signature="1665:2014" placeholder="SELECT `jobf..." />
-                <marker date="1414981534000" expanded="true" signature="5194:5315" placeholder="SELECT `jobf..." />
-                <marker date="1414981534000" expanded="true" signature="10510:10588" placeholder="DELETE FROM ..." />
-                <marker date="1414981534000" expanded="true" signature="12123:12244" placeholder="SELECT `jobf..." />
-                <marker date="1414981534000" expanded="true" signature="14299:14325" placeholder="SELECT * FRO..." />
-                <marker date="1414981534000" expanded="true" signature="16128:16255" placeholder="SELECT `jobf..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="student.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/student.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="173" column="10" selection-start="5403" selection-end="5403" vertical-scroll-proportion="-10.208333" vertical-offset="2350" max-vertical-offset="5115">
-              <folding>
-                <marker date="1414986313000" expanded="true" signature="1713:1737" placeholder="SELECT * FRO..." />
-                <marker date="1414986313000" expanded="true" signature="3247:3296" placeholder="INSERT INTO ..." />
-                <marker date="1414986313000" expanded="true" signature="4787:5014" placeholder="SELECT `stud..." />
-                <marker date="1414986313000" expanded="true" signature="6582:6602" placeholder="SELECT * FRO..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="editcenter.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/tpl/othermanagement/editcenter.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -103,10 +63,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.htm" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="header.htm" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/tpl/header.htm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="68" selection-start="2097" selection-end="2097" vertical-scroll-proportion="-6.875" vertical-offset="510" max-vertical-offset="2040">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.htm" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/tpl/footer.htm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="74" selection-start="384" selection-end="384" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="780">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.htm" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/tpl/index/index.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="378" column="126" selection-start="15505" selection-end="15505" vertical-scroll-proportion="1.2451128" vertical-offset="4827" max-vertical-offset="12840">
+            <state line="821" column="205" selection-start="33014" selection-end="33014" vertical-scroll-proportion="-7.7083335" vertical-offset="12115" max-vertical-offset="12840">
               <folding>
                 <element signature="tag#div#0;tag#ul#0;tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
                 <element signature="n#style#0;n#iframe#0;n#ul#3;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -120,7 +100,19 @@
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#2;n#div#1;n#ul#4;n#div#1;n#div#3;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pm.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/tpl/friendlink/pm.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="10" selection-start="1209" selection-end="1209" vertical-scroll-proportion="0.40601504" vertical-offset="285" max-vertical-offset="1290">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -157,7 +149,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/admin/tpl/employerservice/sourceinfomsg.htm" />
         <option value="$PROJECT_DIR$/admin/controllers/EmployerserviceController.php" />
         <option value="$PROJECT_DIR$/admin/tpl/employerservice/collegeintromsg.htm" />
         <option value="$PROJECT_DIR$/app/tpl/sourceinformation/index.htm" />
@@ -197,7 +188,6 @@
         <option value="$PROJECT_DIR$/app/controllers/JobinfoController.php" />
         <option value="$PROJECT_DIR$/model/friendlink.php" />
         <option value="$PROJECT_DIR$/app/filter/appFilter.php" />
-        <option value="$PROJECT_DIR$/app/tpl/footer.htm" />
         <option value="$PROJECT_DIR$/admin/tpl/index/menu.htm" />
         <option value="$PROJECT_DIR$/admin/controllers/JobinfoController.php" />
         <option value="$PROJECT_DIR$/admin/tpl/othermanagement/soft.html" />
@@ -207,7 +197,9 @@
         <option value="$PROJECT_DIR$/admin/tpl/othermanagement/editcenter.html" />
         <option value="$PROJECT_DIR$/app/tpl/student/myinfo.html" />
         <option value="$PROJECT_DIR$/app/controllers/IndexController.php" />
+        <option value="$PROJECT_DIR$/app/tpl/footer.htm" />
         <option value="$PROJECT_DIR$/app/tpl/index/index.htm" />
+        <option value="$PROJECT_DIR$/app/tpl/friendlink/pm.html" />
       </list>
     </option>
   </component>
@@ -503,11 +495,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/common/app/css/content.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1845" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/tpl/center/index.htm">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="17.5" vertical-offset="420" max-vertical-offset="1590" />
@@ -697,13 +684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/tpl/footer.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="26" selection-start="309" selection-end="309" vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="765">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/jobinfo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="66" column="125" selection-start="1708" selection-end="1713" vertical-scroll-proportion="-32.5" vertical-offset="180" max-vertical-offset="5385">
@@ -748,15 +728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/tpl/header.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="68" selection-start="2097" selection-end="2097" vertical-scroll-proportion="-6.875" vertical-offset="510" max-vertical-offset="2040">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/StudentController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="185" column="38" selection-start="4919" selection-end="4919" vertical-scroll-proportion="-13.125" vertical-offset="2460" max-vertical-offset="4650">
@@ -768,13 +739,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="171" column="10" selection-start="6439" selection-end="6439" vertical-scroll-proportion="-0.0" vertical-offset="2565" max-vertical-offset="7380">
           <folding>
-            <marker date="1414981534000" expanded="true" signature="302:505" placeholder="SELECT `jobf..." />
-            <marker date="1414981534000" expanded="true" signature="1665:2014" placeholder="SELECT `jobf..." />
-            <marker date="1414981534000" expanded="true" signature="5194:5315" placeholder="SELECT `jobf..." />
-            <marker date="1414981534000" expanded="true" signature="10510:10588" placeholder="DELETE FROM ..." />
-            <marker date="1414981534000" expanded="true" signature="12123:12244" placeholder="SELECT `jobf..." />
-            <marker date="1414981534000" expanded="true" signature="14299:14325" placeholder="SELECT * FRO..." />
-            <marker date="1414981534000" expanded="true" signature="16128:16255" placeholder="SELECT `jobf..." />
+            <marker date="1414981534000" expanded="true" signature="-1:-1" placeholder="SELECT `jobf..." />
+            <marker date="1414981534000" expanded="true" signature="-1:-1" placeholder="SELECT `jobf..." />
+            <marker date="1414981534000" expanded="true" signature="-1:-1" placeholder="SELECT `jobf..." />
+            <marker date="1414981534000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1414981534000" expanded="true" signature="-1:-1" placeholder="SELECT `jobf..." />
+            <marker date="1414981534000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1414981534000" expanded="true" signature="-1:-1" placeholder="SELECT `jobf..." />
           </folding>
         </state>
       </provider>
@@ -790,10 +761,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="173" column="10" selection-start="5403" selection-end="5403" vertical-scroll-proportion="-10.208333" vertical-offset="2350" max-vertical-offset="5115">
           <folding>
-            <marker date="1414986313000" expanded="true" signature="1713:1737" placeholder="SELECT * FRO..." />
-            <marker date="1414986313000" expanded="true" signature="3247:3296" placeholder="INSERT INTO ..." />
-            <marker date="1414986313000" expanded="true" signature="4787:5014" placeholder="SELECT `stud..." />
-            <marker date="1414986313000" expanded="true" signature="6582:6602" placeholder="SELECT * FRO..." />
+            <marker date="1414986313000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1414986313000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1414986313000" expanded="true" signature="-1:-1" placeholder="SELECT `stud..." />
+            <marker date="1414986313000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
           </folding>
         </state>
       </provider>
@@ -848,9 +819,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/tpl/header.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="68" selection-start="2097" selection-end="2097" vertical-scroll-proportion="-6.875" vertical-offset="510" max-vertical-offset="2040">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/tpl/footer.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="74" selection-start="384" selection-end="384" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="780">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/tpl/index/index.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="378" column="126" selection-start="15505" selection-end="15505" vertical-scroll-proportion="1.2451128" vertical-offset="4827" max-vertical-offset="12840">
+        <state line="821" column="205" selection-start="33014" selection-end="33014" vertical-scroll-proportion="-7.7083335" vertical-offset="12115" max-vertical-offset="12840">
           <folding>
             <element signature="tag#div#0;tag#ul#0;tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
             <element signature="n#style#0;n#iframe#0;n#ul#3;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -864,7 +851,17 @@
             <element signature="n#style#0;n#a#0;n#div#0;n#div#2;n#div#1;n#ul#4;n#div#1;n#div#3;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/tpl/friendlink/pm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="10" selection-start="1209" selection-end="1209" vertical-scroll-proportion="0.40601504" vertical-offset="285" max-vertical-offset="1290">
+          <folding />
         </state>
       </provider>
     </entry>
