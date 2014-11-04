@@ -126,7 +126,7 @@
 			 	<td><{$jobfair.list[n].cim_name}></td>
 			 	<td>
 			 		<{if $jobfair.list[n].rit_id eq 1}>企业招聘
-			 		<{elseif $jobfair.list[n].rit_id eq 2}>实习招聘
+			 		<{elseif $jobfair.list[n].rit_id eq 2}>基层招聘
 			 		<{elseif $jobfair.list[n].rit_id eq 3 }>基层招聘
 			 		<{/if}>
 			 	</td>
@@ -137,8 +137,8 @@
 			 	</td>
 			 	<td><{$jobfair.list[n].cim_date}></td>
 			 	<td>
-			 		<{if $jobfair.list[n].cim_veri eq 0}><div class="option-item"><a href="<{$web_url}>/index.php/company/editcorpmsg/id/<{$jobfair.list[n].cim_id}>">修改</a></div><div id = "delete-jobfair" class="cursor-hand  option-item" onclick="show_confirm(<{$jobfair.list[n].cim_id}>,1,<{$jobfair.page}>)">删除</div>
-			 		<{elseif $jobfair.list[n].cim_veri eq 2}><div class="option-item"><a href="<{$web_url}>/index.php/company/editcorpmsg/id/<{$jobfair.list[n].cim_id}>">修改</a></div><div id = "delete-jobfair" class="cursor-hand option-item" onclick="show_confirm(<{$jobfair.list[n].cim_id}>,1,<{$jobfair.page}>)">删除</div>
+			 		<{if $jobfair.list[n].cim_veri eq 0}><div class="option-item"><a style="font-size: 12px" href="<{$web_url}>/index.php/company/editcorpmsg/id/<{$jobfair.list[n].cim_id}>">修改</a></div><div id = "delete-jobfair" class="cursor-hand  option-item" onclick="show_confirm(<{$jobfair.list[n].cim_id}>,1,<{$jobfair.page}>)" style="font-size: 12px">删除</div>
+			 		<{elseif $jobfair.list[n].cim_veri eq 2}><div class="option-item"><a style="font-size: 12px" href="<{$web_url}>/index.php/company/editcorpmsg/id/<{$jobfair.list[n].cim_id}>">修改</a></div><div id = "delete-jobfair" class="cursor-hand option-item" onclick="show_confirm(<{$jobfair.list[n].cim_id}>,1,<{$jobfair.page}>)" style="font-size: 12px">删除</div>
 			 		<{elseif $jobfair.list[n].cim_veri eq 1 }>已经审批不能进行操作，如需修改请联系就业中心
 			 		<{/if}>
 			 	</td>

@@ -226,11 +226,11 @@ $(document).ready(function(){
             return false;
         }
         //alert($("#prov").val());
-        // if( !$("div").hasClass("position-list-item") ){
-        //     $("#result").text("职位信息不能为空！");
-        //     //$("#prov").focus();
-        //     return false;
-        // }
+        if( !$("div").hasClass("position-list-item") ){
+             $("#result").text("职位信息不能为空！");
+             //$("#prov").focus();
+             return false;
+        }
         if($("#content").val() == 0){
             $("#result").text("招聘信息内容不能为空！");
             $("#content").focus();
@@ -367,7 +367,7 @@ function delfile(id){
             </span>
             <span><a href="<{$web_url}>/index.php/company/myinfo">>个人中心</a>
             </span>
-            <span><a href="#">>招聘信息</a></span>
+            <span><a href="#">>修改招聘信息</a></span>
         </div>
         <div class="nav_footer"><div></div></div>
     </div>
@@ -464,7 +464,7 @@ function delfile(id){
                 <table class="fairinfo_table">
                     <tbody>
                     <tr class="company-jobfair-item">
-                        <td class="company-jobfair-item-title">职位：</td>
+                        <td class="company-jobfair-item-title" style="width: 64px">职位：</td>
                         <td id="position" class="company-jobfair-item-info">
                             <div>
                                 <input class="cursor-hand jqmClose"  type="button" value="添加职位" onclick="addZhiwei();"/>
@@ -486,9 +486,9 @@ function delfile(id){
                         </td>
                     </tr>
                     <tr class="company-jobfair-item">
-                        <td class="company-jobfair-item-title">招聘内容：</td>
+                        <td class="company-jobfair-item-title">内容：</td>
                         <td class="company-jobfair-item-info">
-                            <textarea id="content" name="content" rows="15" cols="120" style="width:90%;height:230px"><{$corpmsginfo.cim_name}></textarea>
+                            <textarea id="content" name="content" rows="15" cols="120" style="width:90%;height:230px"><{$corpmsginfo.cim_content}></textarea>
                         </td>
                     </tr>
                     <tr class="company-jobfair-item">

@@ -466,7 +466,7 @@ class corpinternmsg extends Model {
 		if ($userid != 0) {
 			$sql .= " AND `cim_publish` = '" . $userid . "' ";
 		}
-		//echo $sql;
+	    //echo $sql;
 		return $this->update ( $sql );
 	}
 	
