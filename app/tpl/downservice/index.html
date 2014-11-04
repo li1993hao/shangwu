@@ -57,14 +57,14 @@
         <div class="work">
             <{section name=n loop=$downlist.list}>
             <div class="rec_item">
-                <div>
+                <div style="float: left">
 
                     <p><a href="<{$web_url}>/index.php/Downservice/dodown/id/<{$downlist.list[n].dc_id}>">
                         <{if $downlist.list[n].dc_istop !=""}>
-                        <font color="#ff0000">[顶]<{$downlist.list[n].dc_title}></font>
+                        <font color="#ff0000">[顶]<{$downlist.list[n].dc_title|truncate:30:'...':true}></font>
 
                         <{else}>
-                            <font color="black"><{$downlist.list[n].dc_title}></font>
+                            <font color="black"><{$downlist.list[n].dc_title|truncate:30:'...':true}></font>
                         <{/if}>
                     </a></p>
                     <em></em>
@@ -75,7 +75,7 @@
                 </div>
                  -->
 
-                <div class="work_readone">
+                <div class="work_readone" style="text-align: right">
                     <div class="work_read_left">
                         <{$downlist.list[n].dc_create|date_format:"%Y-%m-%d"}>
                         &nbsp;下载：<{$downlist.list[n].dc_download}>
