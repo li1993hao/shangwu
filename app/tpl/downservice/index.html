@@ -57,14 +57,14 @@
         <div class="work">
             <{section name=n loop=$downlist.list}>
             <div class="rec_item">
-                <div>
+                <div style="float: left">
 
                     <p><a href="<{$web_url}>/index.php/Downservice/dodown/id/<{$downlist.list[n].dc_id}>">
                         <{if $downlist.list[n].dc_istop !=""}>
-                        <font color="#ff0000">[顶]<{$downlist.list[n].dc_title}></font>
+                        <font color="#ff0000">[顶]<{$downlist.list[n].dc_title|truncate:30:'...':true}></font>
 
                         <{else}>
-                            <font color="black"><{$downlist.list[n].dc_title}></font>
+                            <font color="black"><{$downlist.list[n].dc_title|truncate:30:'...':true}></font>
                         <{/if}>
                     </a></p>
                     <em></em>
@@ -75,7 +75,7 @@
                 </div>
                  -->
 
-                <div class="work_readone">
+                <div class="work_readone" style="text-align: right">
                     <div class="work_read_left">
                         <{$downlist.list[n].dc_create|date_format:"%Y-%m-%d"}>
                         &nbsp;下载：<{$downlist.list[n].dc_download}>
@@ -90,62 +90,14 @@
             </div>
             <{/section}>
         </div>
-    </div
+        <{page info=$downlist web_url=$web_url url="/index.php/Downservice/index/" }>
+    </div>
 </div>
 
-<{assign var=share_content value=$detail.ji_content|strip_tags|truncate:130:"…"}>
-<{assign var=addShareUrl value="<{$web_url}>/index.php/jobinfo/addshare/id/<{$detail.ji_id}>"}>
+
 <{include file='footer.htm' }>
 <script type="text/javascript" src="<{$web_url}>/common/libs/jquery.min.js"></script>
 <script type="text/javascript" src="<{$web_url}>/common/app/js/header.js"></script>
-<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=1782349" ></script>
-<script type="text/javascript" id="bdshell_js"></script>
-<script type="text/javascript">
 
-    $(function(){
-        var flag = false;
-        $("#zandiv").click(function(){
-            //alert("sss");
-            if(!flag){
-                $.ajax({
-                    type: "POST",
-                    url: "<{$web_url}>/index.php/jobinfo/addgood/id/<{$detail.ji_id}>",
-                    success: function(msg){
-                        //alert("chenggong");
-                        flag = true;
-                        //alert( msg );
-                        if(msg != "0"){
-                            //alert("谢谢~");
-                            $(".zan").css("background","#333333");
-                            $(".zannum").text(msg);
-                        }else{
-                            //alert("shibai1");
-                        }
-
-                    },
-                    error:function(msg){
-                        //alert("shibai");
-                        //$("#addresult").html("添加失败！");
-                    }
-                });
-            }
-
-        });
-    });
-
-    var bds_config = {
-        'bdDesc':'<{$share_content|strip_tags|truncate:130:"..."}>'
-    };
-    $(function(){
-        $("#bdshare>a").click(function(){
-            $.ajax({
-                type: "POST",
-                url: "<{$addShareUrl}>"
-            });
-        });
-    });
-    document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000);
-</script>
 </body>
 </html>
->

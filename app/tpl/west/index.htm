@@ -51,7 +51,7 @@
                     <{if $news[n].ww_isup ==""}>
                     <div><a href="<{$web_url}>/index.php/west/detail/id/<{$news[n].ww_id}>" ><{$news[n].ww_title}></a></div>
                     <{else}>
-                    <div><a href="<{$web_url}>/index.php/west/detail/id/<{$news[n].ww_id}>" style="color:red">[顶]<{$news[n].ww_title}></a></div>
+                    <div><a href="<{$web_url}>/index.php/west/detail/id/<{$news[n].ww_id}>" style="color:red">[顶]<{$news[n].ww_title|truncate:30:'…':true}></a></div>
                     <{/if}>
                     <span><{$news[n].ww_time}></span>
                 </div>
@@ -71,7 +71,7 @@
                 <{if $news[n].ww_isup ==""}>
                 <div><a href="<{$web_url}>/index.php/west/detail/id/<{$news[n].ww_id}>" ><{$news[n].ww_title}></a></div>
                 <{else}>
-                <div><a href="<{$web_url}>/index.php/west/detail/id/<{$news[n].ww_id}>" style="color:red">[顶]<{$news[n].ww_title}></a></div>
+                <div><a href="<{$web_url}>/index.php/west/detail/id/<{$news[n].ww_id}>" style="color:red">[顶]<{$news[n].ww_title|truncate:30:'…':true}></a></div>
                 <{/if}>
                 <span><{$news[n].ww_time}></span>
             </div>
@@ -103,7 +103,7 @@
                     <{if $policy[n].ww_isup ==""}>
                     <div><a href="<{$web_url}>/index.php/west/detail/id/<{$policy[n].ww_id}>" ><{$policy[n].ww_title}></a></div>
                     <{else}>
-                    <div><a href="<{$web_url}>/index.php/west/detail/id/<{$policy[n].ww_id}>" style="color:red">[顶]<{$policy[n].ww_title}></a></div>
+                    <div><a href="<{$web_url}>/index.php/west/detail/id/<{$policy[n].ww_id}>" style="color:red">[顶]<{$policy[n].ww_title|truncate:30:'…':true}></a></div>
                     <{/if}>
                     <span><{$policy[n].ww_time}></span>
                 </div>
@@ -123,7 +123,7 @@
                 <{if $policy[n].ww_isup ==""}>
                 <div><a href="<{$web_url}>/index.php/west/detail/id/<{$policy[n].ww_id}>" ><{$policy[n].ww_title}></a></div>
                 <{else}>
-                <div><a href="<{$web_url}>/index.php/west/detail/id/<{$policy[n].ww_id}>" style="color:red">[顶]<{$policy[n].ww_title}></a></div>
+                <div><a href="<{$web_url}>/index.php/west/detail/id/<{$policy[n].ww_id}>" style="color:red">[顶]<{$policy[n].ww_title|truncate:30:'…':true}></a></div>
                 <{/if}>
                 <span><{$policy[n].ww_time}></span>
             </div>
