@@ -485,6 +485,7 @@ class AccountController extends Controller {
         ";
             }
         }else{
+
             if($zp_content[file_name]){
                 echo "
 
@@ -527,8 +528,8 @@ class AccountController extends Controller {
         </html>
         ";
             }else{
-                echo "
 
+                echo "
         <html>
         <head>
         <style type='text/css' >
@@ -852,10 +853,16 @@ class AccountController extends Controller {
             $data[com_address]=$company_info[com_address];
             /**资质证明获得**/
             $zz_arr=$frontuser->getappzzzm($fu_id);
+           // var_dump($zz_arr);
             //var_dump($zz_arr);
             if($zz_arr){
                 for($i=0;$i<count($zz_arr);$i++){
-                    $data["zz_pic"][]=$this->view->images_app_url.$zz_arr[$i]["pic_link"];
+                    if($zz_arr[$i]["pic_link"]){
+                        $data["zz_pic"][]=$this->view->images_app_url.$zz_arr[$i]["pic_link"];
+                    }else{
+                        $data["zz_pic"][]="";
+                    }
+
                 }
             }else{
                 $data["zz_pic"]="";
