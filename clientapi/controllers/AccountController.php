@@ -400,6 +400,90 @@ class AccountController extends Controller {
         </body>
         </html>
         ";
+        }elseif($type==0){
+            if($zp_content[file_name]){
+                echo "
+
+        <html>
+        <head>
+        <style type='text/css' >
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Hiragino Sans GB', 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei', sans-serif;
+        }
+
+        </style>
+        </head>
+        <body style='background-image: url(http://localhost/sw/shangwu/common/upload/images/bg.jpg);width: 98%;height: 100%;'>
+        <div style='width: 98%;height: 100%;'>
+            <div style='text-align: center;padding-top: 15px;font-size: 24px'>$zp_content[title]  </div>
+            <div style='text-align: center;margin-top: 10px;font-size: 8px'><span style='text-decoration:none'>召开时间：$zp_content[fb_date]</span><span style='margin-left: 40px;text-decoration:none'>浏览量：$zp_content[read_num]</span></div>
+        ";
+                echo ($zp_content[pic_link]?$div_str1:"");
+                echo ($office_arr?$div_str:"");
+                echo "
+            <div style='width: 100%' >
+                <div style='line-height:31px;margin: 0 auto;width:98%;margin-left: 15px;font-size: 16px;margin-top: 18px'>
+                    $zp_content[content]
+                </div>
+                <div style='margin-top: 40px;margin-left: 15px'>
+                    <span><strong>相关附件：</strong></span><span style='margin-left: 10px;'><a href='$file_link' style='color: red;text-decoration: none'>
+                    ";
+
+                echo           $zp_content[file_name];
+                echo "
+                        </a>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+        </body>
+        </html>
+        ";
+            }else{
+                echo "
+
+        <html>
+        <head>
+        <style type='text/css' >
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Hiragino Sans GB', 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei', sans-serif;
+        }
+
+        </style>
+        </head>
+        <body style='background-image: url(http://localhost/sw/shangwu/common/upload/images/bg.jpg);width: 98%;height: 100%;'>
+        <div style='width: 98%;height: 100%;'>
+            <div style='text-align: center;padding-top: 15px;font-size: 24px'>$zp_content[title]  </div>
+            <div style='text-align: center;margin-top: 10px;font-size: 8px'><span style='text-decoration:none'>召开时间：$zp_content[fb_date]</span><span style='margin-left: 40px;text-decoration:none'>浏览量：$zp_content[read_num]</span></div>
+        ";
+                echo ($zp_content[pic_link]?$div_str1:"");
+                echo ($office_arr?$div_str:"");
+                echo "
+            <div style='width: 100%' >
+                <div style='line-height:31px;margin: 0 auto;width:98%;margin-left: 15px;font-size: 16px;margin-top: 18px'>
+                    $zp_content[content]
+                </div>
+                <div style='margin-top: 40px;margin-left: 15px'>
+                    <span><strong>相关附件：</strong></span><span style='margin-left: 10px;'>
+                    ";
+
+                echo           "暂无附件";
+                echo "
+
+                    </span>
+                </div>
+            </div>
+
+        </div>
+        </body>
+        </html>
+        ";
+            }
         }else{
             if($zp_content[file_name]){
                 echo "
@@ -504,6 +588,11 @@ class AccountController extends Controller {
                 $data[$i]["ep_content"]=substr(strip_tags($ep_info[$i]["ep_content"]), 0, 300);
                 $data[$i]["ep_content"]=str_replace("&nbsp;","",$data[$i]["ep_content"]);
                 $data[$i]["ep_browse"]=$ep_info[$i]["ep_browse"];
+                if($ep_info[$i]["ep_istop"]){
+                    $data[$i]["ep_istop"]=1;
+                }else{
+                    $data[$i]["ep_istop"]=0;
+                }
             }
             $this->view->setAppStatus ( "1" );
             $this->view->setAppMsg ( "查询就业政策信息成功!" );
@@ -788,8 +877,8 @@ class AccountController extends Controller {
         $ci_type=$this->getRequest()->get("ci_type");
         $ci_introduction=new centerintroduction();
         $ci_info=$ci_introduction->getappcenter($ci_type);
-
-         echo "
+        if($ci_type==1){
+            echo "
 
 <html>
 <head>
@@ -804,7 +893,7 @@ class AccountController extends Controller {
 </head>
 <body style='background-image: url(http://localhost/xiandai/common/upload/images/bg.jpg);width: 98%;height: 100%;'>
 <div style='width: 98%;height: 100%;'>
-    <div style='text-align: center;padding-top: 15px;font-size: 24px'>现代职业技术学院招聘指南  </div>
+    <div style='text-align: center;padding-top: 15px;font-size: 24px'>招聘指南  </div>
     <div style='text-align: center;margin-top: 10px;font-size: 8px'><span style='text-decoration:none'>修改时间：$ci_info[ci_modify]</span><span style='margin-left: 25px;text-decoration:none'>浏览次数：$ci_info[ci_browse]</span><span style='margin-left: 30px;text-decoration:none'>分享次数：$ci_info[ci_share]</span></div>
     <div style='width: 100%' >
         <div style='line-height:31px;margin: 0 auto;width:98%;margin-left: 15px;font-size: 16px;margin-top: 18px'>
@@ -815,6 +904,35 @@ class AccountController extends Controller {
 </body>
 </html>
         ";
+        }elseif($ci_type==2){
+            echo "
+
+<html>
+<head>
+    <style type='text/css' >
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Hiragino Sans GB', 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei', sans-serif;
+        }
+
+    </style>
+</head>
+<body style='background-image: url(http://localhost/xiandai/common/upload/images/bg.jpg);width: 98%;height: 100%;'>
+<div style='width: 98%;height: 100%;'>
+    <div style='text-align: center;padding-top: 15px;font-size: 24px'>中心简介  </div>
+    <div style='text-align: center;margin-top: 10px;font-size: 8px'><span style='text-decoration:none'>修改时间：$ci_info[ci_modify]</span><span style='margin-left: 25px;text-decoration:none'>浏览次数：$ci_info[ci_browse]</span><span style='margin-left: 30px;text-decoration:none'>分享次数：$ci_info[ci_share]</span></div>
+    <div style='width: 100%' >
+        <div style='line-height:31px;margin: 0 auto;width:98%;margin-left: 15px;font-size: 16px;margin-top: 18px'>
+            $ci_info[ci_content]
+        </div>
+
+    </div>
+</body>
+</html>
+        ";
+        }
+
 
      }
      /** 用户反馈提交  安卓提交2 ios提交3 */

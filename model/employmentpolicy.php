@@ -111,7 +111,7 @@ class employmentpolicy extends Model
      */
     public function getappepinfo($num){
         $select = "SELECT `employmentpolicy`.* FROM `employmentpolicy` ";
-        $order = "ORDER BY  `employmentpolicy`.`ep_create` DESC ";
+        $order = "ORDER BY  `employmentpolicy`.`ep_istop` DESC,`employmentpolicy`.`ep_create` DESC ";
         $limit = "LIMIT " . $num . ",10 ";
         //echo $sql;
         $sql = $select.$order.$limit;
