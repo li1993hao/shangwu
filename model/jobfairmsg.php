@@ -476,7 +476,7 @@ class jobfairmsg extends Model{
         if($state!==null){
             $where = " AND `jobfairmsg`.`jm_veri` = ".$state;
         }
-        $order = " ORDER BY  `jobfairmsg`.`jm_isup` DESC , `jobfairmsg`.`jm_date` DESC Limit ".$num.",10";
+        $order = " ORDER BY  `jobfairmsg`.`jm_isup` DESC , `jobfairmsg`.`jm_opentime` DESC Limit ".$num.",10";
         $sql=$sql.$filter.$where.$order;
         return $this->fetchAll($sql);
     }
