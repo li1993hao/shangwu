@@ -590,7 +590,7 @@
             <{section name=n loop=$policyNotice.list}>
             <li>
                 <div>
-                    <{if $empStar.list[i].ji_isup != ""}>
+                    <{if $policyNotice.list[n].ji_isup != ""}>
                     <div class="top">
                         <a href="<{$web_url}>/index.php/jobinfo/detail/id/<{$policyNotice.list[n].ji_id}>">
                             <{$policyNotice.list[n].ji_title|truncate:35: '…':true}>

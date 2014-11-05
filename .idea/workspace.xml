@@ -26,7 +26,7 @@
       <file leaf-file-name="index.htm" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/tpl/index/index.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="556" column="42" selection-start="22759" selection-end="22759" vertical-scroll-proportion="0.15789473" vertical-offset="8235" max-vertical-offset="13125">
+            <state line="592" column="45" selection-start="24079" selection-end="24079" vertical-scroll-proportion="-0.6315789" vertical-offset="9300" max-vertical-offset="13125">
               <folding>
                 <element signature="n#style#0;n#iframe#0;n#ul#3;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -958,7 +958,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/tpl/index/index.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="556" column="42" selection-start="22759" selection-end="22759" vertical-scroll-proportion="0.15789473" vertical-offset="8235" max-vertical-offset="13125">
+        <state line="592" column="45" selection-start="24079" selection-end="24079" vertical-scroll-proportion="-0.6315789" vertical-offset="9300" max-vertical-offset="13125">
           <folding>
             <element signature="n#style#0;n#iframe#0;n#ul#3;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
