@@ -2,7 +2,13 @@ var scrollTimer;
 var scrollWidth;
 var scrollCount;
 var scrollTime = 3000;
-
+function resetSize(){
+    clearInterval(scrollTimer);
+    $(".carousel_content div img").css("width", document.body.clientWidth+"px");
+    $(".carousel_content").css("width",scrollWidth*scrollCount+"px");
+    scrollWidth = document.body.clientWidth;
+    scrollTimer = setInterval(scrollCarousel,scrollTime);
+}
 $(function(){
     /**轮播控件***/
 

@@ -38,7 +38,7 @@
                     <div><a href="<{$web_url}>/index.php/Jobfairmsg/calendardetail/id/<{$jobFair[calendar].jm_id}>"> <{$jobFair[calendar].jm_name|truncate:15: '…':true}></a>
                     </div>
                     <div> <{$jobFair[calendar].jm_opentime|date_format: "%Y.%m.%d  %H:%M"}></div>
-                    <div> <{$jobFair[calendar].jm_addr|truncate:15: '…':true}></div>
+                    <div> <{$jobFair[calendar].jm_addr|truncate:10: '…':true}></div>
                 </div>
             </div>
             <{/section}>
