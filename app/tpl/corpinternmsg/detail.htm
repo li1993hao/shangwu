@@ -21,6 +21,11 @@
         .middle_left > div:nth-child(3) span {
             margin-left: 10px;
         }
+        span.collect-btn{
+            float: right;height: 14px;line-height: 16px;
+            position: relative;
+            top: -37px;
+        }
     </style>
 
 </head>
@@ -69,7 +74,7 @@
             <{if isset($__userinfo__)}>
             <{if $__userinfo__.type==0}>
             <span id="do-collect-btn" class="collect-btn" <{if $collectFlag!="1"}>style="display:none;"<{/if}> >收藏</span>
-            <span id="cancel-collect-btn" class="collect-btn" data="<{$detail.cim_id}>" <{if $collectFlag=="1"}>style="display:none;"<{/if}> >取消收藏</span>
+            <span id="cancel-collect-btn"  class="collect-btn" data="<{$detail.cim_id}>" <{if $collectFlag=="1"}>style="display:none;"<{/if}> >取消收藏</span>
             <{/if}>
             <{/if}>
         </div>

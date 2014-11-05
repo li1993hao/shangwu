@@ -27,7 +27,9 @@
 }
 .note-attr{text-align: left;width:600px;/*background-color:green;*/	line-height:20px;font-size:13px;font-weight:500;color:#b8b8b8;}
 .collect-btn{height:30px;font-size:13px;padding:5px 15px;background:#788ac6;color:#ffffff;cursor:pointer;margin-top:5px;}
-.collect-btn:hover{background:#788ac6;}
+.collect-btn:hover{background:#788ac6;
+
+}
 /*标题以及收藏按钮*/
 
 /*一些属性*/
