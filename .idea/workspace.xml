@@ -23,11 +23,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.htm" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.htm" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/tpl/index/index.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="25" selection-start="879" selection-end="888" vertical-scroll-proportion="-15.625" vertical-offset="0" max-vertical-offset="12975">
+            <state line="556" column="42" selection-start="22759" selection-end="22759" vertical-scroll-proportion="0.15789473" vertical-offset="8235" max-vertical-offset="13125">
               <folding>
+                <element signature="n#style#0;n#iframe#0;n#ul#3;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -70,10 +71,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/app/css/index/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="294" column="17" selection-start="5465" selection-end="5465" vertical-scroll-proportion="0.6196581" vertical-offset="3975" max-vertical-offset="14070">
+            <state line="294" column="17" selection-start="5465" selection-end="5465" vertical-scroll-proportion="0.0" vertical-offset="3975" max-vertical-offset="14070">
               <folding />
             </state>
           </provider>
@@ -166,7 +167,6 @@
         <option value="$PROJECT_DIR$/app/tpl/corpinternmsg/detail.htm" />
         <option value="$PROJECT_DIR$/common/app/css/content.css" />
         <option value="$PROJECT_DIR$/app/tpl/student/favorjobinfo.htm" />
-        <option value="$PROJECT_DIR$/app/tpl/index/index.htm" />
         <option value="$PROJECT_DIR$/common/app/js/index/index.js" />
         <option value="$PROJECT_DIR$/app/tpl/west/detail.htm" />
         <option value="$PROJECT_DIR$/app/tpl/activityjobbulletin/detail.htm" />
@@ -176,6 +176,7 @@
         <option value="$PROJECT_DIR$/app/tpl/west/person.htm" />
         <option value="$PROJECT_DIR$/app/tpl/recruitment/index.htm" />
         <option value="$PROJECT_DIR$/common/app/css/index/index.css" />
+        <option value="$PROJECT_DIR$/app/tpl/index/index.htm" />
       </list>
     </option>
   </component>
@@ -311,6 +312,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="recruitment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wyjob" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shangwu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tpl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="index" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -870,15 +893,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/tpl/index/index.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="25" selection-start="879" selection-end="888" vertical-scroll-proportion="-15.625" vertical-offset="0" max-vertical-offset="12975">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/app/js/index/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="0" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4485">
@@ -937,8 +951,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/common/app/css/index/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="294" column="17" selection-start="5465" selection-end="5465" vertical-scroll-proportion="0.6196581" vertical-offset="3975" max-vertical-offset="14070">
+        <state line="294" column="17" selection-start="5465" selection-end="5465" vertical-scroll-proportion="0.0" vertical-offset="3975" max-vertical-offset="14070">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/tpl/index/index.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="556" column="42" selection-start="22759" selection-end="22759" vertical-scroll-proportion="0.15789473" vertical-offset="8235" max-vertical-offset="13125">
+          <folding>
+            <element signature="n#style#0;n#iframe#0;n#ul#3;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
