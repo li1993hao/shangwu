@@ -769,7 +769,7 @@ class frontuser extends Model {
 				LEFT JOIN `companypicture` ON `companypicture`.`com_id` = `company`.`com_id`
 			 	LEFT JOIN `picture` ON `picture`.`pic_id` = `companypicture`.`pic_id`
 				WHERE `company`.`fu_id` = '" .  $fu_id . "'";
-        //var_dump($sql);
+//        /var_dump($sql);
         // echo $sql;
         return $this->fetchAll ( $sql );
     }
