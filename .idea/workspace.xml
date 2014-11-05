@@ -60,10 +60,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="person.htm" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="person.htm" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/tpl/west/person.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="63" selection-start="3387" selection-end="3387" vertical-scroll-proportion="0.54460096" vertical-offset="837" max-vertical-offset="2115">
+            <state line="79" column="63" selection-start="3387" selection-end="3387" vertical-scroll-proportion="-6.96" vertical-offset="837" max-vertical-offset="2115">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/tpl/friendlink/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="4" selection-start="820" selection-end="820" vertical-scroll-proportion="0.31578946" vertical-offset="165" max-vertical-offset="1515">
               <folding />
             </state>
           </provider>
@@ -114,15 +123,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.htm" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/tpl/activityjobbulletin/index.htm">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="124" column="153" selection-start="5136" selection-end="5136" vertical-scroll-proportion="-17.5" vertical-offset="1440" max-vertical-offset="2385">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -133,7 +133,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/filter/appFilter.php" />
         <option value="$PROJECT_DIR$/admin/controllers/JobinfoController.php" />
         <option value="$PROJECT_DIR$/common/app/css/headAndfoot.css" />
         <option value="$PROJECT_DIR$/app/tpl/header.htm" />
@@ -184,6 +183,7 @@
         <option value="$PROJECT_DIR$/app/tpl/west/westnews.htm" />
         <option value="$PROJECT_DIR$/app/tpl/west/policy.htm" />
         <option value="$PROJECT_DIR$/app/tpl/west/person.htm" />
+        <option value="$PROJECT_DIR$/app/tpl/friendlink/index.html" />
       </list>
     </option>
   </component>
@@ -336,6 +336,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="tpl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="friendlink" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wyjob" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shangwu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -391,28 +413,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="west" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wyjob" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shangwu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tpl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="index" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -547,11 +547,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_5.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="9" selection-start="1144" selection-end="1144" vertical-scroll-proportion="0.0" vertical-offset="326" max-vertical-offset="17265" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/jobinfo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="82" column="9" selection-start="2210" selection-end="2210" vertical-scroll-proportion="0.0" vertical-offset="1230" max-vertical-offset="5925">
@@ -955,7 +950,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/tpl/west/person.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="63" selection-start="3387" selection-end="3387" vertical-scroll-proportion="0.54460096" vertical-offset="837" max-vertical-offset="2115">
+        <state line="79" column="63" selection-start="3387" selection-end="3387" vertical-scroll-proportion="-6.96" vertical-offset="837" max-vertical-offset="2115">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/tpl/friendlink/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="4" selection-start="820" selection-end="820" vertical-scroll-proportion="0.31578946" vertical-offset="165" max-vertical-offset="1515">
           <folding />
         </state>
       </provider>
