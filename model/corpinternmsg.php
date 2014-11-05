@@ -75,27 +75,27 @@ class corpinternmsg extends Model {
 		return $this->fetchAll ( $sql );
 	}
 	public function getPreNews($cur_id, $type) {
-//        $app =  App::getInstance();
-//        $userInfo = $app->getData("userinfo");
-//        if($userInfo){
+        $app =  App::getInstance();
+        $userInfo = $app->getData("userinfo");
+        if($userInfo){
             $sql = "SELECT `corpinternmsg`.* FROM `corpinternmsg`
 				WHERE `cim_id` > " . $cur_id . " AND `rit_id` = '" . $type . "' AND `cim_veri` = " . $this->_state ["pass"] . " ORDER BY `cim_id` ASC ";
-//        }else{
-//            $sql = "SELECT `corpinternmsg`.* FROM `corpinternmsg`
-//				WHERE `cim_id` > " . $cur_id . " AND `rit_id` = '" . $type . "' AND `cim_veri` = " . $this->_state ["pass"] . " AND 'cim_isopen'=1 ORDER BY `cim_id` ASC ";
-//        }
+        }else{
+            $sql = "SELECT `corpinternmsg`.* FROM `corpinternmsg`
+				WHERE `cim_id` > " . $cur_id . " AND `rit_id` = '" . $type . "' AND `cim_veri` = " . $this->_state ["pass"] . " AND `cim_isopen`=1 ORDER BY `cim_id` ASC ";
+        }
 		return $this->fetchRow ( $sql );
 	}
 	public function getNextNews($cur_id, $type) {
-//        $app =  App::getInstance();
-//        $userInfo = $app->getData("userinfo");
-//        if($userInfo){
+        $app =  App::getInstance();
+        $userInfo = $app->getData("userinfo");
+        if($userInfo){
             $sql = "SELECT `corpinternmsg`.* FROM `corpinternmsg`
 				WHERE `cim_id` < " . $cur_id . " AND `rit_id` = '" . $type . "' AND `cim_veri` = " . $this->_state ["pass"] . " ORDER BY `cim_id` DESC ";
-//        }else{
-//            $sql = "SELECT `corpinternmsg`.* FROM `corpinternmsg`
-//				WHERE `cim_id` < " . $cur_id . " AND `rit_id` = '" . $type . "' AND `cim_veri` = " . $this->_state ["pass"] . " AND 'cim_isopen'=1 ORDER BY `cim_id` DESC ";
-//        }
+        }else{
+            $sql = "SELECT `corpinternmsg`.* FROM `corpinternmsg`
+				WHERE `cim_id` < " . $cur_id . " AND `rit_id` = '" . $type . "' AND `cim_veri` = " . $this->_state ["pass"] . " AND  `cim_isopen`=1 ORDER BY `cim_id` DESC ";
+        }
 
 
 		return $this->fetchRow ( $sql );

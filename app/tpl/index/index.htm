@@ -428,11 +428,19 @@
             <{section name=i loop=$bulletin}>
             <li>
                 <div>
+                    <{if $bulletin[i]==""}>
                     <div class="item">
                         <a href="<{$web_url}>/index.php/Activityjobbulletin/detail/id/<{$bulletin[i].aa_id}>">
                             <{$bulletin[i].aa_title|truncate:35: '…':true}>
                         </a>
                     </div>
+                    <{else}>
+                    <div class="top">
+                        <a href="<{$web_url}>/index.php/Activityjobbulletin/detail/id/<{$bulletin[i].aa_id}>">
+                            <{$bulletin[i].aa_title|truncate:35: '…':true}>
+                        </a>
+                    </div>
+                    <{/if}>
                                             <span>
                                                 <{$bulletin[i].aa_time|date_format:"%Y-%m-%d"}>
                                             </span>

@@ -45,7 +45,7 @@
     font-size: 12px;
 }
 .container{
-    background: url(../../images/bg.jpg) repeat-y;
+    background: url(../../images/bg.jpg) repeat;
 
 }
 
