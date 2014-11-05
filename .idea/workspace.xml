@@ -23,10 +23,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="content.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="content.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/app/css/content.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="0" selection-start="498" selection-end="498" vertical-scroll-proportion="0.66239315" vertical-offset="0" max-vertical-offset="1815">
+            <state line="31" column="0" selection-start="498" selection-end="498" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1815">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="favorjobinfo.htm" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/tpl/student/favorjobinfo.htm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="229" column="53" selection-start="9840" selection-end="9840" vertical-scroll-proportion="0.518797" vertical-offset="3090" max-vertical-offset="4815">
               <folding />
             </state>
           </provider>
@@ -101,17 +110,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addjobfairmsg.htm" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/tpl/jobfair/addjobfairmsg.htm">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="5490">
-              <folding>
-                <marker date="1414402819000" expanded="false" signature="2743:2778" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="verifyinfo.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/tpl/jobfair/verifyinfo.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -131,7 +129,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/tpl/sourceinformation/detail.htm" />
         <option value="$PROJECT_DIR$/app/tpl/west/person.htm" />
         <option value="$PROJECT_DIR$/app/tpl/west/policy.htm" />
         <option value="$PROJECT_DIR$/app/tpl/west/westnews.htm" />
@@ -182,6 +179,7 @@
         <option value="$PROJECT_DIR$/app/tpl/jobfairmsg/calendardetail.htm" />
         <option value="$PROJECT_DIR$/app/tpl/corpinternmsg/detail.htm" />
         <option value="$PROJECT_DIR$/common/app/css/content.css" />
+        <option value="$PROJECT_DIR$/app/tpl/student/favorjobinfo.htm" />
       </list>
     </option>
   </component>
@@ -298,32 +296,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wyjob" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shangwu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -364,29 +336,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="jobfairmsg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wyjob" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shangwu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tpl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="corpinternmsg" />
+              <option name="myItemId" value="student" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -437,28 +387,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="tpl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wyjob" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shangwu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tpl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jobfair" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -593,11 +521,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/JobfairmsgController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="49" selection-start="700" selection-end="700" vertical-scroll-proportion="8.75" vertical-offset="585" max-vertical-offset="3525" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/CompanyController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="461" column="42" selection-start="17914" selection-end="17914" vertical-scroll-proportion="0.0" vertical-offset="6915" max-vertical-offset="13800" />
@@ -906,7 +829,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5490">
           <folding>
-            <marker date="1414402819000" expanded="false" signature="2743:2778" placeholder="..." />
+            <marker date="1414402819000" expanded="false" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -975,7 +898,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/common/app/css/content.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="498" selection-end="498" vertical-scroll-proportion="0.66239315" vertical-offset="0" max-vertical-offset="1815">
+        <state line="31" column="0" selection-start="498" selection-end="498" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1815">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/tpl/student/favorjobinfo.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="229" column="53" selection-start="9840" selection-end="9840" vertical-scroll-proportion="0.518797" vertical-offset="3090" max-vertical-offset="4815">
           <folding />
         </state>
       </provider>
