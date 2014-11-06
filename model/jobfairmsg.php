@@ -254,9 +254,9 @@ class jobfairmsg extends Model{
 			$pic = "'".$picid."'";
 		}
 		if($fuId == "0"){
-			$veri = $this->_state["pass"];
+            $veri = $this->_state["untreated"];
 		}else{
-			$veri = $this->_state["untreated"];
+            $veri = $this->_state["pass"];
 		}
 
 		$sql = "INSERT INTO `jobfairmsg` "
@@ -487,6 +487,7 @@ class jobfairmsg extends Model{
         }
         $order = " ORDER BY  `jobfairmsg`.`jm_isup` DESC , `jobfairmsg`.`jm_opentime` DESC Limit ".$num.",10";
         $sql=$sql.$filter.$where.$order;
+        //var_dump($sql);
         return $this->fetchAll($sql);
     }
 
