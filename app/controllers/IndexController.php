@@ -244,6 +244,7 @@ class IndexController extends Controller{
 			$sessionUtil = $this->getApp()->loadUtilClass("SessionUtil");
             $this->getView()->setData(array("userType"=>$result["userinfo"]["type"],"userTypeName"=>$result["userinfo"]["typename"],"userName"=>$result["userinfo"]["name"],"userState"=>$result["userinfo"]["state"],"userStateName"=>$result["userinfo"]["statename"]));
 			$sessionUtil->set ( "session_userid", $result["result"] );
+
 		}else{
 			$this->getView()->setState("0");
 			$this->getView()->setMsg($result["msg"]);
