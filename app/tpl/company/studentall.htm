@@ -1,6 +1,5 @@
 <!DOCTYPE HTML>
 <html>
-
 <head>
     <meta id="screen-view" name="viewport" content="width=device-width" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -149,8 +148,9 @@
             data:{type:flag,college:collegeName,grade:grade,major:pro,degree:degree,page:page},
             type:"post",
             async:false,
-            dataType:"json",
-            success:function(data){
+
+            success:function(datas){
+              var data = eval('('+datas+')');
                 var str = "<tr>";
                 str += "<th scope=\"col\" width=\"60px\" style=\"border-left:1px solid #adceff;text-align:center;\" >姓名</th>";
                 str += "<th scope=\"col\" width=\"50px\" style=\"text-align:center;\">性别</th>";
@@ -210,8 +210,8 @@
             data:{type:flag},
             type:"POST",
             async:false,
-            dataType:"json",
-            success:function(data){
+            success:function(datas){
+              var data = eval('('+datas+')');
                 var str = "";
                 if(data.json.state == 1){
                     str += "<option value=\"0\" selected=\"selected\">不限</option>";
@@ -237,8 +237,8 @@
             data:{type:flag},
             type:"POST",
             async:false,
-            dataType:"json",
-            success:function(jsondata){
+            success:function(datas){
+              var jsondata = eval('('+datas+')');
                 var str = "";
                 if(jsondata.json.state == 1){
                     //alert(jsondata.json.data);
@@ -267,8 +267,8 @@
             data:{type:flag},
             type:"POST",
             async:false,
-            dataType:"json",
-            success:function(jsondata){
+            success:function(datas){
+             var jsondata = eval('('+datas+')');
                 var str = "";
                 if(jsondata.json.state == 1){
                     //alert(jsondata.json.data);
@@ -297,8 +297,8 @@
             data:{type:flag},
             type:"POST",
             async:false,
-            dataType:"json",
-            success:function(jsondata){
+            success:function(datas){
+               var jsondata = eval('('+datas+')');
                 var str = "";
                 if(jsondata.json.state == 1){
                     //alert(jsondata.json.data);

@@ -22,15 +22,13 @@
             background-color: #ffffff;
         }
 
-        #middle_left img {
-            margin-left: 197px;
-            margin-top: 50px;
-            float: left
-        }
-
         #middle_right {
-            float: left;
-            margin-top: 133px;
+            width: 700px;
+            margin: 0 auto;
+            height: 300px;
+            padding-top: 10%;
+            background:url(<{$web_url}>/common/app/images/index/login_person.png) no-repeat;
+            background-position: 10px;
         }
 
         .input-title {
@@ -68,7 +66,9 @@
             padding:10px;
             text-align: center;
         }
-
+        #form_table{
+        margin-left: 202px;
+        }
     </style>
 </head>
 
@@ -76,9 +76,7 @@
 
 <{include file='header.htm'}>
 <div id="middle">
-    <div id="middle_left">
-        <img src="<{$web_url}>/common/app/images/index/login_person.png"/>
-    </div>
+
     <div id="middle_right">
         <table id="form_table">
             <tr>
@@ -124,22 +122,19 @@
         $.ajax({
             url: web_url + "/index.php/index/login",
             data: {"user_name": name, "user_pswd": pswd},
-            dataType: "json",
-            success: function (data) {
+            success: function (datas) {
+                var data = eval('('+datas+')');
                 if (data.json.state == 0) {
                     shake($("#error"));
                     $("#error").html(data.json.msg);
                 } else {
-                    location.href = web_url + "/index.php/";
+                    location.href = web_url + "/index.php";
                 }
-
-
             },
             async: false
         });
     }
 </script>
 <link type="text/css" rel="stylesheet" href="<{$web_url}>/common/app/css/am.min.css"/>
-<script type="text/javascript" src="<{$web_url}>/common/app/js/index/index.js"></script>
 </body>
 </html>

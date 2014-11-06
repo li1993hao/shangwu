@@ -157,8 +157,8 @@
 			data:{flag:flag,type:infoType,infoid:infoId,major:pro,time:timeRange,page:page},
 			type:"POST",
 			async:false,
-			dataType:"json",
-			success:function(data){
+			success:function(datas){
+                var data = eval('('+datas+')');
                 //alert(data);
 				var str = "<tr>";
 				str += "<th scope=\"col\" width=\"80px\" style=\"border-left:1px solid #adceff;text-align:center;\" >姓名</th>";
@@ -202,8 +202,8 @@
 			data:{flag:flag,type:infoType},
 			type:"POST",
 			async:false,
-			dataType:"json",
-			success:function(data){
+			success:function(datas){
+                var data = eval('('+datas+')');
 				var str = "";
 				if(data.json.state == 1){
 					str += "<option value=\"0\" selected=\"selected\">不限</option>";
@@ -229,8 +229,8 @@
 			data:{flag:flag,type:infoType},
 			type:"POST",
 			async:false,
-			dataType:"json",
-			success:function(data){
+			success:function(datas){
+                var data = eval('('+datas+')');
 				var str = "";
 				if(data.json.state == 1){
 					str += "<option value=\"0\" selected=\"selected\">不限</option>";
@@ -252,6 +252,7 @@
 				}
 			},
 			error:function(msg){
+
 				alert("网络出现问题！");
 			}
 		});
