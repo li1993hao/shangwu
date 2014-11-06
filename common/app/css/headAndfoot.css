@@ -1,5 +1,15 @@
 /*轮播控件*/
 
+.clearfix:after,.clearfix:before{
+    display: table;
+    content: " ";
+}
+.clearfix:after{
+    clear: both;
+}
+.clearfix{
+    zoom: 1;
+}
 
 .carousel {
     height: 500px;
@@ -257,10 +267,14 @@ a:hover {
 
 .search_form_wrap{
     height: 40px;
+    float: right;
+    clear: both;
 }
 .header_top ul {
     height: 48px;
-    margin-left: 20px;
+    float: right;
+    margin-right: 52px;
+    clear: both;
 }
 .header_top li {
     float: left;
