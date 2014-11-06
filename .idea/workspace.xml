@@ -32,65 +32,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jobfairmsg.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/jobfairmsg.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="323" column="3" selection-start="11418" selection-end="11418" vertical-scroll-proportion="-7.0833335" vertical-offset="4675" max-vertical-offset="7530">
-              <folding>
-                <marker date="1415262966000" expanded="true" signature="302:505" placeholder="SELECT `jobf..." />
-                <marker date="1415262966000" expanded="true" signature="1665:2014" placeholder="SELECT `jobf..." />
-                <marker date="1415262966000" expanded="true" signature="5187:5308" placeholder="SELECT `jobf..." />
-                <marker date="1415262966000" expanded="true" signature="10614:10692" placeholder="DELETE FROM ..." />
-                <marker date="1415262966000" expanded="true" signature="12401:12560" placeholder="SELECT `jobf..." />
-                <marker date="1415262966000" expanded="true" signature="14564:14590" placeholder="SELECT * FRO..." />
-                <marker date="1415262966000" expanded="true" signature="16403:16533" placeholder="SELECT `jobf..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="corpinternmsg.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/corpinternmsg.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="471" column="39" selection-start="17376" selection-end="17376" vertical-scroll-proportion="-5.8333335" vertical-offset="6925" max-vertical-offset="13920">
-              <folding>
-                <marker date="1415243499000" expanded="true" signature="320:350" placeholder="SELECT * FRO..." />
-                <marker date="1415243499000" expanded="true" signature="436:460" placeholder="SELECT * FRO..." />
-                <marker date="1415243499000" expanded="true" signature="544:564" placeholder="SELECT * FRO..." />
-                <marker date="1415243499000" expanded="true" signature="687:732" placeholder="SELECT `corp..." />
-                <marker date="1415243499000" expanded="true" signature="1263:1833" placeholder="SELECT `corp..." />
-                <marker date="1415243499000" expanded="true" signature="5840:6209" placeholder="SELECT `corp..." />
-                <marker date="1415243499000" expanded="true" signature="8095:8468" placeholder="SELECT `corp..." />
-                <marker date="1415243499000" expanded="true" signature="9588:9882" placeholder="SELECT `corp..." />
-                <marker date="1415243499000" expanded="true" signature="11001:11370" placeholder="SELECT `corp..." />
-                <marker date="1415243499000" expanded="true" signature="14977:15055" placeholder="DELETE FROM ..." />
-                <marker date="1415243499000" expanded="true" signature="24505:24549" placeholder="DELETE FROM ..." />
-                <marker date="1415243499000" expanded="true" signature="25023:25052" placeholder="SELECT * FRO..." />
-                <marker date="1415243499000" expanded="true" signature="27076:27121" placeholder="SELECT `corp..." />
-                <marker date="1415243499000" expanded="true" signature="27849:28058" placeholder="select cim.c..corpinternmsg..." />
-                <marker date="1415243499000" expanded="true" signature="28080:28145" placeholder="update corpi..." />
-                <marker date="1415243499000" expanded="true" signature="28422:28672" placeholder="select jm.jm..jobfairmsg..." />
-                <marker date="1415243499000" expanded="true" signature="28694:28753" placeholder="update jobfa..." />
-                <marker date="1415243499000" expanded="true" signature="29030:29234" placeholder="select ep.ep..employmentpolicy..." />
-                <marker date="1415243499000" expanded="true" signature="29256:29325" placeholder="update emplo..." />
-                <marker date="1415243499000" expanded="true" signature="29407:29701" placeholder="select ji.ji..jobinfo..." />
-                <marker date="1415243499000" expanded="true" signature="29723:29779" placeholder="update jobin..." />
-                <marker date="1415243499000" expanded="true" signature="29861:29984" placeholder="select cci_t..collegeintroduction..." />
-                <marker date="1415243499000" expanded="true" signature="30006:30077" placeholder="update colle..." />
-                <marker date="1415243499000" expanded="true" signature="30159:30360" placeholder="select si.si..sourceinformation..." />
-                <marker date="1415243499000" expanded="true" signature="30382:30448" placeholder="update sourc..." />
-                <marker date="1415243499000" expanded="true" signature="30530:30700" placeholder="select w.ww_..westwork..." />
-                <marker date="1415243499000" expanded="true" signature="30722:30779" placeholder="update westw..." />
-                <marker date="1415243499000" expanded="true" signature="30861:31062" placeholder="select si.si..sourceinformation..." />
-                <marker date="1415243499000" expanded="true" signature="31114:31180" placeholder="update sourc..." />
-                <marker date="1415243499000" expanded="true" signature="31347:31388" placeholder="select * fro..office..." />
-                <marker date="1415243499000" expanded="true" signature="31545:31663" placeholder="select cim_i..corpinternmsg..." />
-                <marker date="1415243499000" expanded="true" signature="31961:32118" placeholder="select jm_id..jobfairmsg..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="register.htm" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/tpl/account/register.htm">
           <provider selected="true" editor-type-id="text-editor">
@@ -139,10 +80,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="detail.htm" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="detail.htm" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/tpl/employmentteam/detail.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="12" selection-start="2812" selection-end="2812" vertical-scroll-proportion="0.30075186" vertical-offset="880" max-vertical-offset="1725">
+            <state line="72" column="12" selection-start="2812" selection-end="2812" vertical-scroll-proportion="-8.333333" vertical-offset="880" max-vertical-offset="1725">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mycorpmsg.htm" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/tpl/company/mycorpmsg.htm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="42.5" vertical-offset="1020" max-vertical-offset="2490">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="myjobfair.htm" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/tpl/company/myjobfair.htm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="62" column="26" selection-start="3020" selection-end="3020" vertical-scroll-proportion="0.60902256" vertical-offset="525" max-vertical-offset="2940">
               <folding />
             </state>
           </provider>
@@ -225,7 +184,6 @@
         <option value="$PROJECT_DIR$/app/controllers/DownserviceController.php" />
         <option value="$PROJECT_DIR$/app/tpl/company/editjobfair.htm" />
         <option value="$PROJECT_DIR$/app/tpl/company/editcorpmsg.htm" />
-        <option value="$PROJECT_DIR$/app/tpl/company/myjobfair.htm" />
         <option value="$PROJECT_DIR$/admin/controllers/JobfairController.php" />
         <option value="$PROJECT_DIR$/common/app/js/header.js" />
         <option value="$PROJECT_DIR$/app/tpl/footer.htm" />
@@ -261,6 +219,7 @@
         <option value="$PROJECT_DIR$/common/app/css/account/register.css" />
         <option value="$PROJECT_DIR$/app/tpl/account/register.htm" />
         <option value="$PROJECT_DIR$/app/tpl/employmentteam/detail.htm" />
+        <option value="$PROJECT_DIR$/app/tpl/company/myjobfair.htm" />
       </list>
     </option>
   </component>
@@ -443,7 +402,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="employmentteam" />
+              <option name="myItemId" value="company" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -646,16 +605,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/tpl/index/loginindex.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2250" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/controllers/JobfairController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="157" column="84" selection-start="5128" selection-end="5128" vertical-scroll-proportion="-13.125" vertical-offset="2040" max-vertical-offset="5520" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/tpl/jobfair/addjobfairmsg.htm">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5490">
@@ -936,13 +885,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="323" column="3" selection-start="11418" selection-end="11418" vertical-scroll-proportion="-7.0833335" vertical-offset="4675" max-vertical-offset="7530">
           <folding>
-            <marker date="1415262966000" expanded="true" signature="302:505" placeholder="SELECT `jobf..." />
-            <marker date="1415262966000" expanded="true" signature="1665:2014" placeholder="SELECT `jobf..." />
-            <marker date="1415262966000" expanded="true" signature="5187:5308" placeholder="SELECT `jobf..." />
-            <marker date="1415262966000" expanded="true" signature="10614:10692" placeholder="DELETE FROM ..." />
-            <marker date="1415262966000" expanded="true" signature="12401:12560" placeholder="SELECT `jobf..." />
-            <marker date="1415262966000" expanded="true" signature="14564:14590" placeholder="SELECT * FRO..." />
-            <marker date="1415262966000" expanded="true" signature="16403:16533" placeholder="SELECT `jobf..." />
+            <marker date="1415262966000" expanded="true" signature="-1:-1" placeholder="SELECT `jobf..." />
+            <marker date="1415262966000" expanded="true" signature="-1:-1" placeholder="SELECT `jobf..." />
+            <marker date="1415262966000" expanded="true" signature="-1:-1" placeholder="SELECT `jobf..." />
+            <marker date="1415262966000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1415262966000" expanded="true" signature="-1:-1" placeholder="SELECT `jobf..." />
+            <marker date="1415262966000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1415262966000" expanded="true" signature="-1:-1" placeholder="SELECT `jobf..." />
           </folding>
         </state>
       </provider>
@@ -951,38 +900,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="471" column="39" selection-start="17376" selection-end="17376" vertical-scroll-proportion="-5.8333335" vertical-offset="6925" max-vertical-offset="13920">
           <folding>
-            <marker date="1415243499000" expanded="true" signature="320:350" placeholder="SELECT * FRO..." />
-            <marker date="1415243499000" expanded="true" signature="436:460" placeholder="SELECT * FRO..." />
-            <marker date="1415243499000" expanded="true" signature="544:564" placeholder="SELECT * FRO..." />
-            <marker date="1415243499000" expanded="true" signature="687:732" placeholder="SELECT `corp..." />
-            <marker date="1415243499000" expanded="true" signature="1263:1833" placeholder="SELECT `corp..." />
-            <marker date="1415243499000" expanded="true" signature="5840:6209" placeholder="SELECT `corp..." />
-            <marker date="1415243499000" expanded="true" signature="8095:8468" placeholder="SELECT `corp..." />
-            <marker date="1415243499000" expanded="true" signature="9588:9882" placeholder="SELECT `corp..." />
-            <marker date="1415243499000" expanded="true" signature="11001:11370" placeholder="SELECT `corp..." />
-            <marker date="1415243499000" expanded="true" signature="14977:15055" placeholder="DELETE FROM ..." />
-            <marker date="1415243499000" expanded="true" signature="24505:24549" placeholder="DELETE FROM ..." />
-            <marker date="1415243499000" expanded="true" signature="25023:25052" placeholder="SELECT * FRO..." />
-            <marker date="1415243499000" expanded="true" signature="27076:27121" placeholder="SELECT `corp..." />
-            <marker date="1415243499000" expanded="true" signature="27849:28058" placeholder="select cim.c..corpinternmsg..." />
-            <marker date="1415243499000" expanded="true" signature="28080:28145" placeholder="update corpi..." />
-            <marker date="1415243499000" expanded="true" signature="28422:28672" placeholder="select jm.jm..jobfairmsg..." />
-            <marker date="1415243499000" expanded="true" signature="28694:28753" placeholder="update jobfa..." />
-            <marker date="1415243499000" expanded="true" signature="29030:29234" placeholder="select ep.ep..employmentpolicy..." />
-            <marker date="1415243499000" expanded="true" signature="29256:29325" placeholder="update emplo..." />
-            <marker date="1415243499000" expanded="true" signature="29407:29701" placeholder="select ji.ji..jobinfo..." />
-            <marker date="1415243499000" expanded="true" signature="29723:29779" placeholder="update jobin..." />
-            <marker date="1415243499000" expanded="true" signature="29861:29984" placeholder="select cci_t..collegeintroduction..." />
-            <marker date="1415243499000" expanded="true" signature="30006:30077" placeholder="update colle..." />
-            <marker date="1415243499000" expanded="true" signature="30159:30360" placeholder="select si.si..sourceinformation..." />
-            <marker date="1415243499000" expanded="true" signature="30382:30448" placeholder="update sourc..." />
-            <marker date="1415243499000" expanded="true" signature="30530:30700" placeholder="select w.ww_..westwork..." />
-            <marker date="1415243499000" expanded="true" signature="30722:30779" placeholder="update westw..." />
-            <marker date="1415243499000" expanded="true" signature="30861:31062" placeholder="select si.si..sourceinformation..." />
-            <marker date="1415243499000" expanded="true" signature="31114:31180" placeholder="update sourc..." />
-            <marker date="1415243499000" expanded="true" signature="31347:31388" placeholder="select * fro..office..." />
-            <marker date="1415243499000" expanded="true" signature="31545:31663" placeholder="select cim_i..corpinternmsg..." />
-            <marker date="1415243499000" expanded="true" signature="31961:32118" placeholder="select jm_id..jobfairmsg..." />
+            <marker date="1415243499000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1415243499000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1415243499000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1415243499000" expanded="true" signature="-1:-1" placeholder="SELECT `corp..." />
+            <marker date="1415243499000" expanded="true" signature="-1:-1" placeholder="SELECT `corp..." />
+            <marker date="1415243499000" expanded="true" signature="-1:-1" placeholder="SELECT `corp..." />
+            <marker date="1415243499000" expanded="true" signature="-1:-1" placeholder="SELECT `corp..." />
+            <marker date="1415243499000" expanded="true" signature="-1:-1" placeholder="SELECT `corp..." />
+            <marker date="1415243499000" expanded="true" signature="-1:-1" placeholder="SELECT `corp..." />
+            <marker date="1415243499000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1415243499000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1415243499000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1415243499000" expanded="true" signature="-1:-1" placeholder="SELECT `corp..." />
+            <marker date="1415243499000" expanded="true" signature="-1:-1" placeholder="select cim.c..corpinternmsg..." />
+            <marker date="1415243499000" expanded="true" signature="-1:-1" placeholder="update corpi..." />
+            <marker date="1415243499000" expanded="true" signature="-1:-1" placeholder="select jm.jm..jobfairmsg..." />
+            <marker date="1415243499000" expanded="true" signature="-1:-1" placeholder="update jobfa..." />
+            <marker date="1415243499000" expanded="true" signature="-1:-1" placeholder="select ep.ep..employmentpolicy..." />
+            <marker date="1415243499000" expanded="true" signature="-1:-1" placeholder="update emplo..." />
+            <marker date="1415243499000" expanded="true" signature="-1:-1" placeholder="select ji.ji..jobinfo..." />
+            <marker date="1415243499000" expanded="true" signature="-1:-1" placeholder="update jobin..." />
+            <marker date="1415243499000" expanded="true" signature="-1:-1" placeholder="select cci_t..collegeintroduction..." />
+            <marker date="1415243499000" expanded="true" signature="-1:-1" placeholder="update colle..." />
+            <marker date="1415243499000" expanded="true" signature="-1:-1" placeholder="select si.si..sourceinformation..." />
+            <marker date="1415243499000" expanded="true" signature="-1:-1" placeholder="update sourc..." />
+            <marker date="1415243499000" expanded="true" signature="-1:-1" placeholder="select w.ww_..westwork..." />
+            <marker date="1415243499000" expanded="true" signature="-1:-1" placeholder="update westw..." />
+            <marker date="1415243499000" expanded="true" signature="-1:-1" placeholder="select si.si..sourceinformation..." />
+            <marker date="1415243499000" expanded="true" signature="-1:-1" placeholder="update sourc..." />
+            <marker date="1415243499000" expanded="true" signature="-1:-1" placeholder="select * fro..office..." />
+            <marker date="1415243499000" expanded="true" signature="-1:-1" placeholder="select cim_i..corpinternmsg..." />
+            <marker date="1415243499000" expanded="true" signature="-1:-1" placeholder="select jm_id..jobfairmsg..." />
           </folding>
         </state>
       </provider>
@@ -1084,7 +1033,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/tpl/employmentteam/detail.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="12" selection-start="2812" selection-end="2812" vertical-scroll-proportion="0.30075186" vertical-offset="880" max-vertical-offset="1725">
+        <state line="72" column="12" selection-start="2812" selection-end="2812" vertical-scroll-proportion="-8.333333" vertical-offset="880" max-vertical-offset="1725">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/tpl/company/mycorpmsg.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="42.5" vertical-offset="1020" max-vertical-offset="2490">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/tpl/company/myjobfair.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="26" selection-start="3020" selection-end="3020" vertical-scroll-proportion="0.60902256" vertical-offset="525" max-vertical-offset="2940">
           <folding />
         </state>
       </provider>
