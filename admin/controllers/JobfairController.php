@@ -152,10 +152,10 @@ class JobfairController extends Controller{
 		//echo $page;
 		
 		if( $key = str_replace("/", " ", trim( urldecode($this->getRequest()->get("keyword") ) ) ) ){
-			$jobList = $jobfairmsg->houtaigetJobfairPageModel($page,$pageSize,$key);
+			$jobList = $jobfairmsg->houtaigetJobfairPageModel($page,$pageSize,$key,3);
 			$this->view->keyword = $key;
 		}else{
-			$jobList = $jobfairmsg->houtaigetJobfairPageModel($page,$pageSize);
+			$jobList = $jobfairmsg->houtaigetJobfairPageModel($page,$pageSize,null,3);
 		}
 	
 		$this->view->joblist = $jobList;

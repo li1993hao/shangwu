@@ -143,11 +143,7 @@
                    $("body").scrollTop(0);
 					return false;
 				}
-                if($("#link").val() == ""){
-                    $("#result").text("链接不能为空！！");
-                    $("#link").focus();
-                    return false;
-                }
+
 			
 				//alert($("#newssort").val());
 				
@@ -216,7 +212,6 @@
                                     <td height="40"><div align="right">链接：</div></td>
                                     <td height="40" colspan="2">&nbsp;
                                         <input type="text" name="link" id="link" size="35" class="inputcss" value="<{$detail.jm_link}>"/>
-                                         &nbsp;&nbsp;<font color="#ff0000">必填</font></td>
                                   </tr>
                                   <tr>
                                     <td height="40"><div align="right">召开时间：</div></td>

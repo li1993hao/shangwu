@@ -75,27 +75,27 @@ class corpinternmsg extends Model {
 		return $this->fetchAll ( $sql );
 	}
 	public function getPreNews($cur_id, $type) {
-//        $app =  App::getInstance();
-//        $userInfo = $app->getData("userinfo");
-//        if($userInfo){
+        $app =  App::getInstance();
+        $userInfo = $app->getData("userinfo");
+        if($userInfo){
             $sql = "SELECT `corpinternmsg`.* FROM `corpinternmsg`
 				WHERE `cim_id` > " . $cur_id . " AND `rit_id` = '" . $type . "' AND `cim_veri` = " . $this->_state ["pass"] . " ORDER BY `cim_id` ASC ";
-//        }else{
-//            $sql = "SELECT `corpinternmsg`.* FROM `corpinternmsg`
-//				WHERE `cim_id` > " . $cur_id . " AND `rit_id` = '" . $type . "' AND `cim_veri` = " . $this->_state ["pass"] . " AND 'cim_isopen'=1 ORDER BY `cim_id` ASC ";
-//        }
+        }else{
+            $sql = "SELECT `corpinternmsg`.* FROM `corpinternmsg`
+				WHERE `cim_id` > " . $cur_id . " AND `rit_id` = '" . $type . "' AND `cim_veri` = " . $this->_state ["pass"] . " AND `cim_isopen`=1 ORDER BY `cim_id` ASC ";
+        }
 		return $this->fetchRow ( $sql );
 	}
 	public function getNextNews($cur_id, $type) {
-//        $app =  App::getInstance();
-//        $userInfo = $app->getData("userinfo");
-//        if($userInfo){
+        $app =  App::getInstance();
+        $userInfo = $app->getData("userinfo");
+        if($userInfo){
             $sql = "SELECT `corpinternmsg`.* FROM `corpinternmsg`
 				WHERE `cim_id` < " . $cur_id . " AND `rit_id` = '" . $type . "' AND `cim_veri` = " . $this->_state ["pass"] . " ORDER BY `cim_id` DESC ";
-//        }else{
-//            $sql = "SELECT `corpinternmsg`.* FROM `corpinternmsg`
-//				WHERE `cim_id` < " . $cur_id . " AND `rit_id` = '" . $type . "' AND `cim_veri` = " . $this->_state ["pass"] . " AND 'cim_isopen'=1 ORDER BY `cim_id` DESC ";
-//        }
+        }else{
+            $sql = "SELECT `corpinternmsg`.* FROM `corpinternmsg`
+				WHERE `cim_id` < " . $cur_id . " AND `rit_id` = '" . $type . "' AND `cim_veri` = " . $this->_state ["pass"] . " AND  `cim_isopen`=1 ORDER BY `cim_id` DESC ";
+        }
 
 
 		return $this->fetchRow ( $sql );
@@ -420,7 +420,14 @@ class corpinternmsg extends Model {
 	 * 最后一个参数 $userid:代表前台用户的id，如果是前台的企业用户需要传入此参数22
 	 */
 	public function updatemsg($id, $name, $ctid, $provid, $addr, $contact, $tel, $email, $fax, $web, $userid, $src, $content, $news, $notice, $filename = null, $fileid = null, $userid = 0,$isopen) {
-		if ($fileid) {
+        $onesql= "SELECT `corpinternmsg`.`cim_veri` FROM `corpinternmsg` WHERE `cim_id`=".$id;
+        $cur = $this->fetchRow($onesql);
+        $veri = $cur['cim_veri'];
+        if($veri==2){
+            $veri = 0;
+        }
+
+        if ($fileid) {
 			$sql = "UPDATE `corpinternmsg` 
 					SET 
 					`cim_name`='" . $name . "',
@@ -439,7 +446,8 @@ class corpinternmsg extends Model {
 					`cim_notice` = '" . $notice . "',
 					`file_name`= '" . $filename . "',
 					`cim_isopen`= '" . $isopen . "',
-					`file_id`= '" . $fileid . "'
+					`file_id`= '" . $fileid . "',
+					`cim_veri`= '" . $veri . "'
 				 	WHERE `cim_id` = '" . $id . "'";
 		} else {
 			$sql = "UPDATE `corpinternmsg`
@@ -460,7 +468,8 @@ class corpinternmsg extends Model {
 			`cim_isopen`= '" . $isopen . "',
 			`cim_notice` = '" . $notice . "',
 			`file_name`= NULL,
-			`file_id`= NULL
+			`file_id`= NULL,
+			`cim_veri`= '" . $veri . "'
 			WHERE `cim_id` = '" . $id . "'";
 		}
 		if ($userid != 0) {

@@ -47,12 +47,12 @@
                 <div>
                     <{if $news.list[n].ww_isup==""}>
                     <div><a href="<{$web_url}>/index.php/west/detail/id/<{$news.list[n].ww_id}>">
-                        <{$news.list[n].ww_title}>
+                        <{$news.list[n].ww_title|truncate:20:'…':true}>
                     </a></div>
                     <{else}>
                     <div>
                         <a style="color:red;" href="<{$web_url}>/index.php/west/detail/id/<{$news.list[n].ww_id}>">
-                            [顶]<{$news.list[n].ww_title}>
+                            [顶]<{$news.list[n].ww_title|truncate:20:'…':true}>
                         </a></div>
                     <{/if}>
                     <span><{$news.list[n].ww_time}></span>
@@ -72,12 +72,12 @@
             <div>
                 <{if $news.list[n].ww_isup==""}>
                 <div><a href="<{$web_url}>/index.php/west/detail/id/<{$news.list[n].ww_id}>">
-                    <{$news.list[n].ww_title}>
+                    <{$news.list[n].ww_title|truncate:30:'…':true}>
                 </a></div>
                 <{else}>
                 <div>
                     <a style="color:red;" href="<{$web_url}>/index.php/west/detail/id/<{$news.list[n].ww_id}>">
-                        [顶]<{$news.list[n].ww_title}>
+                        [顶]<{$news.list[n].ww_title|truncate:30:'…':true}>
                     </a></div>
                 <{/if}>
                 <span><{$news.list[n].ww_time}></span>

@@ -102,9 +102,9 @@
             <div class="news_item2">
                 <div>
                     <{if $bulletin.list[n].aa_top ==""}>
-                    <div><a href="<{$web_url}>/index.php/activityjobbulletin/detail/id/<{$bulletin.list[n].aa_id}>" ><{$bulletin.list[n].aa_title}></a></div>
+                    <div><a href="<{$web_url}>/index.php/activityjobbulletin/detail/id/<{$bulletin.list[n].aa_id}>" ><{$bulletin.list[n].aa_title|truncate:35:'…'}></a></div>
                     <{else}>
-                    <div><a href="<{$web_url}>/index.php/activityjobbulletin/detail/id/<{$bulletin.list[n].aa_id}>" style="color:red">[顶]<{$bulletin.list[n].aa_title}></a></div>
+                    <div><a href="<{$web_url}>/index.php/activityjobbulletin/detail/id/<{$bulletin.list[n].aa_id}>" style="color:red">[顶]<{$bulletin.list[n].aa_title|truncate:35:'…'}></a></div>
                     <{/if}>
                     <span><{$bulletin.list[n].aa_time|date_format:"%Y-%m-%d"}></span>
                 </div>
@@ -122,9 +122,9 @@
         <div class="news_item">
             <div>
                 <{if $bulletin.list[n].aa_top==""}>
-                <div><a href="<{$web_url}>/index.php/activityjobbulletin/detail/id/<{$bulletin.list[n].aa_id}>" ><{$bulletin.list[n].aa_title}></a></div>
+                <div><a href="<{$web_url}>/index.php/activityjobbulletin/detail/id/<{$bulletin.list[n].aa_id}>" ><{$bulletin.list[n].aa_title|truncate:35:'…'}></a></div>
                 <{else}>
-                <div><a href="<{$web_url}>/index.php/activityjobbulletin/detail/id/<{$bulletin.list[n].aa_id}>" style="color:red">[顶]<{$bulletin.list[n].aa_title}></a></div>
+                <div><a href="<{$web_url}>/index.php/activityjobbulletin/detail/id/<{$bulletin.list[n].aa_id}>" style="color:red">[顶]<{$bulletin.list[n].aa_title|truncate:35:'…'}></a></div>
                 <{/if}>
                 <span><{$bulletin.list[n].aa_time|date_format:"%Y-%m-%d"}></span>
             </div>

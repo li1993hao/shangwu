@@ -45,7 +45,7 @@
     font-size: 12px;
 }
 .container{
-    background: url(../../images/bg.jpg) repeat-y;
+    background: url(../../images/bg.jpg) repeat;
 
 }
 
@@ -292,7 +292,7 @@
     font-size: 14px;
 }
 .category_list li span {
-    font-size: 16px;
+    font-size: 14px;
     color: #b2b2b2;
 }
 .category_list li>div {
@@ -787,6 +787,7 @@
     font-size: 18px;
     padding-bottom: 2px;
     color: #ffffff;
+    text-align: left;
     width: 335px;
     height: 30px;
     position: relative;

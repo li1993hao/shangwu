@@ -78,23 +78,24 @@ class jobfairmsg extends Model{
 	}
 
 	public function getPreNews($cur_id){
-//        $app =  App::getInstance();
-//        $userInfo = $app->getData("userinfo");
-//        if($userInfo){
+        $app =  App::getInstance();
+        $userInfo = $app->getData("userinfo");
+        if($userInfo){
             $sql = "SELECT `jobfairmsg`.* FROM `jobfairmsg` WHERE `jm_veri` = ".$this->_state["pass"]." AND `jm_id` > ".$cur_id."   ORDER BY `jm_id` ASC ";
-//        }else{
-//            $sql = "SELECT `jobfairmsg`.* FROM `jobfairmsg` WHERE `jm_veri` = ".$this->_state["pass"]." AND `jm_id` > ".$cur_id." And 'jm_isopen'='1'  ORDER BY `jm_id` ASC ";
-//        }
+        }else{
+            $sql = "SELECT `jobfairmsg`.* FROM `jobfairmsg` WHERE `jm_veri` = ".$this->_state["pass"]." AND `jm_id` > ".$cur_id." And `jm_isopen`=1  ORDER BY `jm_id` ASC ";
+        }
+        //echo $sql;
 		return $this->fetchRow($sql);
 	}
 	public function getNextNews($cur_id){
-//        $app =  App::getInstance();
-//        $userInfo = $app->getData("userinfo");
-//        if($userInfo){
+        $app =  App::getInstance();
+        $userInfo = $app->getData("userinfo");
+        if($userInfo){
             $sql = "SELECT `jobfairmsg`.* FROM `jobfairmsg` WHERE `jm_veri` = ".$this->_state["pass"]." AND `jm_id` < ".$cur_id."  ORDER BY `jm_id` DESC ";
-//        }else{
-//            $sql = "SELECT `jobfairmsg`.* FROM `jobfairmsg` WHERE `jm_veri` = ".$this->_state["pass"]." AND `jm_id` < ".$cur_id." And 'jm_isopen'='1' ORDER BY `jm_id` DESC ";
-//        }
+        }else{
+            $sql = "SELECT `jobfairmsg`.* FROM `jobfairmsg` WHERE `jm_veri` = ".$this->_state["pass"]." AND `jm_id` < ".$cur_id." And `jm_isopen`=1 ORDER BY `jm_id` DESC ";
+        }
 		return $this->fetchRow($sql);
 	}
 
@@ -319,6 +320,13 @@ class jobfairmsg extends Model{
 			$fileid="NULL";
 			$filename ="NULL";
 		}
+        $onesql= "SELECT `jobfairmsg`.`jm_veri` FROM `jobfairmsg` WHERE `jm_id`=".$id;
+        $cur = $this->fetchRow($onesql);
+        $veri = $cur['jm_veri'];
+        if($veri==2){
+            $veri = 0;
+        }
+
 		//echo $require;
 		$sql = "UPDATE `jobfairmsg`
 					SET
@@ -335,8 +343,9 @@ class jobfairmsg extends Model{
 						`file_name` = '".$filename."',
 						`file_id` = '".$fileid."',
 						`area_id` = '".$areaid."',
-						`jm_isopen` = '".$isopen."'
-					WHERE `jobfairmsg`.`jm_id` = '".$id."' AND `jobfairmsg`.`jm_publish`=".$fu_id;
+						`jm_isopen` = '".$isopen."',
+						`jm_veri` = '".$veri."'
+					    WHERE `jobfairmsg`.`jm_id` = '".$id."'";
 
 		//echo $sql;
 		return $this->update($sql);

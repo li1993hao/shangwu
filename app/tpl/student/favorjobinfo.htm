@@ -225,9 +225,9 @@
                                 <td>
                                    <div style="height: 20px;margin-bottom: 5px"> <a class="op-del" href="<{$web_url}>/index.php/student/favorjobinfo/do/del/infoid/<{$joblist.list[jl].cim_id}>" >删除</a></div>
                                     <{if $joblist.list[jl].coll_open_myinfo == 0}>
-                                    <div >信息对企业不可见[<a href="<{$web_url}>/index.php/student/favorjobinfo/do/open/infoid/<{$joblist.list[jl].cim_id}>" style="color: #ff0000; font-size: 12px" >开放</a>]&nbsp;</div>
+                                    <div >信息对企业不可见<br/>[<a href="<{$web_url}>/index.php/student/favorjobinfo/do/open/infoid/<{$joblist.list[jl].cim_id}>" style="color: #ff0000; font-size: 12px" >开放</a>]&nbsp;</div>
                                     <{else}>
-                                    <div>信息对企业可见[<a href="<{$web_url}>/index.php/student/favorjobinfo/do/close/infoid/<{$joblist.list[jl].cim_id}>" style="color: #ff0000; font-size: 12px">关闭</a>]&nbsp;</div>
+                                    <div>信息对企业可见<br/>[<a href="<{$web_url}>/index.php/student/favorjobinfo/do/close/infoid/<{$joblist.list[jl].cim_id}>" style="color: #ff0000; font-size: 12px">关闭</a>]&nbsp;</div>
                                     <{/if}>
                                 </td>
                             </tr>

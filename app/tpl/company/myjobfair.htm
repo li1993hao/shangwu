@@ -122,7 +122,7 @@
                         <div class="option-item"><a href="<{$web_url}>/index.php/company/editjobfair/id/<{$jobfair.list[n].jm_id}>" style="font-size: 14px">修改</a></div>
                         <div id = "delete-jobfair" class="cursor-hand  option-item" style="font-size: 14px" onclick="show_confirm(<{$jobfair.list[n].jm_id}>,1,<{$jobfair.page}>)">删除</div>
                         <{elseif $jobfair.list[n].jm_veri eq 2}>
-                        <div class="option-item"><a href="<{$web_url}>/index.php/company/editjobfair/id/<{$jobfair.list[n].jm_id}>">修改</a></div>
+                        <div class="option-item"><a style="font-size: 14px" href="<{$web_url}>/index.php/company/editjobfair/id/<{$jobfair.list[n].jm_id}>">修改</a></div>
                         <div id = "delete-jobfair" class="cursor-hand option-item" style="font-size: 14px" onclick="show_confirm(<{$jobfair.list[n].jm_id}>,1,<{$jobfair.page}>)">删除</div>
                         <{elseif $jobfair.list[n].jm_veri eq 1 }>
                         已经审批不能进行操作，如需修改请联系就业中心

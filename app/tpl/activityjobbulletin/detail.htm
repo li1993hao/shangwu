@@ -38,7 +38,7 @@
                     <div><a href="<{$web_url}>/index.php/Jobfairmsg/calendardetail/id/<{$jobFair[calendar].jm_id}>"> <{$jobFair[calendar].jm_name|truncate:15: '…':true}></a>
                     </div>
                     <div> <{$jobFair[calendar].jm_opentime|date_format: "%Y.%m.%d  %H:%M"}></div>
-                    <div> <{$jobFair[calendar].jm_addr|truncate:15: '…':true}></div>
+                    <div> <{$jobFair[calendar].jm_addr|truncate:10: '…':true}></div>
                 </div>
             </div>
             <{/section}>
@@ -55,7 +55,7 @@
                     </dt>
                     <dt><a href="<{$web_url}>/index.php/Activityjobbulletin/index/id/<{$detail.ap_id}>">就业工作简报-第<{$detail.ap_number}>期/</a>
                     </dt>
-                    <dt><a href="#"><{$detail.aa_title|truncate:15: '…':true}></a>
+                    <dt><a href="#"><{$detail.aa_title|truncate:10: '…':true}></a>
                     </dt>
                 </dl>
             </div>

@@ -22,7 +22,11 @@
     <![endif]-->
 
 </head>
-
+<style>
+    .uploadify{
+        float: left;
+    }
+    </style>
 <body>
 <{include file='header.htm'}>
 
@@ -143,19 +147,37 @@
         </div>
     </div>
         <div class="form-register-item" style="clear: left;position: relative;left: -29%">
-            <span class="form-register-item-title">上传资质:</span>
+            <span class="form-register-item-title" >营业执照:</span>
             <!-- <img class ="file_upload_img"  alt="资质证明" id="imgFile" src="<{$web_url}>/common/app/images/account/register/upload.png"/> -->
-            <input id="file_upload" name="file_upload" type="file" multiple style="background: url(<{$web_url}>/common/app/images/account/register/upload.png)"/>
-            <input type="hidden" name="fileid" id="hidFileID" value="<{$form_userinfo.fileid|default:""}>" />
-            <input type="hidden" name="filestate" id="filestate" value="0" />
-            <span class="form-register-item-title"></span>
-            <div class="form-register-item-imglist">
-
-
+            <input id="file_upload1" name="file_upload1" style="float: left" type="file"/>
+            <div class="form-register-item-imglist1">
             </div>
             <div style="clear:both;"></div>
+        </div>
+        <div class="form-register-item" style="clear: left;position: relative;left: -29%">
+            <span style="
+    position: relative;
+    float: left;
+    line-height: 30px;
+    left: -8px;
+" >组织机构代码证:</span>
+            <!-- <img class ="file_upload_img"  alt="资质证明" id="imgFile" src="<{$web_url}>/common/app/images/account/register/upload.png"/> -->
+            <input id="file_upload2" name="file_upload2" style="float: left" type="file"/>
+            <div class="form-register-item-imglist2">
+            </div>
             <div style="clear:both;"></div>
         </div>
+        <div class="form-register-item" style="clear: left;position: relative;left: -29%">
+            <span class="form-register-item-title" >税务登记证:</span>
+            <!-- <img class ="file_upload_img"  alt="资质证明" id="imgFile" src="<{$web_url}>/common/app/images/account/register/upload.png"/> -->
+            <input id="file_upload3" name="file_upload3"  style="float: left" type="file"/>
+            <div class="form-register-item-imglist3">
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+
+        <input type="hidden" name="fileid" id="hidFileID"  />
+        <input type="hidden" name="filestate" id="filestate" value="0" />
     <div class="form-footer" style="margin: 0px -162px;">
 
 

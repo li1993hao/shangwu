@@ -136,7 +136,7 @@ $(function() {
 
 
 
-    $('#file_upload').uploadify({
+    $('#file_upload1').uploadify({
         'formData': {},
         'swf': web_url + '/common/libs/upload/uploadify.swf',
         'uploader': web_url + '/index.php/common/fileupload/filetype/img',
@@ -146,7 +146,7 @@ $(function() {
         'fileTypeDesc': "请选择图片文件",
         'fileTypeExts': '*.jpg;*.jpeg;*.png;*.gif;*.bmp',
         'fileSizeLimit': '4096KB',
-        'buttonText': "选择图片",
+        'buttonText': "点击上传",
         'width': 100,
         'height': 20,
         'cancelImg': web_url + '/common/libs/upload/uploadify-cancel.png',
@@ -154,10 +154,10 @@ $(function() {
             alert('The file ' + file.name + ' could not be uploaded: ' + errorString);
         },
         'onUploadStart': function(file) {
-            $("#picstate").val("1");
+            $("#filestate").val("1");
         },
         'onCancel': function(file) {
-            $("#picstate").val("0");
+            $("#filestate").val("0");
         },
         'onUploadSuccess': function(file, data, response) {
             //alert('The file ' + file.name + ' was successfully uploaded with a response of ' + response + ':' + data);
@@ -167,15 +167,98 @@ $(function() {
             //alert(myObject.msg);
             if (myObject.result == '0') {
                 $("#img").html(myObject.msg);
-                $("#picstate").val("0"); //0表示没有图片上传 1表示图片上传中 2表示图片上传成功
+                $("#filestate").val("0"); //0表示没有图片上传 1表示图片上传中 2表示图片上传成功
             } else {
                 var info = "<div data=\"" + myObject.result + "\" class=\"form-register-item-imgitem\"><img alt=\"资质证明\" src=\"" + myObject.msg + "\"><div title=\"删除\" class=\"form-register-item-imgitem-close\">X</div></div>";
-                $(".form-register-item-imglist").append(info);
-                $("#picstate").val("2");
+                $(".form-register-item-imglist1").append(info);
+                $("#filestate").val("2");
             }
 
         }
     });
+
+    $('#file_upload2').uploadify({
+        'formData': {},
+        'swf': web_url + '/common/libs/upload/uploadify.swf',
+        'uploader': web_url + '/index.php/common/fileupload/filetype/img',
+        'queueSizeLimit': 1,
+        'multi': false,
+        'auto': true,
+        'fileTypeDesc': "请选择图片文件",
+        'fileTypeExts': '*.jpg;*.jpeg;*.png;*.gif;*.bmp',
+        'fileSizeLimit': '4096KB',
+        'buttonText': "点击上传",
+        'width': 100,
+        'height': 20,
+        'cancelImg': web_url + '/common/libs/upload/uploadify-cancel.png',
+        'onUploadError': function(file, errorCode, errorMsg, errorString) {
+            alert('The file ' + file.name + ' could not be uploaded: ' + errorString);
+        },
+        'onUploadStart': function(file) {
+            $("#filestate").val("1");
+        },
+        'onCancel': function(file) {
+            $("#filestate").val("0");
+        },
+        'onUploadSuccess': function(file, data, response) {
+            //alert('The file ' + file.name + ' was successfully uploaded with a response of ' + response + ':' + data);
+            // alert(data);
+            var myObject = eval('(' + data + ')');
+            //alert(myObject.result);
+            //alert(myObject.msg);
+            if (myObject.result == '0') {
+                $("#img").html(myObject.msg);
+                $("#filestate").val("0"); //0表示没有图片上传 1表示图片上传中 2表示图片上传成功
+            } else {
+                var info = "<div data=\"" + myObject.result + "\" class=\"form-register-item-imgitem\"><img alt=\"资质证明\" src=\"" + myObject.msg + "\"><div title=\"删除\" class=\"form-register-item-imgitem-close\">X</div></div>";
+                $(".form-register-item-imglist2").append(info);
+                $("#filestate").val("2");
+            }
+
+        }
+    });
+
+    $('#file_upload3').uploadify({
+        'formData': {},
+        'swf': web_url + '/common/libs/upload/uploadify.swf',
+        'uploader': web_url + '/index.php/common/fileupload/filetype/img',
+        'queueSizeLimit': 1,
+        'multi': false,
+        'auto': true,
+        'fileTypeDesc': "请选择图片文件",
+        'fileTypeExts': '*.jpg;*.jpeg;*.png;*.gif;*.bmp',
+        'fileSizeLimit': '4096KB',
+        'buttonText': "点击上传",
+        'width': 100,
+        'height': 20,
+        'cancelImg': web_url + '/common/libs/upload/uploadify-cancel.png',
+        'onUploadError': function(file, errorCode, errorMsg, errorString) {
+            alert('The file ' + file.name + ' could not be uploaded: ' + errorString);
+        },
+        'onUploadStart': function(file) {
+            $("#filestate").val("1");
+        },
+        'onCancel': function(file) {
+            $("#filestate").val("0");
+        },
+        'onUploadSuccess': function(file, data, response) {
+            //alert('The file ' + file.name + ' was successfully uploaded with a response of ' + response + ':' + data);
+            // alert(data);
+            var myObject = eval('(' + data + ')');
+            //alert(myObject.result);
+            //alert(myObject.msg);
+            if (myObject.result == '0') {
+                $("#img").html(myObject.msg);
+                $("#filestate").val("0"); //0表示没有图片上传 1表示图片上传中 2表示图片上传成功
+            } else {
+                var info = "<div data=\"" + myObject.result + "\" class=\"form-register-item-imgitem\"><img alt=\"资质证明\" src=\"" + myObject.msg + "\"><div title=\"删除\" class=\"form-register-item-imgitem-close\">X</div></div>";
+                $(".form-register-item-imglist3").append(info);
+                $("#filestate").val("2");
+            }
+
+        }
+    });
+
 
 
     $(".form-register-item-imgitem-close").live('click', function() {

@@ -6,6 +6,25 @@
 //}
 
 $(function(){
+
+    $("#img_ios_con").hover(function(){
+        $(this).css("cursor","pointer");
+        $(".footer_weixin_title").empty().html("ios");
+        $("#android_img").hide();
+        $("#ios_img").fadeIn("fast");
+    },function(){
+        $(this).css("cursor","none");
+    })
+
+    $("#img_android_con").hover(function(){
+        $(this).css("cursor","pointer");
+        $(".footer_weixin_title").empty().html("android");
+        $("#ios_img").hide();
+        $("#android_img").fadeIn("fast");
+    },function(){
+        $(this).css("cursor","none");
+    });
+
     /***下拉菜单**/
     $(".drop").hover(function(){
         $(this).children("a").css("background-color","#f1dda0");

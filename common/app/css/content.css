@@ -29,7 +29,6 @@
     background-color: #3598db;
     color: white;
     padding:8px 15px;
-    line-height: 2;
     cursor: pointer;
 }
 .middle_left >div:nth-child(3){
@@ -58,8 +57,9 @@
 .middle_left >div:nth-child(2){
     text-align:center;
     margin-right: 20px;
-
 }
+
+
 .middle_left >div:nth-child(5){
     margin-top: 20px;
 }
