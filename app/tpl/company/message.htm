@@ -108,8 +108,8 @@
 				type:"POST",
 				data:{do:"del",id:str},
 				async:false,
-				dataType:"json",
-				success:function(data){
+				success:function(datas){
+                    var data = eval('('+datas+')');
 					if (data.json.state == 1){
 						alert("删除成功！");
 						location.href="<{$web_url}>/index.php/company/message/all/<{$type}>/page/<{$page}>";
@@ -132,8 +132,8 @@
 			type:"POST",
 			data:{do:"del",id:id},
 			async:false,
-			dataType:"json",
-			success:function(data){
+			success:function(datas){
+                var data = eval('('+datas+')');
 				if (data.json.state == 1){
 					alert("删除成功！");
 					location.href="<{$web_url}>/index.php/company/message/all/<{$type}>/page/<{$page}>";
@@ -153,8 +153,8 @@
 			type:"POST",
 			data:{do:"setread",id:id},
 			async:false,
-			dataType:"json",
-			success:function(data){
+			success:function(datas){
+                var data = eval('('+datas+')');
 				if (data.json.state == 1){
 					alert("设为已读成功！");
 					location.href="<{$web_url}>/index.php/company/message/all/<{$type}>/page/<{$page}>";
