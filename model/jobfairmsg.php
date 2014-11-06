@@ -254,9 +254,9 @@ class jobfairmsg extends Model{
 			$pic = "'".$picid."'";
 		}
 		if($fuId == "0"){
-            $veri = $this->_state["untreated"];
-		}else{
             $veri = $this->_state["pass"];
+		}else{
+            $veri = $this->_state["untreated"];
 		}
 
 		$sql = "INSERT INTO `jobfairmsg` "
