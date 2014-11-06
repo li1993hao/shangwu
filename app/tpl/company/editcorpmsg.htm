@@ -282,8 +282,8 @@ function getArea(htmlId,pId){
         url:"<{$web_url}>/index.php/common/area/parentid/"+pId,
         type:"POST",
         async:false,
-        dataType:"json",
-        success:function(data){
+        success:function(datas){
+            var data = eval('('+datas+')');
             var str = "";
             if(htmlId == "prov"){
                 if(provid == ""){
@@ -318,8 +318,8 @@ function delfile(id){
         url:"<{$web_url}>/index.php/common/delfile/filetype/file/id/"+id,
         type:"post",
         async: false,
-        dataType:"json",
-        success:function(data){
+        success:function(datas){
+            var data = eval('('+datas+')');
             if (data.json.state == 1){
                 $("#link"+id).remove();
                 $("#del"+id).remove();

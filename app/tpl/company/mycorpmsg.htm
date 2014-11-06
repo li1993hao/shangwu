@@ -31,10 +31,9 @@
                     url:"<{$web_url}>/index.php/company/deletecorpmsg",
                     type:"POST",
                     data:"id="+id,
-                    dataType:"json",
                     async: false,
-                    success:function(data){
-
+                    success:function(datas){
+                        var data = eval('('+datas+')');
                         if(data.json.state == 1){
                             alert(data.json.msg);
                         }else{
@@ -90,7 +89,7 @@
         </span>
         <span><a href="<{$web_url}>/index.php/company/myinfo">>个人中心</a>
         </span>
-        <span><a href="#">>我的招聘信息</a></span>
+        <span><a href="#">>招聘信息</a></span>
     </div>
     <div class="nav_footer"><div></div></div>
 </div>
