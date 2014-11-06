@@ -291,3 +291,18 @@ function scrollCarousel(){
 
 
 
+function iFrameHeight() {
+
+    var ifm= document.getElementById("mframe");
+
+    var subWeb = document.frames ? document.frames["mframe"].document :
+
+        ifm.contentDocument;
+
+    if(ifm != null && subWeb != null) {
+
+        ifm.height = subWeb.body.scrollHeight;
+
+    }
+
+}

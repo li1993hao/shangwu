@@ -320,6 +320,13 @@ class jobfairmsg extends Model{
 			$fileid="NULL";
 			$filename ="NULL";
 		}
+        $onesql= "SELECT `jobfairmsg`.`jm_veri` FROM `jobfairmsg` WHERE `jm_id`=".$id;
+        $cur = $this->fetchRow($onesql);
+        $veri = $cur['jm_veri'];
+        if($veri==2){
+            $veri = 0;
+        }
+
 		//echo $require;
 		$sql = "UPDATE `jobfairmsg`
 					SET
@@ -336,8 +343,9 @@ class jobfairmsg extends Model{
 						`file_name` = '".$filename."',
 						`file_id` = '".$fileid."',
 						`area_id` = '".$areaid."',
-						`jm_isopen` = '".$isopen."'
-					WHERE `jobfairmsg`.`jm_id` = '".$id."'";
+						`jm_isopen` = '".$isopen."',
+						`jm_veri` = '".$veri."'
+					    WHERE `jobfairmsg`.`jm_id` = '".$id."'";
 
 		//echo $sql;
 		return $this->update($sql);
