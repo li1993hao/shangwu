@@ -146,14 +146,7 @@
             <input class="form-register-item-input" id="form-chz" type="text" name="form_chz" value="<{$form_userinfo.form_chz|default:""}>" />
         </div>
     </div>
-        <div class="form-register-item" style="clear: left;position: relative;left: -29%">
-            <span class="form-register-item-title" >税务登记证:</span>
-            <!-- <img class ="file_upload_img"  alt="资质证明" id="imgFile" src="<{$web_url}>/common/app/images/account/register/upload.png"/> -->
-            <input id="file_upload3" name="file_upload3"  style="float: left" type="file"/>
-            <div class="form-register-item-imglist3">
-            </div>
-            <div style="clear:both;"></div>
-        </div>
+
         <div class="form-register-item" style="clear: left;position: relative;left: -29%">
             <span class="form-register-item-title" >营业执照:</span>
             <!-- <img class ="file_upload_img"  alt="资质证明" id="imgFile" src="<{$web_url}>/common/app/images/account/register/upload.png"/> -->
@@ -177,7 +170,14 @@
             <div style="clear:both;"></div>
         </div>
 
-
+        <div class="form-register-item" style="clear: left;position: relative;left: -29%">
+            <span class="form-register-item-title" >税务登记证:</span>
+            <!-- <img class ="file_upload_img"  alt="资质证明" id="imgFile" src="<{$web_url}>/common/app/images/account/register/upload.png"/> -->
+            <input id="file_upload3" name="file_upload3"  style="float: left" type="file"/>
+            <div class="form-register-item-imglist3">
+            </div>
+            <div style="clear:both;"></div>
+        </div>
         <input type="hidden" name="fileid" id="hidFileID"  />
         <input type="hidden" name="filestate" id="filestate" value="0" />
     <div class="form-footer" style="margin: 0px -162px;">
