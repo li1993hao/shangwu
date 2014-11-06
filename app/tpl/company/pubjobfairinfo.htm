@@ -229,7 +229,6 @@
             url:"<{$web_url}>/index.php/common/delfile/filetype/file/id/"+id,
             type:"post",
             async: false,
-            dataType:"json",
             success:function(datas){
                 var data = eval('('+datas+')');
                 if (data.json.state == 1){
