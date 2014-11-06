@@ -23,8 +23,14 @@
 
 </head>
 <style>
+    .img_tip{
+        display: inline-block;
+        width: 120px;
+        margin-left: 10px;
+        font-size: 14px;
+    }
     .uploadify{
-        float: left;
+        display: inline-block;
     }
     .form-register-item-left,.form-register-item-right{
         height: 40px;
@@ -146,26 +152,26 @@
     </div>
 
         <div class="form-register-item" style="clear: left;position: relative;">
-            <span class="form-register-item-title" >营业执照:</span>
+            <span class="img_tip">营业执照:</span>
             <!-- <img class ="file_upload_img"  alt="资质证明" id="imgFile" src="<{$web_url}>/common/app/images/account/register/upload.png"/> -->
-            <input id="file_upload1" name="file_upload1" style="float: left" type="file"/>
+            <input id="file_upload1" name="file_upload1"  type="file"/>
             <div class="form-register-item-imglist1">
             </div>
             <div style="clear:both;"></div>
         </div>
         <div class="form-register-item" style="clear: left;position: relative;">
-            <span style="position: relative;float: left;line-height: 30px;left: -8px;width: 91px;" >组织机构代码证:</span>
+            <span   class="img_tip">组织机构代码证:</span>
             <!-- <img class ="file_upload_img"  alt="资质证明" id="imgFile" src="<{$web_url}>/common/app/images/account/register/upload.png"/> -->
-            <input id="file_upload2" name="file_upload2" style="float: left" type="file"/>
+            <input id="file_upload2" name="file_upload2"  type="file"/>
             <div class="form-register-item-imglist2">
             </div>
             <div style="clear:both;"></div>
         </div>
 
         <div class="form-register-item" style="clear: left;position: relative;">
-            <span class="form-register-item-title" >税务登记证:</span>
+            <span   class="img_tip">税务登记证:</span>
             <!-- <img class ="file_upload_img"  alt="资质证明" id="imgFile" src="<{$web_url}>/common/app/images/account/register/upload.png"/> -->
-            <input id="file_upload3" name="file_upload3"  style="float: left" type="file"/>
+            <input id="file_upload3" name="file_upload3"  type="file"/>
             <div class="form-register-item-imglist3">
             </div>
             <div style="clear:both;"></div>
@@ -180,7 +186,7 @@
     margin: 0 auto;
     margin-top: 20px;
 ">
-            <span class="form-register-item-title" style="margin-bottom: 10px;">公司简介:</span>
+            <span class="form-register-item-title" style="margin-bottom: 10px; font-size: 14px">公司简介:</span>
             <textarea id="gsjj" name="gsjj" style="width:736px;height:223px;" ><{$form_userinfo.gsjj|default:""}></textarea>
             <div style="clear:both;"></div>
         </div>
