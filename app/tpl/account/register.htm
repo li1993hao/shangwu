@@ -26,6 +26,9 @@
     .uploadify{
         float: left;
     }
+    .form-register-item-left,.form-register-item-right{
+        height: 40px;
+    }
     </style>
 <body>
 <{include file='header.htm'}>
@@ -45,22 +48,17 @@
         </div>
 
     <{if $reg_flag =="succeed"}>
-    <div style="text-align: center"><span style="font-size:24px;color:5ab5f4;"> 恭喜您！注册成功！等待系统管理员审核！</span></div>
+    <div style="text-align: center"><span style="font-size:24px;color:#5ab5f4;"> 恭喜您！注册成功！等待系统管理员审核！</span></div>
     <{else}>
         
 
-    <form id="form-register" name="form_register" method="post" action="" style="width: 558px; margin: 0 auto;">
-        <div class="form-left" style="float:left;margin: 10px -150px;">
+    <form id="form-register" name="form_register" method="post" action="" style="width: 900px; margin: 0 auto;">
+        <div class="form-left" style="float:left;">
             <span class="form-register-item-warn"  init-data=""></span>
-        <div class="form-register-item-left">
-            <span class="form-register-item-title"></span>
 
-            <div style="clear:both;"></div>
-        </div>
         <div class="form-register-item-left">
             <span class="form-register-item-title"><span style="color:red;">*</span>登陆邮箱:</span>
             <input class="form-register-item-input e-mail not-empty" id="form-email" type="text" name="form_email" value="<{$form_userinfo.form_email|default:""}>" error_info="请检查注册邮箱！" placeholder="请输入注册邮箱" />
-            
         </div>
         <div class="form-register-item-left">
             <span class="form-register-item-title"><span style="color:red;">*</span>企业名称:</span>
@@ -101,7 +99,7 @@
             <input class="form-register-item-input not-empty" id="form-zczb" type="text" name="form_zczb" value="<{$form_userinfo.form_zczb|default:""}>" error_info="请输入注册资本！" />
         </div>
     </div>
-    <div class="form-right" style="float:left;margin: 10px 97px;width:80px">
+    <div class="form-right" style="float:left;">
         <div class="form-register-item-right">
             <span class="form-register-item-title"><span style="color:red;">*</span>邮政编码:</span>
             <input class="form-register-item-input not-empty" id="form-yzbm" type="text" name="form_yzbm" value="<{$form_userinfo.form_yzbm|default:""}>" error_info="请输入邮政编码！" />
@@ -147,7 +145,7 @@
         </div>
     </div>
 
-        <div class="form-register-item" style="clear: left;position: relative;left: -29%">
+        <div class="form-register-item" style="clear: left;position: relative;">
             <span class="form-register-item-title" >营业执照:</span>
             <!-- <img class ="file_upload_img"  alt="资质证明" id="imgFile" src="<{$web_url}>/common/app/images/account/register/upload.png"/> -->
             <input id="file_upload1" name="file_upload1" style="float: left" type="file"/>
@@ -155,14 +153,8 @@
             </div>
             <div style="clear:both;"></div>
         </div>
-        <div class="form-register-item" style="clear: left;position: relative;left: -29%">
-            <span style="
-    position: relative;
-    float: left;
-    line-height: 30px;
-    left: -8px;
-    width: 91px;
-" >组织机构代码证:</span>
+        <div class="form-register-item" style="clear: left;position: relative;">
+            <span style="position: relative;float: left;line-height: 30px;left: -8px;width: 91px;" >组织机构代码证:</span>
             <!-- <img class ="file_upload_img"  alt="资质证明" id="imgFile" src="<{$web_url}>/common/app/images/account/register/upload.png"/> -->
             <input id="file_upload2" name="file_upload2" style="float: left" type="file"/>
             <div class="form-register-item-imglist2">
@@ -170,7 +162,7 @@
             <div style="clear:both;"></div>
         </div>
 
-        <div class="form-register-item" style="clear: left;position: relative;left: -29%">
+        <div class="form-register-item" style="clear: left;position: relative;">
             <span class="form-register-item-title" >税务登记证:</span>
             <!-- <img class ="file_upload_img"  alt="资质证明" id="imgFile" src="<{$web_url}>/common/app/images/account/register/upload.png"/> -->
             <input id="file_upload3" name="file_upload3"  style="float: left" type="file"/>
@@ -183,30 +175,32 @@
     <div class="form-footer" style="margin: 0px -162px;">
 
 
-        <div class="form-register-item">
+        <div class="form-register-item" style="
+    width: 886px;
+    margin: 0 auto;
+    margin-top: 20px;
+">
             <span class="form-register-item-title" style="margin-bottom: 10px;">公司简介:</span>
             <textarea id="gsjj" name="gsjj" style="width:736px;height:223px;" ><{$form_userinfo.gsjj|default:""}></textarea>
             <div style="clear:both;"></div>
         </div>
 
-        <div class="form-register-item" >
+        <div class="form-register-item"  >
             <span class="form-register-item-title">&nbsp;</span>
-                    <span class="form-register-item-info">
+                    <span class="form-register-item-info" style="margin-left: 35%">
                         <img src="<{$web_url}>/common/app/images/account/register/checked.png" id="chkImg" >
                         点击注册，将认为您同意<a href="#">《协议》</a>
                     </span>
             <div style="clear:both;"></div>
         </div>
 
-        <div class="form-register-item">
+        <div class="form-register-item" style="margin-top: 20px">
             <span id="register-result" class="form-register-item-title"></span>
-            <input id="form-submit" type="submit" class="form-submit" value="注册"/>
+            <input id="form-submit" style="margin-left: 30%" type="submit"  class="form-submit" value="注册"/>
             <div style="clear:both;"></div>
         </div>
         </div>
 
-        <div class="form-register-item form-register-item-onerow">
-    </div>
     </form>
     <{/if}>
 </div>
