@@ -155,9 +155,9 @@ function deletejobfair(id,type,page){
         url:"<{$web_url}>/index.php/company/deletejobfair",
         type:"POST",
         data:{id:id},
-        dataType:"json",
         async: false,
-        success:function(data){
+        success:function(datas){
+            var data = eval('('+datas+')');
             if(data.json.state == 1){
                 alert(data.json.msg);
             }

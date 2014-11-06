@@ -198,8 +198,8 @@
             url:"<{$web_url}>/index.php/common/area/parentid/"+pId,
             type:"POST",
             async:false,
-            dataType:"json",
-            success:function(data){
+            success:function(datas){
+                var data = eval('('+datas+')');
                 var str = "";
                 if(htmlId == "prov"){
                     str += "<option value=\"0\" selected=\"selected\">选择省份</option>";
@@ -230,7 +230,8 @@
             type:"post",
             async: false,
             dataType:"json",
-            success:function(data){
+            success:function(datas){
+                var data = eval('('+datas+')');
                 if (data.json.state == 1){
                     $("#link"+id).remove();
                     $("#del"+id).remove();
