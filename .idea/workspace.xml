@@ -100,12 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register.htm" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="register.htm" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/tpl/account/register.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="188" column="94" selection-start="10152" selection-end="10152" vertical-scroll-proportion="-9.583333" vertical-offset="2590" max-vertical-offset="3405">
+            <state line="42" column="29" selection-start="1282" selection-end="1282" vertical-scroll-proportion="0.34586465" vertical-offset="400" max-vertical-offset="3405">
               <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -151,19 +150,41 @@
       <file leaf-file-name="register.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/app/js/account/register.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="315" column="11" selection-start="11267" selection-end="11267" vertical-scroll-proportion="0.0" vertical-offset="4440" max-vertical-offset="5625">
+            <state line="254" column="47" selection-start="9658" selection-end="9658" vertical-scroll-proportion="0.0" vertical-offset="3856" max-vertical-offset="5625">
               <folding>
-                <marker date="1415246474000" expanded="false" signature="975:986" placeholder="..." />
-                <marker date="1415246474000" expanded="false" signature="12529:12541" placeholder="..." />
+                <marker date="1415259092000" expanded="false" signature="975:986" placeholder="..." />
+                <marker date="1415259092000" expanded="false" signature="12529:12541" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="register.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/app/css/account/register.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="100" selection-start="291" selection-end="291" vertical-scroll-proportion="0.06531204" vertical-offset="0" max-vertical-offset="690">
+            <state line="0" column="17" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="modifyinfo.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/tpl/student/modifyinfo.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="209.16667" vertical-offset="5020" max-vertical-offset="7095">
+              <folding>
+                <marker date="1414730333000" expanded="false" signature="16543:16578" placeholder="..." />
+                <marker date="1414730333000" expanded="false" signature="18575:18589" placeholder="..." />
+                <marker date="1414730333000" expanded="false" signature="20995:21009" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="modifycominfo.htm" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/tpl/company/modifycominfo.htm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="108" column="57" selection-start="5117" selection-end="5301" vertical-scroll-proportion="-20.833334" vertical-offset="1120" max-vertical-offset="6555">
               <folding />
             </state>
           </provider>
@@ -174,32 +195,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="270" column="16" selection-start="4448" selection-end="4448" vertical-scroll-proportion="0.0" vertical-offset="3945" max-vertical-offset="11130">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IndexController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/IndexController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="4305">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jobinfo.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/jobinfo.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="348" column="20" selection-start="11638" selection-end="11638" vertical-scroll-proportion="-210.0" vertical-offset="150" max-vertical-offset="5895">
-              <folding>
-                <marker date="1415009780000" expanded="true" signature="1175:1283" placeholder="SELECT `jobi..." />
-                <marker date="1415009780000" expanded="true" signature="1755:1863" placeholder="SELECT `jobi..." />
-                <marker date="1415009780000" expanded="true" signature="2366:2551" placeholder="SELECT `jobi..." />
-                <marker date="1415009780000" expanded="true" signature="3438:3546" placeholder="SELECT `jobi..." />
-                <marker date="1415009780000" expanded="true" signature="4580:4604" placeholder="SELECT * FRO..." />
-                <marker date="1415009780000" expanded="true" signature="13070:13265" placeholder="SELECT `jobi..." />
-                <marker date="1415009780000" expanded="true" signature="13367:13422" placeholder="update jobin..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -260,11 +255,11 @@
         <option value="$PROJECT_DIR$/common/app/js/index/index.js" />
         <option value="$PROJECT_DIR$/model/jobfairmsg.php" />
         <option value="$PROJECT_DIR$/model/corpinternmsg.php" />
-        <option value="$PROJECT_DIR$/common/app/js/account/register.js" />
         <option value="$PROJECT_DIR$/app/tpl/header.htm" />
         <option value="$PROJECT_DIR$/common/app/css/headAndfoot.css" />
-        <option value="$PROJECT_DIR$/app/tpl/account/register.htm" />
+        <option value="$PROJECT_DIR$/common/app/js/account/register.js" />
         <option value="$PROJECT_DIR$/common/app/css/account/register.css" />
+        <option value="$PROJECT_DIR$/app/tpl/account/register.htm" />
       </list>
     </option>
   </component>
@@ -650,18 +645,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/tpl/company/myjobfair.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="74" selection-start="6678" selection-end="6678" vertical-scroll-proportion="-18.75" vertical-offset="1410" max-vertical-offset="2940" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/app/css/am.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="34740">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/tpl/footer.htm">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="35" selection-start="1132" selection-end="1132" vertical-scroll-proportion="-11.875" vertical-offset="150" max-vertical-offset="870" />
@@ -732,7 +715,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/tpl/student/favorjobinfo.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="229" column="53" selection-start="9840" selection-end="9840" vertical-scroll-proportion="-14.375" vertical-offset="3090" max-vertical-offset="4815" />
+        <state line="229" column="53" selection-start="9840" selection-end="9840" vertical-scroll-proportion="-14.375" vertical-offset="3090" max-vertical-offset="4815">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/tpl/activityjobbulletin/detail.htm">
@@ -933,13 +918,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="348" column="20" selection-start="11638" selection-end="11638" vertical-scroll-proportion="-210.0" vertical-offset="150" max-vertical-offset="5895">
           <folding>
-            <marker date="1415009780000" expanded="true" signature="1175:1283" placeholder="SELECT `jobi..." />
-            <marker date="1415009780000" expanded="true" signature="1755:1863" placeholder="SELECT `jobi..." />
-            <marker date="1415009780000" expanded="true" signature="2366:2551" placeholder="SELECT `jobi..." />
-            <marker date="1415009780000" expanded="true" signature="3438:3546" placeholder="SELECT `jobi..." />
-            <marker date="1415009780000" expanded="true" signature="4580:4604" placeholder="SELECT * FRO..." />
-            <marker date="1415009780000" expanded="true" signature="13070:13265" placeholder="SELECT `jobi..." />
-            <marker date="1415009780000" expanded="true" signature="13367:13422" placeholder="update jobin..." />
+            <marker date="1415009780000" expanded="true" signature="-1:-1" placeholder="SELECT `jobi..." />
+            <marker date="1415009780000" expanded="true" signature="-1:-1" placeholder="SELECT `jobi..." />
+            <marker date="1415009780000" expanded="true" signature="-1:-1" placeholder="SELECT `jobi..." />
+            <marker date="1415009780000" expanded="true" signature="-1:-1" placeholder="SELECT `jobi..." />
+            <marker date="1415009780000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1415009780000" expanded="true" signature="-1:-1" placeholder="SELECT `jobi..." />
+            <marker date="1415009780000" expanded="true" signature="-1:-1" placeholder="update jobin..." />
           </folding>
         </state>
       </provider>
@@ -1006,16 +991,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/app/js/account/register.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="315" column="11" selection-start="11267" selection-end="11267" vertical-scroll-proportion="0.0" vertical-offset="4440" max-vertical-offset="5625">
-          <folding>
-            <marker date="1415246474000" expanded="false" signature="975:986" placeholder="..." />
-            <marker date="1415246474000" expanded="false" signature="12529:12541" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/tpl/header.htm">
       <provider selected="true" editor-type-id="text-editor">
         <state line="65" column="27" selection-start="2900" selection-end="2900" vertical-scroll-proportion="-23.75" vertical-offset="405" max-vertical-offset="2010">
@@ -1030,11 +1005,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/tpl/student/modifyinfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="209.16667" vertical-offset="5020" max-vertical-offset="7095">
+          <folding>
+            <marker date="1414730333000" expanded="false" signature="16543:16578" placeholder="..." />
+            <marker date="1414730333000" expanded="false" signature="18575:18589" placeholder="..." />
+            <marker date="1414730333000" expanded="false" signature="20995:21009" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/tpl/company/modifycominfo.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="108" column="57" selection-start="5117" selection-end="5301" vertical-scroll-proportion="-20.833334" vertical-offset="1120" max-vertical-offset="6555">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/app/js/account/register.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="254" column="47" selection-start="9658" selection-end="9658" vertical-scroll-proportion="0.0" vertical-offset="3856" max-vertical-offset="5625">
+          <folding>
+            <marker date="1415259092000" expanded="false" signature="975:986" placeholder="..." />
+            <marker date="1415259092000" expanded="false" signature="12529:12541" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/app/css/account/register.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="17" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/tpl/account/register.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="188" column="94" selection-start="10152" selection-end="10152" vertical-scroll-proportion="-9.583333" vertical-offset="2590" max-vertical-offset="3405">
+        <state line="42" column="29" selection-start="1282" selection-end="1282" vertical-scroll-proportion="0.34586465" vertical-offset="400" max-vertical-offset="3405">
           <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1073,13 +1082,6 @@
             <element signature="n#style#0;n#input#0;n#div#2;n#div#5;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#2;n#div#5;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/app/css/account/register.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="100" selection-start="291" selection-end="291" vertical-scroll-proportion="0.06531204" vertical-offset="0" max-vertical-offset="690">
-          <folding />
         </state>
       </provider>
     </entry>
