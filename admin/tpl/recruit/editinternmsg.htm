@@ -275,8 +275,8 @@ function getJobtype(htmlId,pId){
 		url:"<{$web_url}>/index.php/common/jobtype/parentid/"+pId,
 		type:"POST",
 		async:false,
-		dataType:"json",
-		success:function(data){
+		success:function(datas){
+            var data = eval('('+datas+')');
 			var str = "";
 			if(htmlId == "jobtype1"){
 				str += "<option value=\"0\" selected=\"selected\">选择类别</option>";

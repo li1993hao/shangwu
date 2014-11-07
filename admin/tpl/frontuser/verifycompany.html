@@ -55,8 +55,8 @@
 				data:{id:<{$detail.id}>, type:0, reason:reasontxt},
 				type:"POST",
 				async:false,
-				dataType:"json",
-				success:function(data){
+				success:function(datas){
+                    var data = eval('('+datas+')');
 					if (data.json.state == 1){
 						alert("成功");
 						$("#mask").hide();
@@ -79,8 +79,8 @@
 				data:{id:<{$detail.id}>, type:1, degree:degree, outdate:outdate},
 				type:"POST",
 				async:false,
-				dataType:"json",
-				success:function(data){
+				success:function(datas){
+                     var data = eval('('+datas+')');
 					if (data.json.state == 1){
 						alert("审核成功");
 						$("#mask").hide();
