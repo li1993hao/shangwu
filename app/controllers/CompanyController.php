@@ -697,8 +697,7 @@ class CompanyController extends Controller{
             $this->_error("您还不能查看所有学生的信息【原因：等级不够！】");
             exit();
         }
-
-        echo $this->view->render("studentall.htm");
+        echo $this->view->render('studentall.htm');
     }
 
     /**

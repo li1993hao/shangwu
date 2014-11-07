@@ -77,9 +77,9 @@ $(function() {
         $.ajax({
             type: "POST",
             url: web_url + "/index.php/common/area/parentid/" + areaId,
-            dataType: "json",
             async: false,
-            success: function(msg) {
+            success: function(datas) {
+                var msg = eval('('+datas+')');
                 //alert(msg);
                 //var obj = eval('(' + msg + ')');
                 if (msg.json.state == 1) {
@@ -112,9 +112,9 @@ $(function() {
         $.ajax({
             type: "POST",
             url: web_url + "/index.php/common/area/parentid/" + areaId,
-            dataType: "json",
             async: false,
-            success: function(msg) {
+            success: function(datas) {
+                var msg = eval('('+datas+')');
                 //alert(msg);
                 //var obj = eval('(' + msg + ')');
                 if (msg.json.state == 1) {

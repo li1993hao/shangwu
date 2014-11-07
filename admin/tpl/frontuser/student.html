@@ -138,8 +138,8 @@ function getInfo(flag,page){
 		data:{type:flag,college:collegeName,grade:grade,major:pro,degree:degree,page:page,gender:gender,stuname:stuname,number:number,state:state},
 		type:"POST",
 		async:false,
-		dataType:"json",
-		success:function(data){
+		success:function(datas){
+            var data = eval('('+datas+')');
 			//alert(data.json.data.list.stu_gender);
 			var str = "";
 			if(data.json.state == 1){
@@ -212,8 +212,8 @@ function getProList(flag){
 		data:{type:flag},
 		type:"POST",
 		async:false,
-		dataType:"json",
-		success:function(data){
+		success:function(datas){
+            var data = eval('('+datas+')');
 			var str = "";
 			if(data.json.state == 1){
 				str += "<option value=\"0\" selected=\"selected\">不限</option>";
@@ -239,8 +239,8 @@ function getGrade(flag){
 		data:{type:flag},
 		type:"POST",
 		async:false,
-		dataType:"json",
-		success:function(jsondata){
+		success:function(datas){
+            var jsondata = eval('('+datas+')');
 			var str = "";
 			if(jsondata.json.state == 1){
 				//alert(jsondata.json.data);
@@ -269,8 +269,8 @@ function getCollege(flag){
 		data:{type:flag},
 		type:"POST",
 		async:false,
-		dataType:"json",
-		success:function(jsondata){
+		success:function(datas){
+            var jsondata = eval('('+datas+')');
 			var str = "";
 			if(jsondata.json.state == 1){
 				//alert(jsondata.json.data);

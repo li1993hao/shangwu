@@ -146,8 +146,8 @@ $(function(){
             url:"<{$web_url}>/index.php/common/area/parentid/"+pId,
             type:"POST",
             async:false,
-            dataType:"json",
-            success:function(data){
+            success:function(datas){
+                var data =eval('('+datas+')');
                 var str = "";
                 if(htmlId == "prov"){
                     if(provid == ""){
@@ -206,9 +206,9 @@ $(function(){
         $.ajax({
             type:"POST",
             url:web_url+"/index.php/common/Area?parentid="+parentid,
-            dataType:"json",
             async:false,
-            success:function(msg){
+            success:function(datas){
+                var msg = eval('('+datas+')');
                 // console.log(msg);
                 //var obj = eval('(' + msg + ')');
                 if (msg.json.state == 1) {
@@ -243,9 +243,9 @@ $(function(){
         $.ajax({
             type:"POST",
             url: web_url+"/index.php/common/area?parentid="+areaId,
-            dataType:"json",
             async:false,
-            success:function(msg){
+            success:function(datas){
+                var msg = eval('('+datas+')');
                 // alert(msg);
                 //var obj = eval('(' + msg + ')');
                 if (msg.json.state == 1) {

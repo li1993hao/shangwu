@@ -168,9 +168,9 @@ li{margin:0;padding:0; display: inline-block;}
 			url:"<{$web_url}>/manshangwu.php/frontuser/Getcompanylist",
 			data:{state:verifyState,active:activeState,page:page},
 			type:"POST",
-			dataType:"json",
 			async:false,
-			success:function(data){
+			success:function(datas){
+                var data = eval('('+datas+')');
 				if (data.json.state == 1){
 					var str ="";
 					$.each(data.json.data.list, function(i,item){
@@ -259,8 +259,8 @@ li{margin:0;padding:0; display: inline-block;}
 					data:{id:id,pw:password},
 					type:"POST",
 					async:false,
-					dataType:"json",
-					success:function(data){
+					success:function(datas){
+                        var data = eval('('+datas+')');
 						if (data.json.state == 1){
 							alert("重置密码成功！");
 							$("#mask").hide();
@@ -287,8 +287,8 @@ li{margin:0;padding:0; display: inline-block;}
 			url:"<{$web_url}>/manshangwu.php/frontuser/Changestaus/id/"+id,
 			type:"POST",
 			async:false,
-			dataType:"json",
-			success:function(data){
+			success:function(datas){
+                var data = eval('('+datas+')');
 				if (data.json.state == 1){
 					if($("#company-item"+id).attr("class") == "company-enable-item"){
 						$("#company-item"+id).attr("class","company-disable-item");	
@@ -318,8 +318,8 @@ li{margin:0;padding:0; display: inline-block;}
 			url:"<{$web_url}>/manshangwu.php/frontuser/Delcompany/id/"+id,
 			type:"POST",
 			async:false,
-			dataType:"json",
-			success:function(data){
+			success:function(datas){
+                var data = eval('('+datas+')');
 				if (data.json.state == 1){
 					alert("删除成功！");
 					$("#company-container"+id).remove();
