@@ -478,15 +478,13 @@ class jobfairmsg extends Model{
 					FROM `jobfairmsg` LEFT JOIN `picture`
 					ON `jobfairmsg`.`pic_id` = `picture`.`pic_id`";
         if($login_type==1){
-            $filter = "WHERE  jm_isopen=1  ";
+            $filter = "  WHERE  jm_isopen=1 AND `jobfairmsg`.`jm_veri` =$state ";
         }else{
-            $filter = " ";
+            $filter = "  WHERE   `jobfairmsg`.`jm_veri` =$state  ";
         }
-        if($state!==null){
-            $where = " AND `jobfairmsg`.`jm_veri` = ".$state;
-        }
+
         $order = " ORDER BY  `jobfairmsg`.`jm_isup` DESC , `jobfairmsg`.`jm_opentime` DESC Limit ".$num.",10";
-        $sql=$sql.$filter.$where.$order;
+        $sql=$sql.$filter.$order;
         //var_dump($sql);
         return $this->fetchAll($sql);
     }

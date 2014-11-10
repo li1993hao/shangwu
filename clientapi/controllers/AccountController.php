@@ -160,8 +160,8 @@ class AccountController extends Controller {
             $this->view->setAppMsg ( "查询招聘信息成功!" );
             $this->view->setAppData ( $data );
         }else{
-            $this->view->setAppStatus ( "1" );
-            $this->view->setAppMsg ( "暂无招聘信息" );
+            $this->view->setAppStatus ( "0" );
+            $this->view->setAppMsg ( "没有更多信息！" );
         }
         $this->view->appdisplay ( "json" );
     }
@@ -197,8 +197,8 @@ class AccountController extends Controller {
             $this->view->setAppMsg ( "查询招聘信息成功!" );
             $this->view->setAppData ( $data );
         }else{
-            $this->view->setAppStatus ( "1" );
-            $this->view->setAppMsg ( "暂无招聘信息" );
+            $this->view->setAppStatus ( "0" );
+            $this->view->setAppMsg ( "没有更多信息！" );
         }
         $this->view->appdisplay ( "json" );
     }
@@ -239,8 +239,8 @@ class AccountController extends Controller {
             $this->view->setAppMsg ( "查询招聘信息成功!" );
             $this->view->setAppData ( $data );
         }else{
-            $this->view->setAppStatus ( "1" );
-            $this->view->setAppMsg ( "暂无招聘信息" );
+            $this->view->setAppStatus ( "0" );
+            $this->view->setAppMsg ( "没有更多信息！" );
         }
         $this->view->appdisplay ( "json" );
     }
@@ -285,8 +285,8 @@ class AccountController extends Controller {
             $this->view->setAppMsg ( "查询基层就业信息成功!" );
             $this->view->setAppData ( $data );
         }else{
-            $this->view->setAppStatus ( "1" );
-            $this->view->setAppMsg ( "暂无基层就业信息" );
+            $this->view->setAppStatus ( "0" );
+            $this->view->setAppMsg ( "没有更多信息！" );
         }
         $this->view->appdisplay ( "json" );
     }
@@ -343,7 +343,7 @@ class AccountController extends Controller {
         $div_str1 = "";
         if($zp_content[pic_link]){
             $zp_content[pic_link]=$this->view->images_app_url.$zp_content[pic_link];
-            $div_str1 .= "<div style='width: 100%' ><div style='text-align:center;line-height:31px;margin: 0 auto;width:98%;margin-left: 15px;font-size: 16px;margin-top: 18px'><img src='$zp_content[pic_link]' style='width: 150px;height: 200px'/></div></div>";
+            $div_str1 .= "<div style='width: 100%' ><div style='text-align:center;line-height:31px;margin: 0 auto;width:98%;margin-left: 15px;font-size: 16px;margin-top: 18px'><img src='$zp_content[pic_link]' style='max-width: 300px;max-height: 300px'/></div></div>";
             //var_dump($div_str);
         }
         if($type==1){
@@ -599,8 +599,8 @@ class AccountController extends Controller {
             $this->view->setAppMsg ( "查询就业政策信息成功!" );
             $this->view->setAppData ( $data );
         }else{
-            $this->view->setAppStatus ( "1" );
-            $this->view->setAppMsg ( "暂无就业政策信息！" );
+            $this->view->setAppStatus ( "0" );
+            $this->view->setAppMsg ( "没有更多信息！" );
         }
         $this->view->appdisplay ( "json" );
     }
@@ -637,8 +637,8 @@ class AccountController extends Controller {
             $this->view->setAppMsg ( "查询信息成功!" );
             $this->view->setAppData ( $data );
         }else{
-            $this->view->setAppStatus ( "1" );
-            $this->view->setAppMsg ( "暂无信息！" );
+            $this->view->setAppStatus ( "0" );
+            $this->view->setAppMsg ( "没有更多信息！" );
         }
         $this->view->appdisplay ( "json" );
     }
@@ -658,8 +658,8 @@ class AccountController extends Controller {
             $this->view->setAppMsg ( "查询信息成功!" );
             $this->view->setAppData ( $data );
         }else{
-            $this->view->setAppStatus ( "1" );
-            $this->view->setAppMsg ( "暂无信息！" );
+            $this->view->setAppStatus ( "0" );
+            $this->view->setAppMsg ( "没有更多信息！" );
         }
         $this->view->appdisplay ( "json" );
     }
@@ -679,8 +679,8 @@ class AccountController extends Controller {
             $this->view->setAppMsg ( "查询信息成功!" );
             $this->view->setAppData ( $data );
         }else{
-            $this->view->setAppStatus ( "1" );
-            $this->view->setAppMsg ( "暂无信息！" );
+            $this->view->setAppStatus ( "0" );
+            $this->view->setAppMsg ( "没有更多信息！" );
         }
         $this->view->appdisplay ( "json" );
     }
@@ -747,8 +747,8 @@ class AccountController extends Controller {
             $this->view->setAppMsg ( "查询信息成功!" );
             $this->view->setAppData ( $data );
         }else{
-            $this->view->setAppStatus ( "1" );
-            $this->view->setAppMsg ( "暂无信息！" );
+            $this->view->setAppStatus ( "0" );
+            $this->view->setAppMsg ( "没有更多信息！" );
         }
         $this->view->appdisplay ( "json" );
 
@@ -779,8 +779,8 @@ class AccountController extends Controller {
             $this->view->setAppMsg ( "查询信息成功!" );
             $this->view->setAppData ( $msg_lists );
         }else{
-            $this->view->setAppStatus ( "1" );
-            $this->view->setAppMsg ( "暂无信息！" );
+            $this->view->setAppStatus ( "0" );
+            $this->view->setAppMsg ( "没有更多信息！" );
         }
         $this->view->appdisplay ( "json" );
     }
@@ -993,7 +993,7 @@ class AccountController extends Controller {
             $this->view->setAppData ( $data );
         }else{
             $this->view->setAppStatus ( "0" );
-            $this->view->setAppMsg ( "暂无信息！" );
+            $this->view->setAppMsg ( "没有更多信息！" );
         }
         $this->view->appdisplay ( "json" );
     }
@@ -1048,8 +1048,8 @@ class AccountController extends Controller {
             $this->view->setAppMsg ( "查询信息成功!" );
             $this->view->setAppData ( $hot_news );
         }else{
-            $this->view->setAppStatus ( "1" );
-            $this->view->setAppMsg ( "暂无信息" );
+            $this->view->setAppStatus ( "0" );
+            $this->view->setAppMsg ( "没有更多信息！" );
         }
         $this->view->appdisplay ( "json" );
     }
@@ -1109,8 +1109,8 @@ class AccountController extends Controller {
             $this->view->setAppMsg ( "查询信息成功!" );
             $this->view->setAppData ( $data );
         }else{
-            $this->view->setAppStatus ( "1" );
-            $this->view->setAppMsg ( "暂无信息！" );
+            $this->view->setAppStatus ( "0" );
+            $this->view->setAppMsg ( "没有更多信息！" );
         }
         $this->view->appdisplay ( "json" );
     }
@@ -1135,7 +1135,7 @@ class AccountController extends Controller {
             $this->view->setAppData ( $data );
         }else{
             $this->view->setAppStatus ( "0" );
-            $this->view->setAppMsg ( "暂无信息！" );
+            $this->view->setAppMsg ( "没有更多信息！" );
         }
         $this->view->appdisplay ( "json" );
     }
@@ -1168,7 +1168,7 @@ class AccountController extends Controller {
             $this->view->setAppData ($msg_arr );
         }else{
             $this->view->setAppStatus ( "0" );
-            $this->view->setAppMsg ( "暂无信息！" );
+            $this->view->setAppMsg ( "没有更多信息！" );
         }
         $this->view->appdisplay ( "json" );
     }
